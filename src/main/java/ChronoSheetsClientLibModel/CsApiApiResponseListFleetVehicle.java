@@ -23,7 +23,7 @@ public class CsApiApiResponseListFleetVehicle {
   @SerializedName("Data")
   private List<CsApiFleetVehicle> data = null;
   public enum StatusEnum {
-     0,  1,  2,  3,  4,  5,  128, 
+     0,  1,  2,  3,  4,  5, 
   };
   @SerializedName("Status")
   private StatusEnum status = null;
@@ -41,9 +41,9 @@ public class CsApiApiResponseListFleetVehicle {
   }
 
   /**
-   * 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC
+   * 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired
    **/
-  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC")
+  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
   public StatusEnum getStatus() {
     return status;
   }
