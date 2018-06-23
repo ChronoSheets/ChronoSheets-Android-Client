@@ -62,6 +62,152 @@ public class TimesheetsApi {
   }
 
   /**
+  * Inserts a single timesheet record
+  * 
+   * @param request The timesheet request object
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CsApiApiResponseInt32
+  */
+  public CsApiApiResponseInt32 timesheetsCreateSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = request;
+    // verify the required parameter 'request' is set
+    if (request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'request' when calling timesheetsCreateSingleTimesheet",
+        new ApiException(400, "Missing the required parameter 'request' when calling timesheetsCreateSingleTimesheet"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsCreateSingleTimesheet",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetsCreateSingleTimesheet"));
+    }
+
+    // create path and map variables
+    String path = "/api/Timesheets/CreateSingleTimesheet";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+      "application/json",
+      "text/json",
+      "application/xml",
+      "text/xml",
+      "application/x-www-form-urlencoded",
+      "multipart/form-data"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Inserts a single timesheet record
+   * 
+   * @param request The timesheet request object   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void timesheetsCreateSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = request;
+
+    // verify the required parameter 'request' is set
+    if (request == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'request' when calling timesheetsCreateSingleTimesheet",
+        new ApiException(400, "Missing the required parameter 'request' when calling timesheetsCreateSingleTimesheet"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsCreateSingleTimesheet",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetsCreateSingleTimesheet"));
+    }
+
+    // create path and map variables
+    String path = "/api/Timesheets/CreateSingleTimesheet".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      "application/json","text/json","application/xml","text/xml","application/x-www-form-urlencoded","multipart/form-data"
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Delete a timesheet
   * 
    * @param timesheetId The ID of the timesheet to delete
@@ -344,152 +490,6 @@ public class TimesheetsApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CsApiApiResponseListTimesheet) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListTimesheet.class));
-            } catch (ApiException exception) {
-               errorListener.onErrorResponse(new VolleyError(exception));
-            }
-          }
-      }, new Response.ErrorListener() {
-          @Override
-          public void onErrorResponse(VolleyError error) {
-            errorListener.onErrorResponse(error);
-          }
-      });
-    } catch (ApiException ex) {
-      errorListener.onErrorResponse(new VolleyError(ex));
-    }
-  }
-  /**
-  * Inserts a single timesheet record
-  * 
-   * @param request The timesheet request object
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
-  */
-  public CsApiApiResponseInt32 timesheetsInsertSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
-    Object postBody = request;
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'request' when calling timesheetsInsertSingleTimesheet",
-        new ApiException(400, "Missing the required parameter 'request' when calling timesheetsInsertSingleTimesheet"));
-    }
-    // verify the required parameter 'xChronosheetsAuth' is set
-    if (xChronosheetsAuth == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsInsertSingleTimesheet",
-        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetsInsertSingleTimesheet"));
-    }
-
-    // create path and map variables
-    String path = "/api/Timesheets/InsertSingleTimesheet";
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
-    String[] contentTypes = {
-      "application/json",
-      "text/json",
-      "application/xml",
-      "text/xml",
-      "application/x-www-form-urlencoded",
-      "multipart/form-data"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-    }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
-      if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
-      } else {
-         return null;
-      }
-    } catch (ApiException ex) {
-       throw ex;
-    } catch (InterruptedException ex) {
-       throw ex;
-    } catch (ExecutionException ex) {
-      if (ex.getCause() instanceof VolleyError) {
-        VolleyError volleyError = (VolleyError)ex.getCause();
-        if (volleyError.networkResponse != null) {
-          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
-        }
-      }
-      throw ex;
-    } catch (TimeoutException ex) {
-      throw ex;
-    }
-  }
-
-      /**
-   * Inserts a single timesheet record
-   * 
-   * @param request The timesheet request object   * @param xChronosheetsAuth The ChronoSheets Auth Token
-  */
-  public void timesheetsInsertSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
-    Object postBody = request;
-
-    // verify the required parameter 'request' is set
-    if (request == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'request' when calling timesheetsInsertSingleTimesheet",
-        new ApiException(400, "Missing the required parameter 'request' when calling timesheetsInsertSingleTimesheet"));
-    }
-    // verify the required parameter 'xChronosheetsAuth' is set
-    if (xChronosheetsAuth == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetsInsertSingleTimesheet",
-        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetsInsertSingleTimesheet"));
-    }
-
-    // create path and map variables
-    String path = "/api/Timesheets/InsertSingleTimesheet".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    // header params
-    Map<String, String> headerParams = new HashMap<String, String>();
-    // form params
-    Map<String, String> formParams = new HashMap<String, String>();
-
-
-    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
-
-    String[] contentTypes = {
-      "application/json","text/json","application/xml","text/xml","application/x-www-form-urlencoded","multipart/form-data"
-    };
-    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
-
-    if (contentType.startsWith("multipart/form-data")) {
-      // file uploading
-      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
-
-      HttpEntity httpEntity = localVarBuilder.build();
-      postBody = httpEntity;
-    } else {
-      // normal form params
-          }
-
-    String[] authNames = new String[] {  };
-
-    try {
-      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
-        new Response.Listener<String>() {
-          @Override
-          public void onResponse(String localVarResponse) {
-            try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
