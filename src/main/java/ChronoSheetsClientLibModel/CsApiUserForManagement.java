@@ -19,8 +19,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class CsApiUserForManagement {
   
-  @SerializedName("EmailAddress")
-  private String emailAddress = null;
   @SerializedName("IsSubscribedToNewsletter")
   private Boolean isSubscribedToNewsletter = null;
   @SerializedName("IsAccountActive")
@@ -35,6 +33,8 @@ public class CsApiUserForManagement {
   private String firstName = null;
   @SerializedName("LastName")
   private String lastName = null;
+  @SerializedName("EmailAddress")
+  private String emailAddress = null;
   @SerializedName("Roles")
   private Long roles = null;
   @SerializedName("AlertSettings")
@@ -43,16 +43,6 @@ public class CsApiUserForManagement {
   private Boolean setupWizardRequired = null;
   @SerializedName("Organisation")
   private CsApiOrganisation organisation = null;
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getEmailAddress() {
-    return emailAddress;
-  }
-  public void setEmailAddress(String emailAddress) {
-    this.emailAddress = emailAddress;
-  }
 
   /**
    **/
@@ -127,6 +117,16 @@ public class CsApiUserForManagement {
   /**
    **/
   @ApiModelProperty(value = "")
+  public String getEmailAddress() {
+    return emailAddress;
+  }
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Long getRoles() {
     return roles;
   }
@@ -174,14 +174,14 @@ public class CsApiUserForManagement {
       return false;
     }
     CsApiUserForManagement userForManagement = (CsApiUserForManagement) o;
-    return (this.emailAddress == null ? userForManagement.emailAddress == null : this.emailAddress.equals(userForManagement.emailAddress)) &&
-        (this.isSubscribedToNewsletter == null ? userForManagement.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(userForManagement.isSubscribedToNewsletter)) &&
+    return (this.isSubscribedToNewsletter == null ? userForManagement.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(userForManagement.isSubscribedToNewsletter)) &&
         (this.isAccountActive == null ? userForManagement.isAccountActive == null : this.isAccountActive.equals(userForManagement.isAccountActive)) &&
         (this.id == null ? userForManagement.id == null : this.id.equals(userForManagement.id)) &&
         (this.organisationId == null ? userForManagement.organisationId == null : this.organisationId.equals(userForManagement.organisationId)) &&
         (this.userName == null ? userForManagement.userName == null : this.userName.equals(userForManagement.userName)) &&
         (this.firstName == null ? userForManagement.firstName == null : this.firstName.equals(userForManagement.firstName)) &&
         (this.lastName == null ? userForManagement.lastName == null : this.lastName.equals(userForManagement.lastName)) &&
+        (this.emailAddress == null ? userForManagement.emailAddress == null : this.emailAddress.equals(userForManagement.emailAddress)) &&
         (this.roles == null ? userForManagement.roles == null : this.roles.equals(userForManagement.roles)) &&
         (this.alertSettings == null ? userForManagement.alertSettings == null : this.alertSettings.equals(userForManagement.alertSettings)) &&
         (this.setupWizardRequired == null ? userForManagement.setupWizardRequired == null : this.setupWizardRequired.equals(userForManagement.setupWizardRequired)) &&
@@ -191,7 +191,6 @@ public class CsApiUserForManagement {
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.emailAddress == null ? 0: this.emailAddress.hashCode());
     result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.isAccountActive == null ? 0: this.isAccountActive.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
@@ -199,6 +198,7 @@ public class CsApiUserForManagement {
     result = 31 * result + (this.userName == null ? 0: this.userName.hashCode());
     result = 31 * result + (this.firstName == null ? 0: this.firstName.hashCode());
     result = 31 * result + (this.lastName == null ? 0: this.lastName.hashCode());
+    result = 31 * result + (this.emailAddress == null ? 0: this.emailAddress.hashCode());
     result = 31 * result + (this.roles == null ? 0: this.roles.hashCode());
     result = 31 * result + (this.alertSettings == null ? 0: this.alertSettings.hashCode());
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
@@ -211,7 +211,6 @@ public class CsApiUserForManagement {
     StringBuilder sb = new StringBuilder();
     sb.append("class CsApiUserForManagement {\n");
     
-    sb.append("  emailAddress: ").append(emailAddress).append("\n");
     sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  isAccountActive: ").append(isAccountActive).append("\n");
     sb.append("  id: ").append(id).append("\n");
@@ -219,6 +218,7 @@ public class CsApiUserForManagement {
     sb.append("  userName: ").append(userName).append("\n");
     sb.append("  firstName: ").append(firstName).append("\n");
     sb.append("  lastName: ").append(lastName).append("\n");
+    sb.append("  emailAddress: ").append(emailAddress).append("\n");
     sb.append("  roles: ").append(roles).append("\n");
     sb.append("  alertSettings: ").append(alertSettings).append("\n");
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");

@@ -29,6 +29,8 @@ public class CsApiClientSideUser {
   private String firstName = null;
   @SerializedName("LastName")
   private String lastName = null;
+  @SerializedName("EmailAddress")
+  private String emailAddress = null;
   @SerializedName("Roles")
   private Long roles = null;
   @SerializedName("AlertSettings")
@@ -91,6 +93,16 @@ public class CsApiClientSideUser {
   /**
    **/
   @ApiModelProperty(value = "")
+  public String getEmailAddress() {
+    return emailAddress;
+  }
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Long getRoles() {
     return roles;
   }
@@ -143,6 +155,7 @@ public class CsApiClientSideUser {
         (this.userName == null ? clientSideUser.userName == null : this.userName.equals(clientSideUser.userName)) &&
         (this.firstName == null ? clientSideUser.firstName == null : this.firstName.equals(clientSideUser.firstName)) &&
         (this.lastName == null ? clientSideUser.lastName == null : this.lastName.equals(clientSideUser.lastName)) &&
+        (this.emailAddress == null ? clientSideUser.emailAddress == null : this.emailAddress.equals(clientSideUser.emailAddress)) &&
         (this.roles == null ? clientSideUser.roles == null : this.roles.equals(clientSideUser.roles)) &&
         (this.alertSettings == null ? clientSideUser.alertSettings == null : this.alertSettings.equals(clientSideUser.alertSettings)) &&
         (this.setupWizardRequired == null ? clientSideUser.setupWizardRequired == null : this.setupWizardRequired.equals(clientSideUser.setupWizardRequired)) &&
@@ -157,6 +170,7 @@ public class CsApiClientSideUser {
     result = 31 * result + (this.userName == null ? 0: this.userName.hashCode());
     result = 31 * result + (this.firstName == null ? 0: this.firstName.hashCode());
     result = 31 * result + (this.lastName == null ? 0: this.lastName.hashCode());
+    result = 31 * result + (this.emailAddress == null ? 0: this.emailAddress.hashCode());
     result = 31 * result + (this.roles == null ? 0: this.roles.hashCode());
     result = 31 * result + (this.alertSettings == null ? 0: this.alertSettings.hashCode());
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
@@ -174,6 +188,7 @@ public class CsApiClientSideUser {
     sb.append("  userName: ").append(userName).append("\n");
     sb.append("  firstName: ").append(firstName).append("\n");
     sb.append("  lastName: ").append(lastName).append("\n");
+    sb.append("  emailAddress: ").append(emailAddress).append("\n");
     sb.append("  roles: ").append(roles).append("\n");
     sb.append("  alertSettings: ").append(alertSettings).append("\n");
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");
