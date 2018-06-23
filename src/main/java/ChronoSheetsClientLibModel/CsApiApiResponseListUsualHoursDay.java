@@ -23,7 +23,7 @@ public class CsApiApiResponseListUsualHoursDay {
   @SerializedName("Data")
   private List<CsApiUsualHoursDay> data = null;
   public enum StatusEnum {
-     0,  1,  2,  3,  4,  5, 
+     0,  1,  2,  3,  4,  5,  128, 
   };
   @SerializedName("Status")
   private StatusEnum status = null;
@@ -41,9 +41,9 @@ public class CsApiApiResponseListUsualHoursDay {
   }
 
   /**
-   * 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired
+   * 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC
    **/
-  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
+  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired, 128 = TestingABC")
   public StatusEnum getStatus() {
     return status;
   }
