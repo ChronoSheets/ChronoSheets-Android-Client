@@ -19,8 +19,6 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class CsApiUserForManagement {
   
-  @SerializedName("IsSubscribedToNewsletter")
-  private Boolean isSubscribedToNewsletter = null;
   @SerializedName("IsAccountActive")
   private Boolean isAccountActive = null;
   @SerializedName("Id")
@@ -41,18 +39,10 @@ public class CsApiUserForManagement {
   private Long alertSettings = null;
   @SerializedName("SetupWizardRequired")
   private Boolean setupWizardRequired = null;
+  @SerializedName("IsSubscribedToNewsletter")
+  private Boolean isSubscribedToNewsletter = null;
   @SerializedName("Organisation")
   private CsApiOrganisation organisation = null;
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public Boolean getIsSubscribedToNewsletter() {
-    return isSubscribedToNewsletter;
-  }
-  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
-    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
-  }
 
   /**
    **/
@@ -157,6 +147,16 @@ public class CsApiUserForManagement {
   /**
    **/
   @ApiModelProperty(value = "")
+  public Boolean getIsSubscribedToNewsletter() {
+    return isSubscribedToNewsletter;
+  }
+  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public CsApiOrganisation getOrganisation() {
     return organisation;
   }
@@ -174,8 +174,7 @@ public class CsApiUserForManagement {
       return false;
     }
     CsApiUserForManagement userForManagement = (CsApiUserForManagement) o;
-    return (this.isSubscribedToNewsletter == null ? userForManagement.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(userForManagement.isSubscribedToNewsletter)) &&
-        (this.isAccountActive == null ? userForManagement.isAccountActive == null : this.isAccountActive.equals(userForManagement.isAccountActive)) &&
+    return (this.isAccountActive == null ? userForManagement.isAccountActive == null : this.isAccountActive.equals(userForManagement.isAccountActive)) &&
         (this.id == null ? userForManagement.id == null : this.id.equals(userForManagement.id)) &&
         (this.organisationId == null ? userForManagement.organisationId == null : this.organisationId.equals(userForManagement.organisationId)) &&
         (this.userName == null ? userForManagement.userName == null : this.userName.equals(userForManagement.userName)) &&
@@ -185,13 +184,13 @@ public class CsApiUserForManagement {
         (this.roles == null ? userForManagement.roles == null : this.roles.equals(userForManagement.roles)) &&
         (this.alertSettings == null ? userForManagement.alertSettings == null : this.alertSettings.equals(userForManagement.alertSettings)) &&
         (this.setupWizardRequired == null ? userForManagement.setupWizardRequired == null : this.setupWizardRequired.equals(userForManagement.setupWizardRequired)) &&
+        (this.isSubscribedToNewsletter == null ? userForManagement.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(userForManagement.isSubscribedToNewsletter)) &&
         (this.organisation == null ? userForManagement.organisation == null : this.organisation.equals(userForManagement.organisation));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.isAccountActive == null ? 0: this.isAccountActive.hashCode());
     result = 31 * result + (this.id == null ? 0: this.id.hashCode());
     result = 31 * result + (this.organisationId == null ? 0: this.organisationId.hashCode());
@@ -202,6 +201,7 @@ public class CsApiUserForManagement {
     result = 31 * result + (this.roles == null ? 0: this.roles.hashCode());
     result = 31 * result + (this.alertSettings == null ? 0: this.alertSettings.hashCode());
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
+    result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.organisation == null ? 0: this.organisation.hashCode());
     return result;
   }
@@ -211,7 +211,6 @@ public class CsApiUserForManagement {
     StringBuilder sb = new StringBuilder();
     sb.append("class CsApiUserForManagement {\n");
     
-    sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  isAccountActive: ").append(isAccountActive).append("\n");
     sb.append("  id: ").append(id).append("\n");
     sb.append("  organisationId: ").append(organisationId).append("\n");
@@ -222,6 +221,7 @@ public class CsApiUserForManagement {
     sb.append("  roles: ").append(roles).append("\n");
     sb.append("  alertSettings: ").append(alertSettings).append("\n");
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");
+    sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  organisation: ").append(organisation).append("\n");
     sb.append("}\n");
     return sb.toString();

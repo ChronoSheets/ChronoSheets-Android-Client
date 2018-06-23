@@ -37,6 +37,8 @@ public class CsApiClientSideUser {
   private Long alertSettings = null;
   @SerializedName("SetupWizardRequired")
   private Boolean setupWizardRequired = null;
+  @SerializedName("IsSubscribedToNewsletter")
+  private Boolean isSubscribedToNewsletter = null;
   @SerializedName("Organisation")
   private CsApiOrganisation organisation = null;
 
@@ -133,6 +135,16 @@ public class CsApiClientSideUser {
   /**
    **/
   @ApiModelProperty(value = "")
+  public Boolean getIsSubscribedToNewsletter() {
+    return isSubscribedToNewsletter;
+  }
+  public void setIsSubscribedToNewsletter(Boolean isSubscribedToNewsletter) {
+    this.isSubscribedToNewsletter = isSubscribedToNewsletter;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public CsApiOrganisation getOrganisation() {
     return organisation;
   }
@@ -159,6 +171,7 @@ public class CsApiClientSideUser {
         (this.roles == null ? clientSideUser.roles == null : this.roles.equals(clientSideUser.roles)) &&
         (this.alertSettings == null ? clientSideUser.alertSettings == null : this.alertSettings.equals(clientSideUser.alertSettings)) &&
         (this.setupWizardRequired == null ? clientSideUser.setupWizardRequired == null : this.setupWizardRequired.equals(clientSideUser.setupWizardRequired)) &&
+        (this.isSubscribedToNewsletter == null ? clientSideUser.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(clientSideUser.isSubscribedToNewsletter)) &&
         (this.organisation == null ? clientSideUser.organisation == null : this.organisation.equals(clientSideUser.organisation));
   }
 
@@ -174,6 +187,7 @@ public class CsApiClientSideUser {
     result = 31 * result + (this.roles == null ? 0: this.roles.hashCode());
     result = 31 * result + (this.alertSettings == null ? 0: this.alertSettings.hashCode());
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
+    result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.organisation == null ? 0: this.organisation.hashCode());
     return result;
   }
@@ -192,6 +206,7 @@ public class CsApiClientSideUser {
     sb.append("  roles: ").append(roles).append("\n");
     sb.append("  alertSettings: ").append(alertSettings).append("\n");
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");
+    sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  organisation: ").append(organisation).append("\n");
     sb.append("}\n");
     return sb.toString();
