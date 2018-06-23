@@ -25,7 +25,7 @@ public class CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment {
   @SerializedName("Data")
   private List<CsApiOrgReportTimesheetFileAttachment> data = null;
   public enum StatusEnum {
-     Succeeded,  FatalException,  GeneralError,  ValidationError,  UnAuthorized,  SessionExpired, 
+     0,  1,  2,  3,  4,  5, 
   };
   @SerializedName("Status")
   private StatusEnum status = null;
@@ -53,8 +53,9 @@ public class CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment {
   }
 
   /**
+   * 0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Succeeded, 1 = FatalException, 2 = GeneralError, 3 = ValidationError, 4 = UnAuthorized, 5 = SessionExpired")
   public StatusEnum getStatus() {
     return status;
   }

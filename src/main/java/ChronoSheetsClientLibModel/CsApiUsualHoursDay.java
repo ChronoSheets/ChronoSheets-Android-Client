@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 public class CsApiUsualHoursDay {
   
   public enum DayTypeEnum {
-     Monday,  Tuesday,  Wednesday,  Thursday,  Friday,  Saturday,  Sunday, 
+     0,  1,  2,  3,  4,  5,  6, 
   };
   @SerializedName("DayType")
   private DayTypeEnum dayType = null;
@@ -31,8 +31,9 @@ public class CsApiUsualHoursDay {
   private List<Integer> deleteUsualHours = null;
 
   /**
+   * 0 = Monday, 1 = Tuesday, 2 = Wednesday, 3 = Thursday, 4 = Friday, 5 = Saturday, 6 = Sunday
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Monday, 1 = Tuesday, 2 = Wednesday, 3 = Thursday, 4 = Friday, 5 = Saturday, 6 = Sunday")
   public DayTypeEnum getDayType() {
     return dayType;
   }

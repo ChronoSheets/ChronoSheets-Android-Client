@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **vehicleId** | **Integer** |  |  [optional]
 **userId** | **Integer** |  |  [optional]
 **orgId** | **Integer** |  |  [optional]
-**mobilePlatform** | [**MobilePlatformEnum**](#MobilePlatformEnum) |  |  [optional]
+**mobilePlatform** | [**MobilePlatformEnum**](#MobilePlatformEnum) | 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android |  [optional]
 **startDate** | [**Date**](Date.md) |  |  [optional]
 **endDate** | [**Date**](Date.md) |  |  [optional]
 **vehicleName** | **String** |  |  [optional]

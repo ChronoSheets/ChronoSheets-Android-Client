@@ -40,7 +40,7 @@ public class CsApiOrgReportTrip {
   @SerializedName("OrgId")
   private Integer orgId = null;
   public enum MobilePlatformEnum {
-     Unknown,  iOS,  Android, 
+     0,  1,  2, 
   };
   @SerializedName("MobilePlatform")
   private MobilePlatformEnum mobilePlatform = null;
@@ -162,8 +162,9 @@ public class CsApiOrgReportTrip {
   }
 
   /**
+   * 0 = Unknown, 1 = iOS, 2 = Android
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }

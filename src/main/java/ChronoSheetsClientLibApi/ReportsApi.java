@@ -921,14 +921,14 @@ public class ReportsApi {
    * @param startDate 
    * @param endDate 
    * @param userIds 
-   * @param sort 
-   * @param order 
+   * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters
+   * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending
    * @param skip 
    * @param take 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CsApiApiResponseForPaginatedListRawReportItem
   */
-  public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1030,9 +1030,9 @@ public class ReportsApi {
       /**
    * Get Timesheets Raw Data
    * 
-   * @param startDate    * @param endDate    * @param userIds    * @param sort    * @param order    * @param skip    * @param take    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate    * @param endDate    * @param userIds    * @param sort 0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters   * @param order 0 &#x3D; Ascending, 1 &#x3D; Descending   * @param skip    * @param take    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, Integer sort, Integer order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
