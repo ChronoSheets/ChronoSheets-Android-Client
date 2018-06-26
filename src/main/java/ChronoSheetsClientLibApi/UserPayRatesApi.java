@@ -23,9 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserHourlyRate;
-import ChronoSheetsClientLibModel.CsApiInsertUserHourlyRateRequest;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListUserHourlyRate;
+import ChronoSheetsClientLibModel.CSInsertUserHourlyRateRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -62,9 +62,9 @@ public class UserPayRatesApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 userPayRatesCreatePayRate (CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 userPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -111,7 +111,7 @@ public class UserPayRatesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -137,7 +137,7 @@ public class UserPayRatesApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userPayRatesCreatePayRate (CsApiInsertUserHourlyRateRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void userPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -188,7 +188,7 @@ public class UserPayRatesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -208,9 +208,9 @@ public class UserPayRatesApi {
   * 
    * @param userId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListUserHourlyRate
+   * @return CSApiResponseListUserHourlyRate
   */
-  public CsApiApiResponseListUserHourlyRate userPayRatesGetPayRates (Integer userId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListUserHourlyRate userPayRatesGetPayRates (Integer userId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -252,7 +252,7 @@ public class UserPayRatesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListUserHourlyRate) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListUserHourlyRate.class);
+         return (CSApiResponseListUserHourlyRate) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListUserHourlyRate.class);
       } else {
          return null;
       }
@@ -278,7 +278,7 @@ public class UserPayRatesApi {
    * 
    * @param userId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userPayRatesGetPayRates (Integer userId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListUserHourlyRate> responseListener, final Response.ErrorListener errorListener) {
+  public void userPayRatesGetPayRates (Integer userId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListUserHourlyRate> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'userId' is set
@@ -330,7 +330,7 @@ public class UserPayRatesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListUserHourlyRate) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListUserHourlyRate.class));
+              responseListener.onResponse((CSApiResponseListUserHourlyRate) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListUserHourlyRate.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

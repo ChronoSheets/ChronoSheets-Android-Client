@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="userPayRatesCreatePayRate"></a>
 # **userPayRatesCreatePayRate**
-> CsApiApiResponseInt32 userPayRatesCreatePayRate(request, xChronosheetsAuth)
+> CSApiResponseInt32 userPayRatesCreatePayRate(request, xChronosheetsAuth)
 
 Create a new pay rate for a particular user, archiving the previous pay rate
 
@@ -20,10 +20,10 @@ Create a new pay rate for a particular user, archiving the previous pay rate
 //import ChronoSheetsClientLibApi.UserPayRatesApi;
 
 UserPayRatesApi apiInstance = new UserPayRatesApi();
-CsApiInsertUserHourlyRateRequest request = new CsApiInsertUserHourlyRateRequest(); // CsApiInsertUserHourlyRateRequest | 
+CSInsertUserHourlyRateRequest request = new CSInsertUserHourlyRateRequest(); // CSInsertUserHourlyRateRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.userPayRatesCreatePayRate(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.userPayRatesCreatePayRate(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserPayRatesApi#userPayRatesCreatePayRate");
@@ -35,12 +35,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserHourlyRateRequest**](CsApiInsertUserHourlyRateRequest.md)|  |
+ **request** | [**CSInsertUserHourlyRateRequest**](CSInsertUserHourlyRateRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
 
 <a name="userPayRatesGetPayRates"></a>
 # **userPayRatesGetPayRates**
-> CsApiApiResponseListUserHourlyRate userPayRatesGetPayRates(userId, xChronosheetsAuth)
+> CSApiResponseListUserHourlyRate userPayRatesGetPayRates(userId, xChronosheetsAuth)
 
 Get a collection of pay rates for a particular user, specified by user id
 
@@ -66,7 +66,7 @@ UserPayRatesApi apiInstance = new UserPayRatesApi();
 Integer userId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListUserHourlyRate result = apiInstance.userPayRatesGetPayRates(userId, xChronosheetsAuth);
+    CSApiResponseListUserHourlyRate result = apiInstance.userPayRatesGetPayRates(userId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserPayRatesApi#userPayRatesGetPayRates");
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserHourlyRate**](CsApiApiResponseListUserHourlyRate.md)
+[**CSApiResponseListUserHourlyRate**](CSApiResponseListUserHourlyRate.md)
 
 ### Authorization
 

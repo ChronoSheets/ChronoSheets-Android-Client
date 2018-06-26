@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="usersCreateTimesheetUser"></a>
 # **usersCreateTimesheetUser**
-> CsApiApiResponseInsertUserResponse usersCreateTimesheetUser(request, xChronosheetsAuth)
+> CSApiResponseInsertUserResponse usersCreateTimesheetUser(request, xChronosheetsAuth)
 
 Create a user in your organisation
 
@@ -22,10 +22,10 @@ Create a user in your organisation
 //import ChronoSheetsClientLibApi.UsersApi;
 
 UsersApi apiInstance = new UsersApi();
-CsApiInsertUserRequest request = new CsApiInsertUserRequest(); // CsApiInsertUserRequest | 
+CSInsertUserRequest request = new CSInsertUserRequest(); // CSInsertUserRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInsertUserResponse result = apiInstance.usersCreateTimesheetUser(request, xChronosheetsAuth);
+    CSApiResponseInsertUserResponse result = apiInstance.usersCreateTimesheetUser(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#usersCreateTimesheetUser");
@@ -37,12 +37,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserRequest**](CsApiInsertUserRequest.md)|  |
+ **request** | [**CSInsertUserRequest**](CSInsertUserRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInsertUserResponse**](CsApiApiResponseInsertUserResponse.md)
+[**CSApiResponseInsertUserResponse**](CSApiResponseInsertUserResponse.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 
 <a name="usersGetTimesheetUser"></a>
 # **usersGetTimesheetUser**
-> CsApiApiResponseUserForManagement usersGetTimesheetUser(userId, xChronosheetsAuth)
+> CSApiResponseUserForManagement usersGetTimesheetUser(userId, xChronosheetsAuth)
 
 Get a particular user in your organisation
 
@@ -68,7 +68,7 @@ UsersApi apiInstance = new UsersApi();
 Integer userId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseUserForManagement result = apiInstance.usersGetTimesheetUser(userId, xChronosheetsAuth);
+    CSApiResponseUserForManagement result = apiInstance.usersGetTimesheetUser(userId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#usersGetTimesheetUser");
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserForManagement**](CsApiApiResponseUserForManagement.md)
+[**CSApiResponseUserForManagement**](CSApiResponseUserForManagement.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ No authorization required
 
 <a name="usersGetTimesheetUsers"></a>
 # **usersGetTimesheetUsers**
-> CsApiApiResponseListUserForManagement usersGetTimesheetUsers(xChronosheetsAuth)
+> CSApiResponseListUserForManagement usersGetTimesheetUsers(xChronosheetsAuth)
 
 Get users for your organisation
 
@@ -110,7 +110,7 @@ Get users for your organisation
 UsersApi apiInstance = new UsersApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListUserForManagement result = apiInstance.usersGetTimesheetUsers(xChronosheetsAuth);
+    CSApiResponseListUserForManagement result = apiInstance.usersGetTimesheetUsers(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#usersGetTimesheetUsers");
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserForManagement**](CsApiApiResponseListUserForManagement.md)
+[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ No authorization required
 
 <a name="usersUpdateTimesheetUser"></a>
 # **usersUpdateTimesheetUser**
-> CsApiApiResponseUpdateUserResponse usersUpdateTimesheetUser(request, xChronosheetsAuth)
+> CSApiResponseUpdateUserResponse usersUpdateTimesheetUser(request, xChronosheetsAuth)
 
 Update a user
 
@@ -149,10 +149,10 @@ Update a user
 //import ChronoSheetsClientLibApi.UsersApi;
 
 UsersApi apiInstance = new UsersApi();
-CsApiUpdateUserRequest request = new CsApiUpdateUserRequest(); // CsApiUpdateUserRequest | 
+CSUpdateUserRequest request = new CSUpdateUserRequest(); // CSUpdateUserRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseUpdateUserResponse result = apiInstance.usersUpdateTimesheetUser(request, xChronosheetsAuth);
+    CSApiResponseUpdateUserResponse result = apiInstance.usersUpdateTimesheetUser(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsersApi#usersUpdateTimesheetUser");
@@ -164,12 +164,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateUserRequest**](CsApiUpdateUserRequest.md)|  |
+ **request** | [**CSUpdateUserRequest**](CSUpdateUserRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseUpdateUserResponse**](CsApiApiResponseUpdateUserResponse.md)
+[**CSApiResponseUpdateUserResponse**](CSApiResponseUpdateUserResponse.md)
 
 ### Authorization
 

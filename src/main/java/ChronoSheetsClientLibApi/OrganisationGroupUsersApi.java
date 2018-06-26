@@ -23,9 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUserForManagement;
-import ChronoSheetsClientLibModel.CsApiSetOrganisationGroupUsersRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUserForManagement;
+import ChronoSheetsClientLibModel.CSSetOrganisationGroupUsersRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -62,9 +62,9 @@ public class OrganisationGroupUsersApi {
   * 
    * @param orgGroupId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListUserForManagement
+   * @return CSApiResponseListUserForManagement
   */
-  public CsApiApiResponseListUserForManagement organisationGroupUsersGetOrganisationGroupUsers (Integer orgGroupId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListUserForManagement organisationGroupUsersGetOrganisationGroupUsers (Integer orgGroupId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'orgGroupId' is set
     if (orgGroupId == null) {
@@ -106,7 +106,7 @@ public class OrganisationGroupUsersApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListUserForManagement) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListUserForManagement.class);
+         return (CSApiResponseListUserForManagement) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListUserForManagement.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class OrganisationGroupUsersApi {
    * 
    * @param orgGroupId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void organisationGroupUsersGetOrganisationGroupUsers (Integer orgGroupId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListUserForManagement> responseListener, final Response.ErrorListener errorListener) {
+  public void organisationGroupUsersGetOrganisationGroupUsers (Integer orgGroupId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListUserForManagement> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'orgGroupId' is set
@@ -184,7 +184,7 @@ public class OrganisationGroupUsersApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListUserForManagement) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListUserForManagement.class));
+              responseListener.onResponse((CSApiResponseListUserForManagement) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListUserForManagement.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -204,9 +204,9 @@ public class OrganisationGroupUsersApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean organisationGroupUsersUpdateOrganisationGroupUsers (CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean organisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -253,7 +253,7 @@ public class OrganisationGroupUsersApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -279,7 +279,7 @@ public class OrganisationGroupUsersApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void organisationGroupUsersUpdateOrganisationGroupUsers (CsApiSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void organisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -330,7 +330,7 @@ public class OrganisationGroupUsersApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

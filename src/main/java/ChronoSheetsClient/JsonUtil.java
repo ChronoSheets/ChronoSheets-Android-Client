@@ -57,392 +57,392 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CsApiAggregateJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiAggregateJobCode>>(){}.getType();
+    if ("CSAggregateJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSAggregateJobCode>>(){}.getType();
     }
     
-    if ("CsApiAggregateJobTask".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiAggregateJobTask>>(){}.getType();
+    if ("CSAggregateJobTask".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSAggregateJobTask>>(){}.getType();
     }
     
-    if ("CsApiApiResponseBoolean".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseBoolean>>(){}.getType();
+    if ("CSApiResponseBoolean".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseBoolean>>(){}.getType();
     }
     
-    if ("CsApiApiResponseClient".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseClient>>(){}.getType();
+    if ("CSApiResponseClient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseClient>>(){}.getType();
     }
     
-    if ("CsApiApiResponseCombinedReportsData".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseCombinedReportsData>>(){}.getType();
+    if ("CSApiResponseCombinedReportsData".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseCombinedReportsData>>(){}.getType();
     }
     
-    if ("CsApiApiResponseDoLoginResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseDoLoginResponse>>(){}.getType();
+    if ("CSApiResponseDoLoginResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseDoLoginResponse>>(){}.getType();
     }
     
-    if ("CsApiApiResponseFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseFleetVehicle>>(){}.getType();
+    if ("CSApiResponseFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseFleetVehicle>>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>>(){}.getType();
+    if ("CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseForPaginatedListOrgReportTrip>>(){}.getType();
+    if ("CSApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTrip>>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseForPaginatedListRawReportItem>>(){}.getType();
+    if ("CSApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListRawReportItem>>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseForPaginatedListTrip>>(){}.getType();
+    if ("CSApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListTrip>>(){}.getType();
     }
     
-    if ("CsApiApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseInsertUserResponse>>(){}.getType();
+    if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseInsertUserResponse>>(){}.getType();
     }
     
-    if ("CsApiApiResponseInt32".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseInt32>>(){}.getType();
+    if ("CSApiResponseInt32".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseInt32>>(){}.getType();
     }
     
-    if ("CsApiApiResponseJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseJobCode>>(){}.getType();
+    if ("CSApiResponseJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseJobCode>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListAggregateJobCode>>(){}.getType();
+    if ("CSApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListAggregateJobCode>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListClient".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListClient>>(){}.getType();
+    if ("CSApiResponseListClient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListClient>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListFleetVehicle>>(){}.getType();
+    if ("CSApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListFleetVehicle>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListInt32".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListInt32>>(){}.getType();
+    if ("CSApiResponseListInt32".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListInt32>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListJobCode>>(){}.getType();
+    if ("CSApiResponseListJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListJobCode>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListJobSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListJobSeriesReportItem>>(){}.getType();
+    if ("CSApiResponseListJobSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListJobSeriesReportItem>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListOrganisationGroup>>(){}.getType();
+    if ("CSApiResponseListOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListOrganisationGroup>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListProject".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListProject>>(){}.getType();
+    if ("CSApiResponseListProject".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListProject>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListProjectCostingReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListProjectCostingReportItem>>(){}.getType();
+    if ("CSApiResponseListProjectCostingReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListProjectCostingReportItem>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListTimesheet".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListTimesheet>>(){}.getType();
+    if ("CSApiResponseListTimesheet".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListTimesheet>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListTimesheetTask>>(){}.getType();
+    if ("CSApiResponseListTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListTimesheetTask>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListUserForManagement>>(){}.getType();
+    if ("CSApiResponseListUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListUserForManagement>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserHourlyRate".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListUserHourlyRate>>(){}.getType();
+    if ("CSApiResponseListUserHourlyRate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListUserHourlyRate>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserJobFavourite".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListUserJobFavourite>>(){}.getType();
+    if ("CSApiResponseListUserJobFavourite".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListUserJobFavourite>>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUsualHoursDay".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseListUsualHoursDay>>(){}.getType();
+    if ("CSApiResponseListUsualHoursDay".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListUsualHoursDay>>(){}.getType();
     }
     
-    if ("CsApiApiResponseOrganisation".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseOrganisation>>(){}.getType();
+    if ("CSApiResponseOrganisation".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseOrganisation>>(){}.getType();
     }
     
-    if ("CsApiApiResponseOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseOrganisationGroup>>(){}.getType();
+    if ("CSApiResponseOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseOrganisationGroup>>(){}.getType();
     }
     
-    if ("CsApiApiResponseProject".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseProject>>(){}.getType();
+    if ("CSApiResponseProject".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseProject>>(){}.getType();
     }
     
-    if ("CsApiApiResponseSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseSignupResponse>>(){}.getType();
+    if ("CSApiResponseSignupResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseSignupResponse>>(){}.getType();
     }
     
-    if ("CsApiApiResponseTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseTimesheetTask>>(){}.getType();
+    if ("CSApiResponseTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseTimesheetTask>>(){}.getType();
     }
     
-    if ("CsApiApiResponseTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseTrip>>(){}.getType();
+    if ("CSApiResponseTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseTrip>>(){}.getType();
     }
     
-    if ("CsApiApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseUpdateOrganisationResponse>>(){}.getType();
+    if ("CSApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseUpdateOrganisationResponse>>(){}.getType();
     }
     
-    if ("CsApiApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseUpdateUserResponse>>(){}.getType();
+    if ("CSApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseUpdateUserResponse>>(){}.getType();
     }
     
-    if ("CsApiApiResponseUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseUserForManagement>>(){}.getType();
+    if ("CSApiResponseUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseUserForManagement>>(){}.getType();
     }
     
-    if ("CsApiApiResponseUserProfile".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiApiResponseUserProfile>>(){}.getType();
+    if ("CSApiResponseUserProfile".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseUserProfile>>(){}.getType();
     }
     
-    if ("CsApiBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiBatchUpdateTimesheetRequest>>(){}.getType();
+    if ("CSBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSBatchUpdateTimesheetRequest>>(){}.getType();
     }
     
-    if ("CsApiClient".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiClient>>(){}.getType();
+    if ("CSClient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSClient>>(){}.getType();
     }
     
-    if ("CsApiClientSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiClientSeriesReportItem>>(){}.getType();
+    if ("CSClientSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSClientSeriesReportItem>>(){}.getType();
     }
     
-    if ("CsApiClientSideUser".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiClientSideUser>>(){}.getType();
+    if ("CSClientSideUser".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSClientSideUser>>(){}.getType();
     }
     
-    if ("CsApiClientTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiClientTotalsReportItem>>(){}.getType();
+    if ("CSClientTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSClientTotalsReportItem>>(){}.getType();
     }
     
-    if ("CsApiCombinedReportsData".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiCombinedReportsData>>(){}.getType();
+    if ("CSCombinedReportsData".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSCombinedReportsData>>(){}.getType();
     }
     
-    if ("CsApiCreateTripRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiCreateTripRequest>>(){}.getType();
+    if ("CSCreateTripRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSCreateTripRequest>>(){}.getType();
     }
     
-    if ("CsApiDoLoginRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiDoLoginRequest>>(){}.getType();
+    if ("CSDoLoginRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSDoLoginRequest>>(){}.getType();
     }
     
-    if ("CsApiDoLoginResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiDoLoginResponse>>(){}.getType();
+    if ("CSDoLoginResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSDoLoginResponse>>(){}.getType();
     }
     
-    if ("CsApiFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiFleetVehicle>>(){}.getType();
+    if ("CSFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSFleetVehicle>>(){}.getType();
     }
     
-    if ("CsApiInsertClientRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertClientRequest>>(){}.getType();
+    if ("CSInsertClientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertClientRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertJobCodeRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertJobCodeRequest>>(){}.getType();
+    if ("CSInsertJobCodeRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertJobCodeRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertOrganisationGroupRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertOrganisationGroupRequest>>(){}.getType();
+    if ("CSInsertOrganisationGroupRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertOrganisationGroupRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertProjectRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertProjectRequest>>(){}.getType();
+    if ("CSInsertProjectRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertProjectRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertTaskRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertTaskRequest>>(){}.getType();
+    if ("CSInsertTaskRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertTaskRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertUserHourlyRateRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertUserHourlyRateRequest>>(){}.getType();
+    if ("CSInsertUserHourlyRateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertUserHourlyRateRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertUserJobFavouriteRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertUserJobFavouriteRequest>>(){}.getType();
+    if ("CSInsertUserJobFavouriteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertUserJobFavouriteRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertUserRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertUserRequest>>(){}.getType();
+    if ("CSInsertUserRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertUserRequest>>(){}.getType();
     }
     
-    if ("CsApiInsertUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertUserResponse>>(){}.getType();
+    if ("CSInsertUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertUserResponse>>(){}.getType();
     }
     
-    if ("CsApiInsertVehicleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiInsertVehicleRequest>>(){}.getType();
+    if ("CSInsertVehicleRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSInsertVehicleRequest>>(){}.getType();
     }
     
-    if ("CsApiJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiJobCode>>(){}.getType();
+    if ("CSJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSJobCode>>(){}.getType();
     }
     
-    if ("CsApiJobSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiJobSeriesReportItem>>(){}.getType();
+    if ("CSJobSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSJobSeriesReportItem>>(){}.getType();
     }
     
-    if ("CsApiJobTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiJobTotalsReportItem>>(){}.getType();
+    if ("CSJobTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSJobTotalsReportItem>>(){}.getType();
     }
     
-    if ("CsApiOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiOrgReportTimesheetFileAttachment>>(){}.getType();
+    if ("CSOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrgReportTimesheetFileAttachment>>(){}.getType();
     }
     
-    if ("CsApiOrgReportTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiOrgReportTrip>>(){}.getType();
+    if ("CSOrgReportTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrgReportTrip>>(){}.getType();
     }
     
-    if ("CsApiOrganisation".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiOrganisation>>(){}.getType();
+    if ("CSOrganisation".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrganisation>>(){}.getType();
     }
     
-    if ("CsApiOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiOrganisationGroup>>(){}.getType();
+    if ("CSOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrganisationGroup>>(){}.getType();
     }
     
-    if ("CsApiProject".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiProject>>(){}.getType();
+    if ("CSProject".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSProject>>(){}.getType();
     }
     
-    if ("CsApiProjectCostingReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiProjectCostingReportItem>>(){}.getType();
+    if ("CSProjectCostingReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSProjectCostingReportItem>>(){}.getType();
     }
     
-    if ("CsApiProjectSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiProjectSeriesReportItem>>(){}.getType();
+    if ("CSProjectSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSProjectSeriesReportItem>>(){}.getType();
     }
     
-    if ("CsApiProjectTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiProjectTotalsReportItem>>(){}.getType();
+    if ("CSProjectTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSProjectTotalsReportItem>>(){}.getType();
     }
     
-    if ("CsApiRawReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiRawReportItem>>(){}.getType();
+    if ("CSRawReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSRawReportItem>>(){}.getType();
     }
     
-    if ("CsApiSaveClientRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSaveClientRequest>>(){}.getType();
+    if ("CSSaveClientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSaveClientRequest>>(){}.getType();
     }
     
-    if ("CsApiSaveOrganisationGroupRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSaveOrganisationGroupRequest>>(){}.getType();
+    if ("CSSaveOrganisationGroupRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSaveOrganisationGroupRequest>>(){}.getType();
     }
     
-    if ("CsApiSaveVehicleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSaveVehicleRequest>>(){}.getType();
+    if ("CSSaveVehicleRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSaveVehicleRequest>>(){}.getType();
     }
     
-    if ("CsApiSetOrganisationGroupUsersRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSetOrganisationGroupUsersRequest>>(){}.getType();
+    if ("CSSetOrganisationGroupUsersRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSetOrganisationGroupUsersRequest>>(){}.getType();
     }
     
-    if ("CsApiSetUsualHoursRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSetUsualHoursRequest>>(){}.getType();
+    if ("CSSetUsualHoursRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSetUsualHoursRequest>>(){}.getType();
     }
     
-    if ("CsApiSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiSignupResponse>>(){}.getType();
+    if ("CSSignupResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSSignupResponse>>(){}.getType();
     }
     
-    if ("CsApiTaskSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTaskSeriesReportItem>>(){}.getType();
+    if ("CSTaskSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTaskSeriesReportItem>>(){}.getType();
     }
     
-    if ("CsApiTaskTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTaskTotalsReportItem>>(){}.getType();
+    if ("CSTaskTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTaskTotalsReportItem>>(){}.getType();
     }
     
-    if ("CsApiTimeSlot".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTimeSlot>>(){}.getType();
+    if ("CSTimeSlot".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTimeSlot>>(){}.getType();
     }
     
-    if ("CsApiTimesheet".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTimesheet>>(){}.getType();
+    if ("CSTimesheet".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTimesheet>>(){}.getType();
     }
     
-    if ("CsApiTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTimesheetTask>>(){}.getType();
+    if ("CSTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTimesheetTask>>(){}.getType();
     }
     
-    if ("CsApiTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTrip>>(){}.getType();
+    if ("CSTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTrip>>(){}.getType();
     }
     
-    if ("CsApiTripCoordinate".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiTripCoordinate>>(){}.getType();
+    if ("CSTripCoordinate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTripCoordinate>>(){}.getType();
     }
     
-    if ("CsApiUpdateJobCodeRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateJobCodeRequest>>(){}.getType();
+    if ("CSUpdateJobCodeRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateJobCodeRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateMyProfileRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateMyProfileRequest>>(){}.getType();
+    if ("CSUpdateMyProfileRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateMyProfileRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateOrganisationRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateOrganisationRequest>>(){}.getType();
+    if ("CSUpdateOrganisationRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateOrganisationRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateOrganisationResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateOrganisationResponse>>(){}.getType();
+    if ("CSUpdateOrganisationResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateOrganisationResponse>>(){}.getType();
     }
     
-    if ("CsApiUpdateProjectRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateProjectRequest>>(){}.getType();
+    if ("CSUpdateProjectRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateProjectRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateTaskRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateTaskRequest>>(){}.getType();
+    if ("CSUpdateTaskRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateTaskRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateUserRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateUserRequest>>(){}.getType();
+    if ("CSUpdateUserRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateUserRequest>>(){}.getType();
     }
     
-    if ("CsApiUpdateUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUpdateUserResponse>>(){}.getType();
+    if ("CSUpdateUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateUserResponse>>(){}.getType();
     }
     
-    if ("CsApiUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUserForManagement>>(){}.getType();
+    if ("CSUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUserForManagement>>(){}.getType();
     }
     
-    if ("CsApiUserHourlyRate".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUserHourlyRate>>(){}.getType();
+    if ("CSUserHourlyRate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUserHourlyRate>>(){}.getType();
     }
     
-    if ("CsApiUserJobFavourite".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUserJobFavourite>>(){}.getType();
+    if ("CSUserJobFavourite".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUserJobFavourite>>(){}.getType();
     }
     
-    if ("CsApiUserProfile".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUserProfile>>(){}.getType();
+    if ("CSUserProfile".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUserProfile>>(){}.getType();
     }
     
-    if ("CsApiUsualHoursDay".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CsApiUsualHoursDay>>(){}.getType();
+    if ("CSUsualHoursDay".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUsualHoursDay>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -451,392 +451,392 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CsApiAggregateJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiAggregateJobCode>(){}.getType();
+    if ("CSAggregateJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<CSAggregateJobCode>(){}.getType();
     }
     
-    if ("CsApiAggregateJobTask".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiAggregateJobTask>(){}.getType();
+    if ("CSAggregateJobTask".equalsIgnoreCase(className)) {
+      return new TypeToken<CSAggregateJobTask>(){}.getType();
     }
     
-    if ("CsApiApiResponseBoolean".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseBoolean>(){}.getType();
+    if ("CSApiResponseBoolean".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseBoolean>(){}.getType();
     }
     
-    if ("CsApiApiResponseClient".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseClient>(){}.getType();
+    if ("CSApiResponseClient".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseClient>(){}.getType();
     }
     
-    if ("CsApiApiResponseCombinedReportsData".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseCombinedReportsData>(){}.getType();
+    if ("CSApiResponseCombinedReportsData".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseCombinedReportsData>(){}.getType();
     }
     
-    if ("CsApiApiResponseDoLoginResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseDoLoginResponse>(){}.getType();
+    if ("CSApiResponseDoLoginResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseDoLoginResponse>(){}.getType();
     }
     
-    if ("CsApiApiResponseFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseFleetVehicle>(){}.getType();
+    if ("CSApiResponseFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseFleetVehicle>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
+    if ("CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseForPaginatedListOrgReportTrip>(){}.getType();
+    if ("CSApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseForPaginatedListRawReportItem>(){}.getType();
+    if ("CSApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
     }
     
-    if ("CsApiApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseForPaginatedListTrip>(){}.getType();
+    if ("CSApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
     }
     
-    if ("CsApiApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseInsertUserResponse>(){}.getType();
+    if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseInsertUserResponse>(){}.getType();
     }
     
-    if ("CsApiApiResponseInt32".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseInt32>(){}.getType();
+    if ("CSApiResponseInt32".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseInt32>(){}.getType();
     }
     
-    if ("CsApiApiResponseJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseJobCode>(){}.getType();
+    if ("CSApiResponseJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseJobCode>(){}.getType();
     }
     
-    if ("CsApiApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListAggregateJobCode>(){}.getType();
+    if ("CSApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListAggregateJobCode>(){}.getType();
     }
     
-    if ("CsApiApiResponseListClient".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListClient>(){}.getType();
+    if ("CSApiResponseListClient".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListClient>(){}.getType();
     }
     
-    if ("CsApiApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListFleetVehicle>(){}.getType();
+    if ("CSApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListFleetVehicle>(){}.getType();
     }
     
-    if ("CsApiApiResponseListInt32".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListInt32>(){}.getType();
+    if ("CSApiResponseListInt32".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListInt32>(){}.getType();
     }
     
-    if ("CsApiApiResponseListJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListJobCode>(){}.getType();
+    if ("CSApiResponseListJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListJobCode>(){}.getType();
     }
     
-    if ("CsApiApiResponseListJobSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListJobSeriesReportItem>(){}.getType();
+    if ("CSApiResponseListJobSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListJobSeriesReportItem>(){}.getType();
     }
     
-    if ("CsApiApiResponseListOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListOrganisationGroup>(){}.getType();
+    if ("CSApiResponseListOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListOrganisationGroup>(){}.getType();
     }
     
-    if ("CsApiApiResponseListProject".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListProject>(){}.getType();
+    if ("CSApiResponseListProject".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListProject>(){}.getType();
     }
     
-    if ("CsApiApiResponseListProjectCostingReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListProjectCostingReportItem>(){}.getType();
+    if ("CSApiResponseListProjectCostingReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListProjectCostingReportItem>(){}.getType();
     }
     
-    if ("CsApiApiResponseListTimesheet".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListTimesheet>(){}.getType();
+    if ("CSApiResponseListTimesheet".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListTimesheet>(){}.getType();
     }
     
-    if ("CsApiApiResponseListTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListTimesheetTask>(){}.getType();
+    if ("CSApiResponseListTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListTimesheetTask>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListUserForManagement>(){}.getType();
+    if ("CSApiResponseListUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListUserForManagement>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserHourlyRate".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListUserHourlyRate>(){}.getType();
+    if ("CSApiResponseListUserHourlyRate".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListUserHourlyRate>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUserJobFavourite".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListUserJobFavourite>(){}.getType();
+    if ("CSApiResponseListUserJobFavourite".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListUserJobFavourite>(){}.getType();
     }
     
-    if ("CsApiApiResponseListUsualHoursDay".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseListUsualHoursDay>(){}.getType();
+    if ("CSApiResponseListUsualHoursDay".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListUsualHoursDay>(){}.getType();
     }
     
-    if ("CsApiApiResponseOrganisation".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseOrganisation>(){}.getType();
+    if ("CSApiResponseOrganisation".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseOrganisation>(){}.getType();
     }
     
-    if ("CsApiApiResponseOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseOrganisationGroup>(){}.getType();
+    if ("CSApiResponseOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseOrganisationGroup>(){}.getType();
     }
     
-    if ("CsApiApiResponseProject".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseProject>(){}.getType();
+    if ("CSApiResponseProject".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseProject>(){}.getType();
     }
     
-    if ("CsApiApiResponseSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseSignupResponse>(){}.getType();
+    if ("CSApiResponseSignupResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseSignupResponse>(){}.getType();
     }
     
-    if ("CsApiApiResponseTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseTimesheetTask>(){}.getType();
+    if ("CSApiResponseTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseTimesheetTask>(){}.getType();
     }
     
-    if ("CsApiApiResponseTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseTrip>(){}.getType();
+    if ("CSApiResponseTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseTrip>(){}.getType();
     }
     
-    if ("CsApiApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseUpdateOrganisationResponse>(){}.getType();
+    if ("CSApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseUpdateOrganisationResponse>(){}.getType();
     }
     
-    if ("CsApiApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseUpdateUserResponse>(){}.getType();
+    if ("CSApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseUpdateUserResponse>(){}.getType();
     }
     
-    if ("CsApiApiResponseUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseUserForManagement>(){}.getType();
+    if ("CSApiResponseUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseUserForManagement>(){}.getType();
     }
     
-    if ("CsApiApiResponseUserProfile".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiApiResponseUserProfile>(){}.getType();
+    if ("CSApiResponseUserProfile".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseUserProfile>(){}.getType();
     }
     
-    if ("CsApiBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiBatchUpdateTimesheetRequest>(){}.getType();
+    if ("CSBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSBatchUpdateTimesheetRequest>(){}.getType();
     }
     
-    if ("CsApiClient".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiClient>(){}.getType();
+    if ("CSClient".equalsIgnoreCase(className)) {
+      return new TypeToken<CSClient>(){}.getType();
     }
     
-    if ("CsApiClientSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiClientSeriesReportItem>(){}.getType();
+    if ("CSClientSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSClientSeriesReportItem>(){}.getType();
     }
     
-    if ("CsApiClientSideUser".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiClientSideUser>(){}.getType();
+    if ("CSClientSideUser".equalsIgnoreCase(className)) {
+      return new TypeToken<CSClientSideUser>(){}.getType();
     }
     
-    if ("CsApiClientTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiClientTotalsReportItem>(){}.getType();
+    if ("CSClientTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSClientTotalsReportItem>(){}.getType();
     }
     
-    if ("CsApiCombinedReportsData".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiCombinedReportsData>(){}.getType();
+    if ("CSCombinedReportsData".equalsIgnoreCase(className)) {
+      return new TypeToken<CSCombinedReportsData>(){}.getType();
     }
     
-    if ("CsApiCreateTripRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiCreateTripRequest>(){}.getType();
+    if ("CSCreateTripRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSCreateTripRequest>(){}.getType();
     }
     
-    if ("CsApiDoLoginRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiDoLoginRequest>(){}.getType();
+    if ("CSDoLoginRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSDoLoginRequest>(){}.getType();
     }
     
-    if ("CsApiDoLoginResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiDoLoginResponse>(){}.getType();
+    if ("CSDoLoginResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSDoLoginResponse>(){}.getType();
     }
     
-    if ("CsApiFleetVehicle".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiFleetVehicle>(){}.getType();
+    if ("CSFleetVehicle".equalsIgnoreCase(className)) {
+      return new TypeToken<CSFleetVehicle>(){}.getType();
     }
     
-    if ("CsApiInsertClientRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertClientRequest>(){}.getType();
+    if ("CSInsertClientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertClientRequest>(){}.getType();
     }
     
-    if ("CsApiInsertJobCodeRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertJobCodeRequest>(){}.getType();
+    if ("CSInsertJobCodeRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertJobCodeRequest>(){}.getType();
     }
     
-    if ("CsApiInsertOrganisationGroupRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertOrganisationGroupRequest>(){}.getType();
+    if ("CSInsertOrganisationGroupRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertOrganisationGroupRequest>(){}.getType();
     }
     
-    if ("CsApiInsertProjectRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertProjectRequest>(){}.getType();
+    if ("CSInsertProjectRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertProjectRequest>(){}.getType();
     }
     
-    if ("CsApiInsertTaskRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertTaskRequest>(){}.getType();
+    if ("CSInsertTaskRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertTaskRequest>(){}.getType();
     }
     
-    if ("CsApiInsertUserHourlyRateRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertUserHourlyRateRequest>(){}.getType();
+    if ("CSInsertUserHourlyRateRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertUserHourlyRateRequest>(){}.getType();
     }
     
-    if ("CsApiInsertUserJobFavouriteRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertUserJobFavouriteRequest>(){}.getType();
+    if ("CSInsertUserJobFavouriteRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertUserJobFavouriteRequest>(){}.getType();
     }
     
-    if ("CsApiInsertUserRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertUserRequest>(){}.getType();
+    if ("CSInsertUserRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertUserRequest>(){}.getType();
     }
     
-    if ("CsApiInsertUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertUserResponse>(){}.getType();
+    if ("CSInsertUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertUserResponse>(){}.getType();
     }
     
-    if ("CsApiInsertVehicleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiInsertVehicleRequest>(){}.getType();
+    if ("CSInsertVehicleRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSInsertVehicleRequest>(){}.getType();
     }
     
-    if ("CsApiJobCode".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiJobCode>(){}.getType();
+    if ("CSJobCode".equalsIgnoreCase(className)) {
+      return new TypeToken<CSJobCode>(){}.getType();
     }
     
-    if ("CsApiJobSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiJobSeriesReportItem>(){}.getType();
+    if ("CSJobSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSJobSeriesReportItem>(){}.getType();
     }
     
-    if ("CsApiJobTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiJobTotalsReportItem>(){}.getType();
+    if ("CSJobTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSJobTotalsReportItem>(){}.getType();
     }
     
-    if ("CsApiOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiOrgReportTimesheetFileAttachment>(){}.getType();
+    if ("CSOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrgReportTimesheetFileAttachment>(){}.getType();
     }
     
-    if ("CsApiOrgReportTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiOrgReportTrip>(){}.getType();
+    if ("CSOrgReportTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrgReportTrip>(){}.getType();
     }
     
-    if ("CsApiOrganisation".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiOrganisation>(){}.getType();
+    if ("CSOrganisation".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrganisation>(){}.getType();
     }
     
-    if ("CsApiOrganisationGroup".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiOrganisationGroup>(){}.getType();
+    if ("CSOrganisationGroup".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrganisationGroup>(){}.getType();
     }
     
-    if ("CsApiProject".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiProject>(){}.getType();
+    if ("CSProject".equalsIgnoreCase(className)) {
+      return new TypeToken<CSProject>(){}.getType();
     }
     
-    if ("CsApiProjectCostingReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiProjectCostingReportItem>(){}.getType();
+    if ("CSProjectCostingReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSProjectCostingReportItem>(){}.getType();
     }
     
-    if ("CsApiProjectSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiProjectSeriesReportItem>(){}.getType();
+    if ("CSProjectSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSProjectSeriesReportItem>(){}.getType();
     }
     
-    if ("CsApiProjectTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiProjectTotalsReportItem>(){}.getType();
+    if ("CSProjectTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSProjectTotalsReportItem>(){}.getType();
     }
     
-    if ("CsApiRawReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiRawReportItem>(){}.getType();
+    if ("CSRawReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSRawReportItem>(){}.getType();
     }
     
-    if ("CsApiSaveClientRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSaveClientRequest>(){}.getType();
+    if ("CSSaveClientRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSaveClientRequest>(){}.getType();
     }
     
-    if ("CsApiSaveOrganisationGroupRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSaveOrganisationGroupRequest>(){}.getType();
+    if ("CSSaveOrganisationGroupRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSaveOrganisationGroupRequest>(){}.getType();
     }
     
-    if ("CsApiSaveVehicleRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSaveVehicleRequest>(){}.getType();
+    if ("CSSaveVehicleRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSaveVehicleRequest>(){}.getType();
     }
     
-    if ("CsApiSetOrganisationGroupUsersRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSetOrganisationGroupUsersRequest>(){}.getType();
+    if ("CSSetOrganisationGroupUsersRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSetOrganisationGroupUsersRequest>(){}.getType();
     }
     
-    if ("CsApiSetUsualHoursRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSetUsualHoursRequest>(){}.getType();
+    if ("CSSetUsualHoursRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSetUsualHoursRequest>(){}.getType();
     }
     
-    if ("CsApiSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiSignupResponse>(){}.getType();
+    if ("CSSignupResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSSignupResponse>(){}.getType();
     }
     
-    if ("CsApiTaskSeriesReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTaskSeriesReportItem>(){}.getType();
+    if ("CSTaskSeriesReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTaskSeriesReportItem>(){}.getType();
     }
     
-    if ("CsApiTaskTotalsReportItem".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTaskTotalsReportItem>(){}.getType();
+    if ("CSTaskTotalsReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTaskTotalsReportItem>(){}.getType();
     }
     
-    if ("CsApiTimeSlot".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTimeSlot>(){}.getType();
+    if ("CSTimeSlot".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTimeSlot>(){}.getType();
     }
     
-    if ("CsApiTimesheet".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTimesheet>(){}.getType();
+    if ("CSTimesheet".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTimesheet>(){}.getType();
     }
     
-    if ("CsApiTimesheetTask".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTimesheetTask>(){}.getType();
+    if ("CSTimesheetTask".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTimesheetTask>(){}.getType();
     }
     
-    if ("CsApiTrip".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTrip>(){}.getType();
+    if ("CSTrip".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTrip>(){}.getType();
     }
     
-    if ("CsApiTripCoordinate".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiTripCoordinate>(){}.getType();
+    if ("CSTripCoordinate".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTripCoordinate>(){}.getType();
     }
     
-    if ("CsApiUpdateJobCodeRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateJobCodeRequest>(){}.getType();
+    if ("CSUpdateJobCodeRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateJobCodeRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateMyProfileRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateMyProfileRequest>(){}.getType();
+    if ("CSUpdateMyProfileRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateMyProfileRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateOrganisationRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateOrganisationRequest>(){}.getType();
+    if ("CSUpdateOrganisationRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateOrganisationRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateOrganisationResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateOrganisationResponse>(){}.getType();
+    if ("CSUpdateOrganisationResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateOrganisationResponse>(){}.getType();
     }
     
-    if ("CsApiUpdateProjectRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateProjectRequest>(){}.getType();
+    if ("CSUpdateProjectRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateProjectRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateTaskRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateTaskRequest>(){}.getType();
+    if ("CSUpdateTaskRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateTaskRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateUserRequest".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateUserRequest>(){}.getType();
+    if ("CSUpdateUserRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateUserRequest>(){}.getType();
     }
     
-    if ("CsApiUpdateUserResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUpdateUserResponse>(){}.getType();
+    if ("CSUpdateUserResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateUserResponse>(){}.getType();
     }
     
-    if ("CsApiUserForManagement".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUserForManagement>(){}.getType();
+    if ("CSUserForManagement".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUserForManagement>(){}.getType();
     }
     
-    if ("CsApiUserHourlyRate".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUserHourlyRate>(){}.getType();
+    if ("CSUserHourlyRate".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUserHourlyRate>(){}.getType();
     }
     
-    if ("CsApiUserJobFavourite".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUserJobFavourite>(){}.getType();
+    if ("CSUserJobFavourite".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUserJobFavourite>(){}.getType();
     }
     
-    if ("CsApiUserProfile".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUserProfile>(){}.getType();
+    if ("CSUserProfile".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUserProfile>(){}.getType();
     }
     
-    if ("CsApiUsualHoursDay".equalsIgnoreCase(className)) {
-      return new TypeToken<CsApiUsualHoursDay>(){}.getType();
+    if ("CSUsualHoursDay".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUsualHoursDay>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

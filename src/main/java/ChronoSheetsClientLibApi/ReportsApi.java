@@ -23,13 +23,13 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseCombinedReportsData;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListOrgReportTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListRawReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobSeriesReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProjectCostingReportItem;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
+import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -69,9 +69,9 @@ public class ReportsApi {
    * @param endDate 
    * @param userIds 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseCombinedReportsData
+   * @return CSApiResponseCombinedReportsData
   */
-  public CsApiApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -125,7 +125,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseCombinedReportsData.class);
+         return (CSApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseCombinedReportsData.class);
       } else {
          return null;
       }
@@ -151,7 +151,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -215,7 +215,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseCombinedReportsData.class));
+              responseListener.onResponse((CSApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseCombinedReportsData.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -236,9 +236,9 @@ public class ReportsApi {
    * @param startDate 
    * @param endDate 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseCombinedReportsData
+   * @return CSApiResponseCombinedReportsData
   */
-  public CsApiApiResponseCombinedReportsData reportsGetAllChartsDataUser (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseCombinedReportsData reportsGetAllChartsDataUser (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -286,7 +286,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseCombinedReportsData.class);
+         return (CSApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseCombinedReportsData.class);
       } else {
          return null;
       }
@@ -312,7 +312,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetAllChartsDataUser (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetAllChartsDataUser (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -370,7 +370,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseCombinedReportsData.class));
+              responseListener.onResponse((CSApiResponseCombinedReportsData) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseCombinedReportsData.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -390,9 +390,9 @@ public class ReportsApi {
   * 
    * @param tripId The ID of the trip
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseTrip
+   * @return CSApiResponseTrip
   */
-  public CsApiApiResponseTrip reportsGetOrgTripById (Integer tripId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseTrip reportsGetOrgTripById (Integer tripId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'tripId' is set
     if (tripId == null) {
@@ -434,7 +434,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseTrip) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseTrip.class);
+         return (CSApiResponseTrip) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseTrip.class);
       } else {
          return null;
       }
@@ -460,7 +460,7 @@ public class ReportsApi {
    * 
    * @param tripId The ID of the trip   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetOrgTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrgTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'tripId' is set
@@ -512,7 +512,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseTrip) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseTrip.class));
+              responseListener.onResponse((CSApiResponseTrip) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseTrip.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -536,9 +536,9 @@ public class ReportsApi {
    * @param take 
    * @param userIds 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment
+   * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
   */
-  public CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -604,7 +604,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment.class);
+         return (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.class);
       } else {
          return null;
       }
@@ -630,7 +630,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param skip    * @param take    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -706,7 +706,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment.class));
+              responseListener.onResponse((CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -730,9 +730,9 @@ public class ReportsApi {
    * @param take 
    * @param userIds 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseForPaginatedListOrgReportTrip
+   * @return CSApiResponseForPaginatedListOrgReportTrip
   */
-  public CsApiApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -798,7 +798,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseForPaginatedListOrgReportTrip) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseForPaginatedListOrgReportTrip.class);
+         return (CSApiResponseForPaginatedListOrgReportTrip) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListOrgReportTrip.class);
       } else {
          return null;
       }
@@ -824,7 +824,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param skip    * @param take    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListOrgReportTrip> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -900,7 +900,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseForPaginatedListOrgReportTrip) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseForPaginatedListOrgReportTrip.class));
+              responseListener.onResponse((CSApiResponseForPaginatedListOrgReportTrip) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListOrgReportTrip.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -926,9 +926,9 @@ public class ReportsApi {
    * @param skip 
    * @param take 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseForPaginatedListRawReportItem
+   * @return CSApiResponseForPaginatedListRawReportItem
   */
-  public CsApiApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1006,7 +1006,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseForPaginatedListRawReportItem) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseForPaginatedListRawReportItem.class);
+         return (CSApiResponseForPaginatedListRawReportItem) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListRawReportItem.class);
       } else {
          return null;
       }
@@ -1032,7 +1032,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param userIds    * @param sort    * @param order    * @param skip    * @param take    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1120,7 +1120,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseForPaginatedListRawReportItem) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseForPaginatedListRawReportItem.class));
+              responseListener.onResponse((CSApiResponseForPaginatedListRawReportItem) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListRawReportItem.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1142,9 +1142,9 @@ public class ReportsApi {
    * @param endDate 
    * @param userIds 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListProjectCostingReportItem
+   * @return CSApiResponseListProjectCostingReportItem
   */
-  public CsApiApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1198,7 +1198,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListProjectCostingReportItem) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListProjectCostingReportItem.class);
+         return (CSApiResponseListProjectCostingReportItem) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListProjectCostingReportItem.class);
       } else {
          return null;
       }
@@ -1224,7 +1224,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListProjectCostingReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseListProjectCostingReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1288,7 +1288,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListProjectCostingReportItem) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListProjectCostingReportItem.class));
+              responseListener.onResponse((CSApiResponseListProjectCostingReportItem) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListProjectCostingReportItem.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -1309,9 +1309,9 @@ public class ReportsApi {
    * @param startDate 
    * @param endDate 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListJobSeriesReportItem
+   * @return CSApiResponseListJobSeriesReportItem
   */
-  public CsApiApiResponseListJobSeriesReportItem reportsUserJobsOverTime (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListJobSeriesReportItem reportsUserJobsOverTime (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1359,7 +1359,7 @@ public class ReportsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListJobSeriesReportItem) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListJobSeriesReportItem.class);
+         return (CSApiResponseListJobSeriesReportItem) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListJobSeriesReportItem.class);
       } else {
          return null;
       }
@@ -1385,7 +1385,7 @@ public class ReportsApi {
    * 
    * @param startDate    * @param endDate    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void reportsUserJobsOverTime (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListJobSeriesReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsUserJobsOverTime (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CSApiResponseListJobSeriesReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1443,7 +1443,7 @@ public class ReportsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListJobSeriesReportItem) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListJobSeriesReportItem.class));
+              responseListener.onResponse((CSApiResponseListJobSeriesReportItem) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListJobSeriesReportItem.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

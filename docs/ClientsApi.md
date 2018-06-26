@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="clientsCreateClient"></a>
 # **clientsCreateClient**
-> CsApiApiResponseInt32 clientsCreateClient(request, xChronosheetsAuth)
+> CSApiResponseInt32 clientsCreateClient(request, xChronosheetsAuth)
 
 Create a client
 
@@ -22,10 +22,10 @@ Create a client
 //import ChronoSheetsClientLibApi.ClientsApi;
 
 ClientsApi apiInstance = new ClientsApi();
-CsApiInsertClientRequest request = new CsApiInsertClientRequest(); // CsApiInsertClientRequest | 
+CSInsertClientRequest request = new CSInsertClientRequest(); // CSInsertClientRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.clientsCreateClient(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.clientsCreateClient(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClientsApi#clientsCreateClient");
@@ -37,12 +37,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertClientRequest**](CsApiInsertClientRequest.md)|  |
+ **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 
 <a name="clientsGetClient"></a>
 # **clientsGetClient**
-> CsApiApiResponseClient clientsGetClient(clientId, xChronosheetsAuth)
+> CSApiResponseClient clientsGetClient(clientId, xChronosheetsAuth)
 
 Get a particular client
 
@@ -68,7 +68,7 @@ ClientsApi apiInstance = new ClientsApi();
 Integer clientId = 56; // Integer | The ID of the client you want to get
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseClient result = apiInstance.clientsGetClient(clientId, xChronosheetsAuth);
+    CSApiResponseClient result = apiInstance.clientsGetClient(clientId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClientsApi#clientsGetClient");
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseClient**](CsApiApiResponseClient.md)
+[**CSApiResponseClient**](CSApiResponseClient.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ No authorization required
 
 <a name="clientsGetClients"></a>
 # **clientsGetClients**
-> CsApiApiResponseListClient clientsGetClients(xChronosheetsAuth)
+> CSApiResponseListClient clientsGetClients(xChronosheetsAuth)
 
 Get a collection of clients that are under your organisation
 
@@ -110,7 +110,7 @@ Get a collection of clients that are under your organisation
 ClientsApi apiInstance = new ClientsApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListClient result = apiInstance.clientsGetClients(xChronosheetsAuth);
+    CSApiResponseListClient result = apiInstance.clientsGetClients(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClientsApi#clientsGetClients");
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListClient**](CsApiApiResponseListClient.md)
+[**CSApiResponseListClient**](CSApiResponseListClient.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ No authorization required
 
 <a name="clientsUpdateClient"></a>
 # **clientsUpdateClient**
-> CsApiApiResponseBoolean clientsUpdateClient(request, xChronosheetsAuth)
+> CSApiResponseBoolean clientsUpdateClient(request, xChronosheetsAuth)
 
 Update a client
 
@@ -149,10 +149,10 @@ Update a client
 //import ChronoSheetsClientLibApi.ClientsApi;
 
 ClientsApi apiInstance = new ClientsApi();
-CsApiSaveClientRequest request = new CsApiSaveClientRequest(); // CsApiSaveClientRequest | 
+CSSaveClientRequest request = new CSSaveClientRequest(); // CSSaveClientRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.clientsUpdateClient(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.clientsUpdateClient(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ClientsApi#clientsUpdateClient");
@@ -164,12 +164,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveClientRequest**](CsApiSaveClientRequest.md)|  |
+ **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

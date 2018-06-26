@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="userJobFavouritesCreateJobFavourite"></a>
 # **userJobFavouritesCreateJobFavourite**
-> CsApiApiResponseInt32 userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth)
+> CSApiResponseInt32 userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth)
 
 Create a job favourite
 
@@ -21,10 +21,10 @@ Create a job favourite
 //import ChronoSheetsClientLibApi.UserJobFavouritesApi;
 
 UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
-CsApiInsertUserJobFavouriteRequest request = new CsApiInsertUserJobFavouriteRequest(); // CsApiInsertUserJobFavouriteRequest | 
+CSInsertUserJobFavouriteRequest request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesCreateJobFavourite");
@@ -36,12 +36,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserJobFavouriteRequest**](CsApiInsertUserJobFavouriteRequest.md)|  |
+ **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="userJobFavouritesDeleteJobFavourite"></a>
 # **userJobFavouritesDeleteJobFavourite**
-> CsApiApiResponseBoolean userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth)
+> CSApiResponseBoolean userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth)
 
 Delete a job favourite
 
@@ -67,7 +67,7 @@ UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
 Integer jobId = 56; // Integer | The ID of the Job
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesDeleteJobFavourite");
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ No authorization required
 
 <a name="userJobFavouritesGetJobFavourites"></a>
 # **userJobFavouritesGetJobFavourites**
-> CsApiApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(xChronosheetsAuth)
+> CSApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(xChronosheetsAuth)
 
 Get your job favourites
 
@@ -109,7 +109,7 @@ Get your job favourites
 UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListUserJobFavourite result = apiInstance.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
+    CSApiResponseListUserJobFavourite result = apiInstance.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesGetJobFavourites");
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserJobFavourite**](CsApiApiResponseListUserJobFavourite.md)
+[**CSApiResponseListUserJobFavourite**](CSApiResponseListUserJobFavourite.md)
 
 ### Authorization
 

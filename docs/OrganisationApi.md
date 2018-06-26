@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="organisationGetOrganisation"></a>
 # **organisationGetOrganisation**
-> CsApiApiResponseOrganisation organisationGetOrganisation(xChronosheetsAuth)
+> CSApiResponseOrganisation organisationGetOrganisation(xChronosheetsAuth)
 
 Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
 
@@ -22,7 +22,7 @@ Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
 OrganisationApi apiInstance = new OrganisationApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseOrganisation result = apiInstance.organisationGetOrganisation(xChronosheetsAuth);
+    CSApiResponseOrganisation result = apiInstance.organisationGetOrganisation(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationApi#organisationGetOrganisation");
@@ -38,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisation**](CsApiApiResponseOrganisation.md)
+[**CSApiResponseOrganisation**](CSApiResponseOrganisation.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ No authorization required
 
 <a name="organisationUpdateOrganisation"></a>
 # **organisationUpdateOrganisation**
-> CsApiApiResponseUpdateOrganisationResponse organisationUpdateOrganisation(request, xChronosheetsAuth)
+> CSApiResponseUpdateOrganisationResponse organisationUpdateOrganisation(request, xChronosheetsAuth)
 
 Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
 
@@ -61,10 +61,10 @@ Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
 //import ChronoSheetsClientLibApi.OrganisationApi;
 
 OrganisationApi apiInstance = new OrganisationApi();
-CsApiUpdateOrganisationRequest request = new CsApiUpdateOrganisationRequest(); // CsApiUpdateOrganisationRequest | 
+CSUpdateOrganisationRequest request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseUpdateOrganisationResponse result = apiInstance.organisationUpdateOrganisation(request, xChronosheetsAuth);
+    CSApiResponseUpdateOrganisationResponse result = apiInstance.organisationUpdateOrganisation(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationApi#organisationUpdateOrganisation");
@@ -76,12 +76,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateOrganisationRequest**](CsApiUpdateOrganisationRequest.md)|  |
+ **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseUpdateOrganisationResponse**](CsApiApiResponseUpdateOrganisationResponse.md)
+[**CSApiResponseUpdateOrganisationResponse**](CSApiResponseUpdateOrganisationResponse.md)
 
 ### Authorization
 

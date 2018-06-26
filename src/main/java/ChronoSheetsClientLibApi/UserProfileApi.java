@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseDoLoginResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseSignupResponse;
-import ChronoSheetsClientLibModel.CsApiApiResponseUserProfile;
-import ChronoSheetsClientLibModel.CsApiDoLoginRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateMyProfileRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseDoLoginResponse;
+import ChronoSheetsClientLibModel.CSApiResponseSignupResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUserProfile;
+import ChronoSheetsClientLibModel.CSDoLoginRequest;
+import ChronoSheetsClientLibModel.CSUpdateMyProfileRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -64,9 +64,9 @@ public class UserProfileApi {
   * 
   * 
    * @param request 
-   * @return CsApiApiResponseDoLoginResponse
+   * @return CSApiResponseDoLoginResponse
   */
-  public CsApiApiResponseDoLoginResponse userProfileDoLogin (CsApiDoLoginRequest request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseDoLoginResponse userProfileDoLogin (CSDoLoginRequest request) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -107,7 +107,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseDoLoginResponse) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseDoLoginResponse.class);
+         return (CSApiResponseDoLoginResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseDoLoginResponse.class);
       } else {
          return null;
       }
@@ -133,7 +133,7 @@ public class UserProfileApi {
    * 
    * @param request 
   */
-  public void userProfileDoLogin (CsApiDoLoginRequest request, final Response.Listener<CsApiApiResponseDoLoginResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileDoLogin (CSDoLoginRequest request, final Response.Listener<CSApiResponseDoLoginResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -178,7 +178,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseDoLoginResponse) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseDoLoginResponse.class));
+              responseListener.onResponse((CSApiResponseDoLoginResponse) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseDoLoginResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -197,9 +197,9 @@ public class UserProfileApi {
   * 
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean userProfileDoLogout (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean userProfileDoLogout (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -235,7 +235,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -261,7 +261,7 @@ public class UserProfileApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userProfileDoLogout (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileDoLogout (String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -307,7 +307,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -326,9 +326,9 @@ public class UserProfileApi {
   * 
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseUserProfile
+   * @return CSApiResponseUserProfile
   */
-  public CsApiApiResponseUserProfile userProfileGetMyProfile (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseUserProfile userProfileGetMyProfile (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -364,7 +364,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseUserProfile) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseUserProfile.class);
+         return (CSApiResponseUserProfile) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseUserProfile.class);
       } else {
          return null;
       }
@@ -390,7 +390,7 @@ public class UserProfileApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userProfileGetMyProfile (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseUserProfile> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileGetMyProfile (String xChronosheetsAuth, final Response.Listener<CSApiResponseUserProfile> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -436,7 +436,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseUserProfile) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseUserProfile.class));
+              responseListener.onResponse((CSApiResponseUserProfile) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseUserProfile.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -455,9 +455,9 @@ public class UserProfileApi {
   * 
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean userProfileKeepSessionAlive (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean userProfileKeepSessionAlive (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -493,7 +493,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -519,7 +519,7 @@ public class UserProfileApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userProfileKeepSessionAlive (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileKeepSessionAlive (String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -565,7 +565,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -585,9 +585,9 @@ public class UserProfileApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseSignupResponse
+   * @return CSApiResponseSignupResponse
   */
-  public CsApiApiResponseSignupResponse userProfileUpdateMyProfile (CsApiUpdateMyProfileRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseSignupResponse userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -634,7 +634,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseSignupResponse.class);
+         return (CSApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseSignupResponse.class);
       } else {
          return null;
       }
@@ -660,7 +660,7 @@ public class UserProfileApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userProfileUpdateMyProfile (CsApiUpdateMyProfileRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseSignupResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseSignupResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -711,7 +711,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseSignupResponse.class));
+              responseListener.onResponse((CSApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseSignupResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

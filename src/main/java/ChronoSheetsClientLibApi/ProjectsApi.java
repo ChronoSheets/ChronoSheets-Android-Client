@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListProject;
-import ChronoSheetsClientLibModel.CsApiApiResponseProject;
-import ChronoSheetsClientLibModel.CsApiInsertProjectRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateProjectRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListProject;
+import ChronoSheetsClientLibModel.CSApiResponseProject;
+import ChronoSheetsClientLibModel.CSInsertProjectRequest;
+import ChronoSheetsClientLibModel.CSUpdateProjectRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -65,9 +65,9 @@ public class ProjectsApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 projectsCreateProject (CsApiInsertProjectRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 projectsCreateProject (CSInsertProjectRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -114,7 +114,7 @@ public class ProjectsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class ProjectsApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void projectsCreateProject (CsApiInsertProjectRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void projectsCreateProject (CSInsertProjectRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -191,7 +191,7 @@ public class ProjectsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -211,9 +211,9 @@ public class ProjectsApi {
   * 
    * @param projectId The ID of the project
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseProject
+   * @return CSApiResponseProject
   */
-  public CsApiApiResponseProject projectsGetProjectById (Integer projectId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseProject projectsGetProjectById (Integer projectId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'projectId' is set
     if (projectId == null) {
@@ -255,7 +255,7 @@ public class ProjectsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseProject) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseProject.class);
+         return (CSApiResponseProject) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseProject.class);
       } else {
          return null;
       }
@@ -281,7 +281,7 @@ public class ProjectsApi {
    * 
    * @param projectId The ID of the project   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void projectsGetProjectById (Integer projectId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseProject> responseListener, final Response.ErrorListener errorListener) {
+  public void projectsGetProjectById (Integer projectId, String xChronosheetsAuth, final Response.Listener<CSApiResponseProject> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'projectId' is set
@@ -333,7 +333,7 @@ public class ProjectsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseProject) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseProject.class));
+              responseListener.onResponse((CSApiResponseProject) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseProject.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -353,9 +353,9 @@ public class ProjectsApi {
   * 
    * @param clientId The ID of the client
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListProject
+   * @return CSApiResponseListProject
   */
-  public CsApiApiResponseListProject projectsGetProjectsForClient (Integer clientId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListProject projectsGetProjectsForClient (Integer clientId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'clientId' is set
     if (clientId == null) {
@@ -397,7 +397,7 @@ public class ProjectsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListProject) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListProject.class);
+         return (CSApiResponseListProject) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListProject.class);
       } else {
          return null;
       }
@@ -423,7 +423,7 @@ public class ProjectsApi {
    * 
    * @param clientId The ID of the client   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void projectsGetProjectsForClient (Integer clientId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListProject> responseListener, final Response.ErrorListener errorListener) {
+  public void projectsGetProjectsForClient (Integer clientId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListProject> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'clientId' is set
@@ -475,7 +475,7 @@ public class ProjectsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListProject) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListProject.class));
+              responseListener.onResponse((CSApiResponseListProject) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListProject.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -495,9 +495,9 @@ public class ProjectsApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean projectsUpdateProject (CsApiUpdateProjectRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean projectsUpdateProject (CSUpdateProjectRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -544,7 +544,7 @@ public class ProjectsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -570,7 +570,7 @@ public class ProjectsApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void projectsUpdateProject (CsApiUpdateProjectRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void projectsUpdateProject (CSUpdateProjectRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -621,7 +621,7 @@ public class ProjectsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

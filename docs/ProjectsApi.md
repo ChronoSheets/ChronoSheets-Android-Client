@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="projectsCreateProject"></a>
 # **projectsCreateProject**
-> CsApiApiResponseInt32 projectsCreateProject(request, xChronosheetsAuth)
+> CSApiResponseInt32 projectsCreateProject(request, xChronosheetsAuth)
 
 Create a project
 
@@ -22,10 +22,10 @@ Create a project
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-CsApiInsertProjectRequest request = new CsApiInsertProjectRequest(); // CsApiInsertProjectRequest | 
+CSInsertProjectRequest request = new CSInsertProjectRequest(); // CSInsertProjectRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.projectsCreateProject(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.projectsCreateProject(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsCreateProject");
@@ -37,12 +37,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertProjectRequest**](CsApiInsertProjectRequest.md)|  |
+ **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 
 <a name="projectsGetProjectById"></a>
 # **projectsGetProjectById**
-> CsApiApiResponseProject projectsGetProjectById(projectId, xChronosheetsAuth)
+> CSApiResponseProject projectsGetProjectById(projectId, xChronosheetsAuth)
 
 Get project by Id
 
@@ -68,7 +68,7 @@ ProjectsApi apiInstance = new ProjectsApi();
 Integer projectId = 56; // Integer | The ID of the project
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseProject result = apiInstance.projectsGetProjectById(projectId, xChronosheetsAuth);
+    CSApiResponseProject result = apiInstance.projectsGetProjectById(projectId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsGetProjectById");
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseProject**](CsApiApiResponseProject.md)
+[**CSApiResponseProject**](CSApiResponseProject.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ No authorization required
 
 <a name="projectsGetProjectsForClient"></a>
 # **projectsGetProjectsForClient**
-> CsApiApiResponseListProject projectsGetProjectsForClient(clientId, xChronosheetsAuth)
+> CSApiResponseListProject projectsGetProjectsForClient(clientId, xChronosheetsAuth)
 
 Get projects for a particular client
 
@@ -111,7 +111,7 @@ ProjectsApi apiInstance = new ProjectsApi();
 Integer clientId = 56; // Integer | The ID of the client
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListProject result = apiInstance.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
+    CSApiResponseListProject result = apiInstance.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsGetProjectsForClient");
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProject**](CsApiApiResponseListProject.md)
+[**CSApiResponseListProject**](CSApiResponseListProject.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ No authorization required
 
 <a name="projectsUpdateProject"></a>
 # **projectsUpdateProject**
-> CsApiApiResponseBoolean projectsUpdateProject(request, xChronosheetsAuth)
+> CSApiResponseBoolean projectsUpdateProject(request, xChronosheetsAuth)
 
 Update a project
 
@@ -151,10 +151,10 @@ Update a project
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-CsApiUpdateProjectRequest request = new CsApiUpdateProjectRequest(); // CsApiUpdateProjectRequest | 
+CSUpdateProjectRequest request = new CSUpdateProjectRequest(); // CSUpdateProjectRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.projectsUpdateProject(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.projectsUpdateProject(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsUpdateProject");
@@ -166,12 +166,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateProjectRequest**](CsApiUpdateProjectRequest.md)|  |
+ **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

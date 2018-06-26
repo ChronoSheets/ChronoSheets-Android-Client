@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListTimesheetTask;
-import ChronoSheetsClientLibModel.CsApiApiResponseTimesheetTask;
-import ChronoSheetsClientLibModel.CsApiInsertTaskRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateTaskRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListTimesheetTask;
+import ChronoSheetsClientLibModel.CSApiResponseTimesheetTask;
+import ChronoSheetsClientLibModel.CSInsertTaskRequest;
+import ChronoSheetsClientLibModel.CSUpdateTaskRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -65,9 +65,9 @@ public class TasksApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 tasksCreateTask (CsApiInsertTaskRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 tasksCreateTask (CSInsertTaskRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -114,7 +114,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class TasksApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksCreateTask (CsApiInsertTaskRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksCreateTask (CSInsertTaskRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -191,7 +191,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -211,9 +211,9 @@ public class TasksApi {
   * 
    * @param taskId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean tasksDeleteTask (Integer taskId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean tasksDeleteTask (Integer taskId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -255,7 +255,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -281,7 +281,7 @@ public class TasksApi {
    * 
    * @param taskId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksDeleteTask (Integer taskId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksDeleteTask (Integer taskId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'taskId' is set
@@ -333,7 +333,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -353,9 +353,9 @@ public class TasksApi {
   * 
    * @param taskId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseTimesheetTask
+   * @return CSApiResponseTimesheetTask
   */
-  public CsApiApiResponseTimesheetTask tasksGetTaskById (Integer taskId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseTimesheetTask tasksGetTaskById (Integer taskId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -397,7 +397,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseTimesheetTask.class);
+         return (CSApiResponseTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseTimesheetTask.class);
       } else {
          return null;
       }
@@ -423,7 +423,7 @@ public class TasksApi {
    * 
    * @param taskId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksGetTaskById (Integer taskId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksGetTaskById (Integer taskId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'taskId' is set
@@ -475,7 +475,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseTimesheetTask.class));
+              responseListener.onResponse((CSApiResponseTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseTimesheetTask.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -494,9 +494,9 @@ public class TasksApi {
   * Get tasks in your organisation
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListTimesheetTask
+   * @return CSApiResponseListTimesheetTask
   */
-  public CsApiApiResponseListTimesheetTask tasksGetTasks (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListTimesheetTask tasksGetTasks (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -532,7 +532,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListTimesheetTask.class);
+         return (CSApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListTimesheetTask.class);
       } else {
          return null;
       }
@@ -558,7 +558,7 @@ public class TasksApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksGetTasks (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksGetTasks (String xChronosheetsAuth, final Response.Listener<CSApiResponseListTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -604,7 +604,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListTimesheetTask.class));
+              responseListener.onResponse((CSApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListTimesheetTask.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -624,9 +624,9 @@ public class TasksApi {
   * 
    * @param jobId The ID of the job
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListTimesheetTask
+   * @return CSApiResponseListTimesheetTask
   */
-  public CsApiApiResponseListTimesheetTask tasksGetTasksForJob (Integer jobId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListTimesheetTask tasksGetTasksForJob (Integer jobId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'jobId' is set
     if (jobId == null) {
@@ -668,7 +668,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListTimesheetTask.class);
+         return (CSApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListTimesheetTask.class);
       } else {
          return null;
       }
@@ -694,7 +694,7 @@ public class TasksApi {
    * 
    * @param jobId The ID of the job   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksGetTasksForJob (Integer jobId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksGetTasksForJob (Integer jobId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'jobId' is set
@@ -746,7 +746,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListTimesheetTask.class));
+              responseListener.onResponse((CSApiResponseListTimesheetTask) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListTimesheetTask.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -766,9 +766,9 @@ public class TasksApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean tasksUpdateTask (CsApiUpdateTaskRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean tasksUpdateTask (CSUpdateTaskRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -815,7 +815,7 @@ public class TasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -841,7 +841,7 @@ public class TasksApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tasksUpdateTask (CsApiUpdateTaskRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void tasksUpdateTask (CSUpdateTaskRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -892,7 +892,7 @@ public class TasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

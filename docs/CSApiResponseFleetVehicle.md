@@ -1,0 +1,18 @@
+
+# CSApiResponseFleetVehicle
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**CSFleetVehicle**](CSFleetVehicle.md) |  |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
+**message** | **String** |  |  [optional]
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+Name | Value
+---- | -----
+
+
+

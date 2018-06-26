@@ -23,9 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseListUsualHoursDay;
-import ChronoSheetsClientLibModel.CsApiSetUsualHoursRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseListUsualHoursDay;
+import ChronoSheetsClientLibModel.CSSetUsualHoursRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -62,9 +62,9 @@ public class UsualHoursApi {
   * 
    * @param userId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListUsualHoursDay
+   * @return CSApiResponseListUsualHoursDay
   */
-  public CsApiApiResponseListUsualHoursDay usualHoursGetUsualHours (Integer userId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListUsualHoursDay usualHoursGetUsualHours (Integer userId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -106,7 +106,7 @@ public class UsualHoursApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListUsualHoursDay) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListUsualHoursDay.class);
+         return (CSApiResponseListUsualHoursDay) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListUsualHoursDay.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class UsualHoursApi {
    * 
    * @param userId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void usualHoursGetUsualHours (Integer userId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListUsualHoursDay> responseListener, final Response.ErrorListener errorListener) {
+  public void usualHoursGetUsualHours (Integer userId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListUsualHoursDay> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'userId' is set
@@ -184,7 +184,7 @@ public class UsualHoursApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListUsualHoursDay) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListUsualHoursDay.class));
+              responseListener.onResponse((CSApiResponseListUsualHoursDay) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListUsualHoursDay.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -204,9 +204,9 @@ public class UsualHoursApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean usualHoursSetUsualHours (CsApiSetUsualHoursRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean usualHoursSetUsualHours (CSSetUsualHoursRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -253,7 +253,7 @@ public class UsualHoursApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -279,7 +279,7 @@ public class UsualHoursApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void usualHoursSetUsualHours (CsApiSetUsualHoursRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void usualHoursSetUsualHours (CSSetUsualHoursRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -330,7 +330,7 @@ public class UsualHoursApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

@@ -23,7 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseListAggregateJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListAggregateJobCode;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -59,9 +59,9 @@ public class AggregateJobTasksApi {
   * Get jobs and tasks information, aggregated
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListAggregateJobCode
+   * @return CSApiResponseListAggregateJobCode
   */
-  public CsApiApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListAggregateJobCode aggregateJobTasksGetAggregateJobTasks (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -97,7 +97,7 @@ public class AggregateJobTasksApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListAggregateJobCode) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListAggregateJobCode.class);
+         return (CSApiResponseListAggregateJobCode) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListAggregateJobCode.class);
       } else {
          return null;
       }
@@ -123,7 +123,7 @@ public class AggregateJobTasksApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void aggregateJobTasksGetAggregateJobTasks (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListAggregateJobCode> responseListener, final Response.ErrorListener errorListener) {
+  public void aggregateJobTasksGetAggregateJobTasks (String xChronosheetsAuth, final Response.Listener<CSApiResponseListAggregateJobCode> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -169,7 +169,7 @@ public class AggregateJobTasksApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListAggregateJobCode) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListAggregateJobCode.class));
+              responseListener.onResponse((CSApiResponseListAggregateJobCode) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListAggregateJobCode.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

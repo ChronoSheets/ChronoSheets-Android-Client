@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="jobCodesCreateJobCode"></a>
 # **jobCodesCreateJobCode**
-> CsApiApiResponseInt32 jobCodesCreateJobCode(request, xChronosheetsAuth)
+> CSApiResponseInt32 jobCodesCreateJobCode(request, xChronosheetsAuth)
 
 Create a job code
 
@@ -23,10 +23,10 @@ Create a job code
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-CsApiInsertJobCodeRequest request = new CsApiInsertJobCodeRequest(); // CsApiInsertJobCodeRequest | 
+CSInsertJobCodeRequest request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.jobCodesCreateJobCode(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.jobCodesCreateJobCode(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesCreateJobCode");
@@ -38,12 +38,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertJobCodeRequest**](CsApiInsertJobCodeRequest.md)|  |
+ **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 
 <a name="jobCodesDeleteJobCode"></a>
 # **jobCodesDeleteJobCode**
-> CsApiApiResponseBoolean jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth)
+> CSApiResponseBoolean jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth)
 
 Delete a job code
 
@@ -69,7 +69,7 @@ JobCodesApi apiInstance = new JobCodesApi();
 Integer jobCodeId = 56; // Integer | The ID of the job code your want to delete
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesDeleteJobCode");
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ No authorization required
 
 <a name="jobCodesGetJobCodeById"></a>
 # **jobCodesGetJobCodeById**
-> CsApiApiResponseJobCode jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth)
+> CSApiResponseJobCode jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth)
 
 Get a particular job code by job code id
 
@@ -112,7 +112,7 @@ JobCodesApi apiInstance = new JobCodesApi();
 Integer jobCodeId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseJobCode result = apiInstance.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
+    CSApiResponseJobCode result = apiInstance.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesGetJobCodeById");
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseJobCode**](CsApiApiResponseJobCode.md)
+[**CSApiResponseJobCode**](CSApiResponseJobCode.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ No authorization required
 
 <a name="jobCodesGetJobCodes"></a>
 # **jobCodesGetJobCodes**
-> CsApiApiResponseListJobCode jobCodesGetJobCodes(xChronosheetsAuth)
+> CSApiResponseListJobCode jobCodesGetJobCodes(xChronosheetsAuth)
 
 Get job codes for your organisation
 
@@ -154,7 +154,7 @@ Get job codes for your organisation
 JobCodesApi apiInstance = new JobCodesApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListJobCode result = apiInstance.jobCodesGetJobCodes(xChronosheetsAuth);
+    CSApiResponseListJobCode result = apiInstance.jobCodesGetJobCodes(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesGetJobCodes");
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobCode**](CsApiApiResponseListJobCode.md)
+[**CSApiResponseListJobCode**](CSApiResponseListJobCode.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 
 <a name="jobCodesUpdateJobCode"></a>
 # **jobCodesUpdateJobCode**
-> CsApiApiResponseBoolean jobCodesUpdateJobCode(request, xChronosheetsAuth)
+> CSApiResponseBoolean jobCodesUpdateJobCode(request, xChronosheetsAuth)
 
 Update a job code
 
@@ -193,10 +193,10 @@ Update a job code
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-CsApiUpdateJobCodeRequest request = new CsApiUpdateJobCodeRequest(); // CsApiUpdateJobCodeRequest | 
+CSUpdateJobCodeRequest request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.jobCodesUpdateJobCode(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.jobCodesUpdateJobCode(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesUpdateJobCode");
@@ -208,12 +208,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateJobCodeRequest**](CsApiUpdateJobCodeRequest.md)|  |
+ **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

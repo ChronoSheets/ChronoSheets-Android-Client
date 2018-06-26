@@ -23,10 +23,10 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseForPaginatedListTrip;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseTrip;
-import ChronoSheetsClientLibModel.CsApiCreateTripRequest;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTrip;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseTrip;
+import ChronoSheetsClientLibModel.CSCreateTripRequest;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -64,9 +64,9 @@ public class TripsApi {
   * 
    * @param request The create trip request
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 tripsCreateTrip (CsApiCreateTripRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 tripsCreateTrip (CSCreateTripRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -113,7 +113,7 @@ public class TripsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -139,7 +139,7 @@ public class TripsApi {
    * 
    * @param request The create trip request   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tripsCreateTrip (CsApiCreateTripRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void tripsCreateTrip (CSCreateTripRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -190,7 +190,7 @@ public class TripsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -210,9 +210,9 @@ public class TripsApi {
   * 
    * @param tripId The ID of the trip
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseTrip
+   * @return CSApiResponseTrip
   */
-  public CsApiApiResponseTrip tripsGetMyTripById (Integer tripId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseTrip tripsGetMyTripById (Integer tripId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'tripId' is set
     if (tripId == null) {
@@ -254,7 +254,7 @@ public class TripsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseTrip) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseTrip.class);
+         return (CSApiResponseTrip) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseTrip.class);
       } else {
          return null;
       }
@@ -280,7 +280,7 @@ public class TripsApi {
    * 
    * @param tripId The ID of the trip   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tripsGetMyTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
+  public void tripsGetMyTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'tripId' is set
@@ -332,7 +332,7 @@ public class TripsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseTrip) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseTrip.class));
+              responseListener.onResponse((CSApiResponseTrip) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseTrip.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -356,9 +356,9 @@ public class TripsApi {
    * @param take 
    * @param vehicleId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseForPaginatedListTrip
+   * @return CSApiResponseForPaginatedListTrip
   */
-  public CsApiApiResponseForPaginatedListTrip tripsGetMyTrips (Date startDate, Date endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListTrip tripsGetMyTrips (Date startDate, Date endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -424,7 +424,7 @@ public class TripsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseForPaginatedListTrip) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseForPaginatedListTrip.class);
+         return (CSApiResponseForPaginatedListTrip) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListTrip.class);
       } else {
          return null;
       }
@@ -450,7 +450,7 @@ public class TripsApi {
    * 
    * @param startDate    * @param endDate    * @param skip    * @param take    * @param vehicleId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void tripsGetMyTrips (Date startDate, Date endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseForPaginatedListTrip> responseListener, final Response.ErrorListener errorListener) {
+  public void tripsGetMyTrips (Date startDate, Date endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -526,7 +526,7 @@ public class TripsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseForPaginatedListTrip) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseForPaginatedListTrip.class));
+              responseListener.onResponse((CSApiResponseForPaginatedListTrip) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListTrip.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

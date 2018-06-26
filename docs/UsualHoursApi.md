@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="usualHoursGetUsualHours"></a>
 # **usualHoursGetUsualHours**
-> CsApiApiResponseListUsualHoursDay usualHoursGetUsualHours(userId, xChronosheetsAuth)
+> CSApiResponseListUsualHoursDay usualHoursGetUsualHours(userId, xChronosheetsAuth)
 
 Get usual hours (rostered hours) for an employee
 
@@ -23,7 +23,7 @@ UsualHoursApi apiInstance = new UsualHoursApi();
 Integer userId = 56; // Integer | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListUsualHoursDay result = apiInstance.usualHoursGetUsualHours(userId, xChronosheetsAuth);
+    CSApiResponseListUsualHoursDay result = apiInstance.usualHoursGetUsualHours(userId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsualHoursApi#usualHoursGetUsualHours");
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUsualHoursDay**](CsApiApiResponseListUsualHoursDay.md)
+[**CSApiResponseListUsualHoursDay**](CSApiResponseListUsualHoursDay.md)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
 
 <a name="usualHoursSetUsualHours"></a>
 # **usualHoursSetUsualHours**
-> CsApiApiResponseBoolean usualHoursSetUsualHours(request, xChronosheetsAuth)
+> CSApiResponseBoolean usualHoursSetUsualHours(request, xChronosheetsAuth)
 
 Set usual hours (rostered hours) for an employee
 
@@ -63,10 +63,10 @@ Set usual hours (rostered hours) for an employee
 //import ChronoSheetsClientLibApi.UsualHoursApi;
 
 UsualHoursApi apiInstance = new UsualHoursApi();
-CsApiSetUsualHoursRequest request = new CsApiSetUsualHoursRequest(); // CsApiSetUsualHoursRequest | 
+CSSetUsualHoursRequest request = new CSSetUsualHoursRequest(); // CSSetUsualHoursRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.usualHoursSetUsualHours(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.usualHoursSetUsualHours(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UsualHoursApi#usualHoursSetUsualHours");
@@ -78,12 +78,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSetUsualHoursRequest**](CsApiSetUsualHoursRequest.md)|  |
+ **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

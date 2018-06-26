@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="organisationGroupsCreateOrganisationGroup"></a>
 # **organisationGroupsCreateOrganisationGroup**
-> CsApiApiResponseInt32 organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth)
+> CSApiResponseInt32 organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth)
 
 Create an organisation group
 
@@ -24,10 +24,10 @@ Create an organisation group
 //import ChronoSheetsClientLibApi.OrganisationGroupsApi;
 
 OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
-CsApiInsertOrganisationGroupRequest request = new CsApiInsertOrganisationGroupRequest(); // CsApiInsertOrganisationGroupRequest | 
+CSInsertOrganisationGroupRequest request = new CSInsertOrganisationGroupRequest(); // CSInsertOrganisationGroupRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseInt32 result = apiInstance.organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
+    CSApiResponseInt32 result = apiInstance.organisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsCreateOrganisationGroup");
@@ -39,12 +39,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertOrganisationGroupRequest**](CsApiInsertOrganisationGroupRequest.md)|  |
+ **request** | [**CSInsertOrganisationGroupRequest**](CSInsertOrganisationGroupRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 
 <a name="organisationGroupsGetOrganisationGroup"></a>
 # **organisationGroupsGetOrganisationGroup**
-> CsApiApiResponseOrganisationGroup organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth)
+> CSApiResponseOrganisationGroup organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth)
 
 Get a particular organisation group
 
@@ -70,7 +70,7 @@ OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
 Integer organisationGroupId = 56; // Integer | The ID of the organisation group you want to get
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
+    CSApiResponseOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsGetOrganisationGroup");
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisationGroup**](CsApiApiResponseOrganisationGroup.md)
+[**CSApiResponseOrganisationGroup**](CSApiResponseOrganisationGroup.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ No authorization required
 
 <a name="organisationGroupsGetOrganisationGroups"></a>
 # **organisationGroupsGetOrganisationGroups**
-> CsApiApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroups(xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroups(xChronosheetsAuth)
 
 Get a collection of organisation groups that are under your organisation
 
@@ -112,7 +112,7 @@ Get a collection of organisation groups that are under your organisation
 OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroups(xChronosheetsAuth);
+    CSApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroups(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsGetOrganisationGroups");
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ No authorization required
 
 <a name="organisationGroupsGetOrganisationGroupsForJob"></a>
 # **organisationGroupsGetOrganisationGroupsForJob**
-> CsApiApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth)
 
 Get org groups for a particular job
 
@@ -154,7 +154,7 @@ OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
 Integer jobId = 56; // Integer | The ID of the job
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
+    CSApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsGetOrganisationGroupsForJob");
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ No authorization required
 
 <a name="organisationGroupsGetOrganisationGroupsForVehicle"></a>
 # **organisationGroupsGetOrganisationGroupsForVehicle**
-> CsApiApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth)
 
 Get org groups for a particular vehicle
 
@@ -197,7 +197,7 @@ OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
 Integer vehicleId = 56; // Integer | The ID of the vehicle
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
+    CSApiResponseListOrganisationGroup result = apiInstance.organisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsGetOrganisationGroupsForVehicle");
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ No authorization required
 
 <a name="organisationGroupsUpdateOrganisationGroup"></a>
 # **organisationGroupsUpdateOrganisationGroup**
-> CsApiApiResponseBoolean organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth)
+> CSApiResponseBoolean organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth)
 
 Update an organisation group
 
@@ -237,10 +237,10 @@ Update an organisation group
 //import ChronoSheetsClientLibApi.OrganisationGroupsApi;
 
 OrganisationGroupsApi apiInstance = new OrganisationGroupsApi();
-CsApiSaveOrganisationGroupRequest request = new CsApiSaveOrganisationGroupRequest(); // CsApiSaveOrganisationGroupRequest | 
+CSSaveOrganisationGroupRequest request = new CSSaveOrganisationGroupRequest(); // CSSaveOrganisationGroupRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.organisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling OrganisationGroupsApi#organisationGroupsUpdateOrganisationGroup");
@@ -252,12 +252,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveOrganisationGroupRequest**](CsApiSaveOrganisationGroupRequest.md)|  |
+ **request** | [**CSSaveOrganisationGroupRequest**](CSSaveOrganisationGroupRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

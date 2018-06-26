@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="userProfileDoLogin"></a>
 # **userProfileDoLogin**
-> CsApiApiResponseDoLoginResponse userProfileDoLogin(request)
+> CSApiResponseDoLoginResponse userProfileDoLogin(request)
 
 
 
@@ -23,9 +23,9 @@ Method | HTTP request | Description
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-CsApiDoLoginRequest request = new CsApiDoLoginRequest(); // CsApiDoLoginRequest | 
+CSDoLoginRequest request = new CSDoLoginRequest(); // CSDoLoginRequest | 
 try {
-    CsApiApiResponseDoLoginResponse result = apiInstance.userProfileDoLogin(request);
+    CSApiResponseDoLoginResponse result = apiInstance.userProfileDoLogin(request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileDoLogin");
@@ -37,11 +37,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiDoLoginRequest**](CsApiDoLoginRequest.md)|  |
+ **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)|  |
 
 ### Return type
 
-[**CsApiApiResponseDoLoginResponse**](CsApiApiResponseDoLoginResponse.md)
+[**CSApiResponseDoLoginResponse**](CSApiResponseDoLoginResponse.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 
 <a name="userProfileDoLogout"></a>
 # **userProfileDoLogout**
-> CsApiApiResponseBoolean userProfileDoLogout(xChronosheetsAuth)
+> CSApiResponseBoolean userProfileDoLogout(xChronosheetsAuth)
 
 
 
@@ -66,7 +66,7 @@ No authorization required
 UserProfileApi apiInstance = new UserProfileApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.userProfileDoLogout(xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.userProfileDoLogout(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileDoLogout");
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ No authorization required
 
 <a name="userProfileGetMyProfile"></a>
 # **userProfileGetMyProfile**
-> CsApiApiResponseUserProfile userProfileGetMyProfile(xChronosheetsAuth)
+> CSApiResponseUserProfile userProfileGetMyProfile(xChronosheetsAuth)
 
 
 
@@ -107,7 +107,7 @@ No authorization required
 UserProfileApi apiInstance = new UserProfileApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseUserProfile result = apiInstance.userProfileGetMyProfile(xChronosheetsAuth);
+    CSApiResponseUserProfile result = apiInstance.userProfileGetMyProfile(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileGetMyProfile");
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserProfile**](CsApiApiResponseUserProfile.md)
+[**CSApiResponseUserProfile**](CSApiResponseUserProfile.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 <a name="userProfileKeepSessionAlive"></a>
 # **userProfileKeepSessionAlive**
-> CsApiApiResponseBoolean userProfileKeepSessionAlive(xChronosheetsAuth)
+> CSApiResponseBoolean userProfileKeepSessionAlive(xChronosheetsAuth)
 
 
 
@@ -148,7 +148,7 @@ No authorization required
 UserProfileApi apiInstance = new UserProfileApi();
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseBoolean result = apiInstance.userProfileKeepSessionAlive(xChronosheetsAuth);
+    CSApiResponseBoolean result = apiInstance.userProfileKeepSessionAlive(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileKeepSessionAlive");
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ No authorization required
 
 <a name="userProfileUpdateMyProfile"></a>
 # **userProfileUpdateMyProfile**
-> CsApiApiResponseSignupResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
+> CSApiResponseSignupResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
 
 
 
@@ -187,10 +187,10 @@ No authorization required
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-CsApiUpdateMyProfileRequest request = new CsApiUpdateMyProfileRequest(); // CsApiUpdateMyProfileRequest | 
+CSUpdateMyProfileRequest request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | 
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
-    CsApiApiResponseSignupResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
+    CSApiResponseSignupResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileUpdateMyProfile");
@@ -202,12 +202,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateMyProfileRequest**](CsApiUpdateMyProfileRequest.md)|  |
+ **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)|  |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type
 
-[**CsApiApiResponseSignupResponse**](CsApiApiResponseSignupResponse.md)
+[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
 
 ### Authorization
 

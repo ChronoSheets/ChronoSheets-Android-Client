@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseJobCode;
-import ChronoSheetsClientLibModel.CsApiApiResponseListJobCode;
-import ChronoSheetsClientLibModel.CsApiInsertJobCodeRequest;
-import ChronoSheetsClientLibModel.CsApiUpdateJobCodeRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseJobCode;
+import ChronoSheetsClientLibModel.CSApiResponseListJobCode;
+import ChronoSheetsClientLibModel.CSInsertJobCodeRequest;
+import ChronoSheetsClientLibModel.CSUpdateJobCodeRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -65,9 +65,9 @@ public class JobCodesApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 jobCodesCreateJobCode (CsApiInsertJobCodeRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 jobCodesCreateJobCode (CSInsertJobCodeRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -114,7 +114,7 @@ public class JobCodesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class JobCodesApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void jobCodesCreateJobCode (CsApiInsertJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void jobCodesCreateJobCode (CSInsertJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -191,7 +191,7 @@ public class JobCodesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -211,9 +211,9 @@ public class JobCodesApi {
   * 
    * @param jobCodeId The ID of the job code your want to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean jobCodesDeleteJobCode (Integer jobCodeId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean jobCodesDeleteJobCode (Integer jobCodeId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'jobCodeId' is set
     if (jobCodeId == null) {
@@ -255,7 +255,7 @@ public class JobCodesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -281,7 +281,7 @@ public class JobCodesApi {
    * 
    * @param jobCodeId The ID of the job code your want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void jobCodesDeleteJobCode (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void jobCodesDeleteJobCode (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'jobCodeId' is set
@@ -333,7 +333,7 @@ public class JobCodesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -353,9 +353,9 @@ public class JobCodesApi {
   * 
    * @param jobCodeId 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseJobCode
+   * @return CSApiResponseJobCode
   */
-  public CsApiApiResponseJobCode jobCodesGetJobCodeById (Integer jobCodeId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseJobCode jobCodesGetJobCodeById (Integer jobCodeId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'jobCodeId' is set
     if (jobCodeId == null) {
@@ -397,7 +397,7 @@ public class JobCodesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseJobCode) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseJobCode.class);
+         return (CSApiResponseJobCode) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseJobCode.class);
       } else {
          return null;
       }
@@ -423,7 +423,7 @@ public class JobCodesApi {
    * 
    * @param jobCodeId    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void jobCodesGetJobCodeById (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseJobCode> responseListener, final Response.ErrorListener errorListener) {
+  public void jobCodesGetJobCodeById (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CSApiResponseJobCode> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'jobCodeId' is set
@@ -475,7 +475,7 @@ public class JobCodesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseJobCode) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseJobCode.class));
+              responseListener.onResponse((CSApiResponseJobCode) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseJobCode.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -494,9 +494,9 @@ public class JobCodesApi {
   * Get job codes for your organisation
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListJobCode
+   * @return CSApiResponseListJobCode
   */
-  public CsApiApiResponseListJobCode jobCodesGetJobCodes (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListJobCode jobCodesGetJobCodes (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -532,7 +532,7 @@ public class JobCodesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListJobCode) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListJobCode.class);
+         return (CSApiResponseListJobCode) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListJobCode.class);
       } else {
          return null;
       }
@@ -558,7 +558,7 @@ public class JobCodesApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void jobCodesGetJobCodes (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListJobCode> responseListener, final Response.ErrorListener errorListener) {
+  public void jobCodesGetJobCodes (String xChronosheetsAuth, final Response.Listener<CSApiResponseListJobCode> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -604,7 +604,7 @@ public class JobCodesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListJobCode) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListJobCode.class));
+              responseListener.onResponse((CSApiResponseListJobCode) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListJobCode.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -624,9 +624,9 @@ public class JobCodesApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean jobCodesUpdateJobCode (CsApiUpdateJobCodeRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean jobCodesUpdateJobCode (CSUpdateJobCodeRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -673,7 +673,7 @@ public class JobCodesApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -699,7 +699,7 @@ public class JobCodesApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void jobCodesUpdateJobCode (CsApiUpdateJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void jobCodesUpdateJobCode (CSUpdateJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -750,7 +750,7 @@ public class JobCodesApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

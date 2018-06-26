@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListTimesheet;
-import ChronoSheetsClientLibModel.CsApiBatchUpdateTimesheetRequest;
-import ChronoSheetsClientLibModel.CsApiTimesheet;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListTimesheet;
+import ChronoSheetsClientLibModel.CSBatchUpdateTimesheetRequest;
+import ChronoSheetsClientLibModel.CSTimesheet;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -66,9 +66,9 @@ public class TimesheetsApi {
   * 
    * @param request The timesheet request object
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 timesheetsCreateSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 timesheetsCreateSingleTimesheet (CSTimesheet request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -115,7 +115,7 @@ public class TimesheetsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -141,7 +141,7 @@ public class TimesheetsApi {
    * 
    * @param request The timesheet request object   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void timesheetsCreateSingleTimesheet (CsApiTimesheet request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void timesheetsCreateSingleTimesheet (CSTimesheet request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -192,7 +192,7 @@ public class TimesheetsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -212,9 +212,9 @@ public class TimesheetsApi {
   * 
    * @param timesheetId The ID of the timesheet to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean timesheetsDeleteTimesheet (Integer timesheetId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean timesheetsDeleteTimesheet (Integer timesheetId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'timesheetId' is set
     if (timesheetId == null) {
@@ -256,7 +256,7 @@ public class TimesheetsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -282,7 +282,7 @@ public class TimesheetsApi {
    * 
    * @param timesheetId The ID of the timesheet to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void timesheetsDeleteTimesheet (Integer timesheetId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void timesheetsDeleteTimesheet (Integer timesheetId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'timesheetId' is set
@@ -334,7 +334,7 @@ public class TimesheetsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -355,9 +355,9 @@ public class TimesheetsApi {
    * @param startDate The start date of the date range
    * @param endDate The end date of the date range
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListTimesheet
+   * @return CSApiResponseListTimesheet
   */
-  public CsApiApiResponseListTimesheet timesheetsGetTimesheets (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListTimesheet timesheetsGetTimesheets (Date startDate, Date endDate, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -405,7 +405,7 @@ public class TimesheetsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListTimesheet) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListTimesheet.class);
+         return (CSApiResponseListTimesheet) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListTimesheet.class);
       } else {
          return null;
       }
@@ -431,7 +431,7 @@ public class TimesheetsApi {
    * 
    * @param startDate The start date of the date range   * @param endDate The end date of the date range   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void timesheetsGetTimesheets (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListTimesheet> responseListener, final Response.ErrorListener errorListener) {
+  public void timesheetsGetTimesheets (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CSApiResponseListTimesheet> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -489,7 +489,7 @@ public class TimesheetsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListTimesheet) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListTimesheet.class));
+              responseListener.onResponse((CSApiResponseListTimesheet) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListTimesheet.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -509,9 +509,9 @@ public class TimesheetsApi {
   * 
    * @param request The batch update timesheets request
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListInt32
+   * @return CSApiResponseListInt32
   */
-  public CsApiApiResponseListInt32 timesheetsUpdateTimesheets (CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListInt32 timesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -558,7 +558,7 @@ public class TimesheetsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListInt32.class);
+         return (CSApiResponseListInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListInt32.class);
       } else {
          return null;
       }
@@ -584,7 +584,7 @@ public class TimesheetsApi {
    * 
    * @param request The batch update timesheets request   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void timesheetsUpdateTimesheets (CsApiBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void timesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseListInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -635,7 +635,7 @@ public class TimesheetsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListInt32.class));
+              responseListener.onResponse((CSApiResponseListInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

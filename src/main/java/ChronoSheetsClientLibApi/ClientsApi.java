@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseClient;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListClient;
-import ChronoSheetsClientLibModel.CsApiInsertClientRequest;
-import ChronoSheetsClientLibModel.CsApiSaveClientRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseClient;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListClient;
+import ChronoSheetsClientLibModel.CSInsertClientRequest;
+import ChronoSheetsClientLibModel.CSSaveClientRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -65,9 +65,9 @@ public class ClientsApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 clientsCreateClient (CsApiInsertClientRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 clientsCreateClient (CSInsertClientRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -114,7 +114,7 @@ public class ClientsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class ClientsApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void clientsCreateClient (CsApiInsertClientRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void clientsCreateClient (CSInsertClientRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -191,7 +191,7 @@ public class ClientsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -211,9 +211,9 @@ public class ClientsApi {
   * 
    * @param clientId The ID of the client you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseClient
+   * @return CSApiResponseClient
   */
-  public CsApiApiResponseClient clientsGetClient (Integer clientId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseClient clientsGetClient (Integer clientId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'clientId' is set
     if (clientId == null) {
@@ -255,7 +255,7 @@ public class ClientsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseClient) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseClient.class);
+         return (CSApiResponseClient) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseClient.class);
       } else {
          return null;
       }
@@ -281,7 +281,7 @@ public class ClientsApi {
    * 
    * @param clientId The ID of the client you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void clientsGetClient (Integer clientId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseClient> responseListener, final Response.ErrorListener errorListener) {
+  public void clientsGetClient (Integer clientId, String xChronosheetsAuth, final Response.Listener<CSApiResponseClient> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'clientId' is set
@@ -333,7 +333,7 @@ public class ClientsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseClient) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseClient.class));
+              responseListener.onResponse((CSApiResponseClient) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseClient.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -352,9 +352,9 @@ public class ClientsApi {
   * Get a collection of clients that are under your organisation
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListClient
+   * @return CSApiResponseListClient
   */
-  public CsApiApiResponseListClient clientsGetClients (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListClient clientsGetClients (String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -390,7 +390,7 @@ public class ClientsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListClient) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListClient.class);
+         return (CSApiResponseListClient) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListClient.class);
       } else {
          return null;
       }
@@ -416,7 +416,7 @@ public class ClientsApi {
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void clientsGetClients (String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListClient> responseListener, final Response.ErrorListener errorListener) {
+  public void clientsGetClients (String xChronosheetsAuth, final Response.Listener<CSApiResponseListClient> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'xChronosheetsAuth' is set
@@ -462,7 +462,7 @@ public class ClientsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListClient) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListClient.class));
+              responseListener.onResponse((CSApiResponseListClient) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListClient.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -482,9 +482,9 @@ public class ClientsApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean clientsUpdateClient (CsApiSaveClientRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean clientsUpdateClient (CSSaveClientRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -531,7 +531,7 @@ public class ClientsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -557,7 +557,7 @@ public class ClientsApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void clientsUpdateClient (CsApiSaveClientRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void clientsUpdateClient (CSSaveClientRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -608,7 +608,7 @@ public class ClientsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

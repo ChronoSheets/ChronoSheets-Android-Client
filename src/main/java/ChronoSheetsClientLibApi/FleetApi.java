@@ -23,12 +23,12 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import ChronoSheetsClientLibModel.CsApiApiResponseBoolean;
-import ChronoSheetsClientLibModel.CsApiApiResponseFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiApiResponseInt32;
-import ChronoSheetsClientLibModel.CsApiApiResponseListFleetVehicle;
-import ChronoSheetsClientLibModel.CsApiInsertVehicleRequest;
-import ChronoSheetsClientLibModel.CsApiSaveVehicleRequest;
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
+import ChronoSheetsClientLibModel.CSApiResponseFleetVehicle;
+import ChronoSheetsClientLibModel.CSApiResponseInt32;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetVehicle;
+import ChronoSheetsClientLibModel.CSInsertVehicleRequest;
+import ChronoSheetsClientLibModel.CSSaveVehicleRequest;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -65,9 +65,9 @@ public class FleetApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseInt32
+   * @return CSApiResponseInt32
   */
-  public CsApiApiResponseInt32 fleetCreateVehicle (CsApiInsertVehicleRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseInt32 fleetCreateVehicle (CSInsertVehicleRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -114,7 +114,7 @@ public class FleetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseInt32.class);
+         return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
          return null;
       }
@@ -140,7 +140,7 @@ public class FleetApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void fleetCreateVehicle (CsApiInsertVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
+  public void fleetCreateVehicle (CSInsertVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -191,7 +191,7 @@ public class FleetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseInt32.class));
+              responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -211,9 +211,9 @@ public class FleetApi {
   * 
    * @param vehicleId The ID of the vehicle you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseFleetVehicle
+   * @return CSApiResponseFleetVehicle
   */
-  public CsApiApiResponseFleetVehicle fleetGetVehicleById (Integer vehicleId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseFleetVehicle fleetGetVehicleById (Integer vehicleId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'vehicleId' is set
     if (vehicleId == null) {
@@ -255,7 +255,7 @@ public class FleetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseFleetVehicle) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseFleetVehicle.class);
+         return (CSApiResponseFleetVehicle) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseFleetVehicle.class);
       } else {
          return null;
       }
@@ -281,7 +281,7 @@ public class FleetApi {
    * 
    * @param vehicleId The ID of the vehicle you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void fleetGetVehicleById (Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
+  public void fleetGetVehicleById (Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CSApiResponseFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'vehicleId' is set
@@ -333,7 +333,7 @@ public class FleetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseFleetVehicle) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseFleetVehicle.class));
+              responseListener.onResponse((CSApiResponseFleetVehicle) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseFleetVehicle.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -353,9 +353,9 @@ public class FleetApi {
   * 
    * @param includeDeleted 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseListFleetVehicle
+   * @return CSApiResponseListFleetVehicle
   */
-  public CsApiApiResponseListFleetVehicle fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListFleetVehicle fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'includeDeleted' is set
     if (includeDeleted == null) {
@@ -397,7 +397,7 @@ public class FleetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseListFleetVehicle) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseListFleetVehicle.class);
+         return (CSApiResponseListFleetVehicle) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListFleetVehicle.class);
       } else {
          return null;
       }
@@ -423,7 +423,7 @@ public class FleetApi {
    * 
    * @param includeDeleted    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseListFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
+  public void fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth, final Response.Listener<CSApiResponseListFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'includeDeleted' is set
@@ -475,7 +475,7 @@ public class FleetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseListFleetVehicle) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseListFleetVehicle.class));
+              responseListener.onResponse((CSApiResponseListFleetVehicle) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListFleetVehicle.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
@@ -495,9 +495,9 @@ public class FleetApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CsApiApiResponseBoolean
+   * @return CSApiResponseBoolean
   */
-  public CsApiApiResponseBoolean fleetUpdateVehicle (CsApiSaveVehicleRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseBoolean fleetUpdateVehicle (CSSaveVehicleRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -544,7 +544,7 @@ public class FleetApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CsApiApiResponseBoolean.class);
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
       } else {
          return null;
       }
@@ -570,7 +570,7 @@ public class FleetApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void fleetUpdateVehicle (CsApiSaveVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CsApiApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+  public void fleetUpdateVehicle (CSSaveVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -621,7 +621,7 @@ public class FleetApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CsApiApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CsApiApiResponseBoolean.class));
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
