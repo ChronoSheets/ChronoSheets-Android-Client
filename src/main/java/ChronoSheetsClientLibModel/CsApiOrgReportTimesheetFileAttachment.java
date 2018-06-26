@@ -48,12 +48,12 @@ public class CsApiOrgReportTimesheetFileAttachment {
   @SerializedName("OrgId")
   private Integer orgId = null;
   public enum MobilePlatformEnum {
-     0,  1,  2, 
+     Unknown,  iOS,  Android, 
   };
   @SerializedName("MobilePlatform")
   private MobilePlatformEnum mobilePlatform = null;
   public enum AttachmentTypeEnum {
-     1,  30,  31,  32,  33,  34,  35,  100, 
+     Image,  WordDoc,  Pdf,  MSSpreadSheet,  MSPowerPoint,  RichTextFormat,  ZipFile,  Other, 
   };
   @SerializedName("AttachmentType")
   private AttachmentTypeEnum attachmentType = null;
@@ -221,9 +221,8 @@ public class CsApiOrgReportTimesheetFileAttachment {
   }
 
   /**
-   * 0 = Unknown, 1 = iOS, 2 = Android
    **/
-  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
+  @ApiModelProperty(value = "")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }
@@ -232,9 +231,8 @@ public class CsApiOrgReportTimesheetFileAttachment {
   }
 
   /**
-   * 1 = Image, 30 = WordDoc, 31 = Pdf, 32 = MSSpreadSheet, 33 = MSPowerPoint, 34 = RichTextFormat, 35 = ZipFile, 100 = Other
    **/
-  @ApiModelProperty(value = "1 = Image, 30 = WordDoc, 31 = Pdf, 32 = MSSpreadSheet, 33 = MSPowerPoint, 34 = RichTextFormat, 35 = ZipFile, 100 = Other")
+  @ApiModelProperty(value = "")
   public AttachmentTypeEnum getAttachmentType() {
     return attachmentType;
   }

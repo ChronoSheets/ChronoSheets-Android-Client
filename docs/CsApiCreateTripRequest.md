@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **vehicleId** | **Integer** |  |  [optional]
 **pathCoordsStringCsv** | **String** |  |  [optional]
 **distanceMeters** | **Double** |  |  [optional]
-**mobilePlatform** | [**MobilePlatformEnum**](#MobilePlatformEnum) | 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android |  [optional]
+**mobilePlatform** | [**MobilePlatformEnum**](#MobilePlatformEnum) |  |  [optional]
 
 
 <a name="MobilePlatformEnum"></a>

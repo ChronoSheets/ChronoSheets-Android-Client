@@ -27,7 +27,7 @@ public class CsApiCreateTripRequest {
   @SerializedName("DistanceMeters")
   private Double distanceMeters = null;
   public enum MobilePlatformEnum {
-     0,  1,  2, 
+     Unknown,  iOS,  Android, 
   };
   @SerializedName("MobilePlatform")
   private MobilePlatformEnum mobilePlatform = null;
@@ -73,9 +73,8 @@ public class CsApiCreateTripRequest {
   }
 
   /**
-   * 0 = Unknown, 1 = iOS, 2 = Android
    **/
-  @ApiModelProperty(value = "0 = Unknown, 1 = iOS, 2 = Android")
+  @ApiModelProperty(value = "")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }
