@@ -61,9 +61,9 @@ public class ProjectsApi {
   }
 
   /**
-  * Create a project
+  * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert Project Request object containing values for the new Project to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -136,9 +136,9 @@ public class ProjectsApi {
   }
 
       /**
-   * Create a project
+   * Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert Project Request object containing values for the new Project to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void projectsCreateProject (CSInsertProjectRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -207,9 +207,9 @@ public class ProjectsApi {
     }
   }
   /**
-  * Get project by Id
+  * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
-   * @param projectId The ID of the project
+   * @param projectId The ID of the Project you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseProject
   */
@@ -277,9 +277,9 @@ public class ProjectsApi {
   }
 
       /**
-   * Get project by Id
+   * Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
-   * @param projectId The ID of the project   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param projectId The ID of the Project you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void projectsGetProjectById (Integer projectId, String xChronosheetsAuth, final Response.Listener<CSApiResponseProject> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -349,7 +349,7 @@ public class ProjectsApi {
     }
   }
   /**
-  * Get projects for a particular client
+  * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
    * @param clientId The ID of the client
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -419,7 +419,7 @@ public class ProjectsApi {
   }
 
       /**
-   * Get projects for a particular client
+   * Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
    * @param clientId The ID of the client   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -491,9 +491,9 @@ public class ProjectsApi {
     }
   }
   /**
-  * Update a project
+  * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   * 
-   * @param request 
+   * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -566,9 +566,9 @@ public class ProjectsApi {
   }
 
       /**
-   * Update a project
+   * Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void projectsUpdateProject (CSUpdateProjectRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

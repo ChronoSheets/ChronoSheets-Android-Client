@@ -63,11 +63,11 @@ public class ReportsApi {
   }
 
   /**
-  * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+  * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param userIds 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param userIds The Ids of the users, if you want to filter the report data to particular users
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseCombinedReportsData
   */
@@ -147,9 +147,9 @@ public class ReportsApi {
   }
 
       /**
-   * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
+   * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds The Ids of the users, if you want to filter the report data to particular users   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -231,10 +231,10 @@ public class ReportsApi {
     }
   }
   /**
-  * Get Consolidated User Reports Data (Jobs and Tasks)
+  * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseCombinedReportsData
   */
@@ -308,9 +308,9 @@ public class ReportsApi {
   }
 
       /**
-   * Get Consolidated User Reports Data (Jobs and Tasks)
+   * Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetAllChartsDataUser (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -386,9 +386,9 @@ public class ReportsApi {
     }
   }
   /**
-  * Get trip by Id, for reporting purposes
+  * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param tripId The ID of the trip
+   * @param tripId The ID of the Trip you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseTrip
   */
@@ -456,9 +456,9 @@ public class ReportsApi {
   }
 
       /**
-   * Get trip by Id, for reporting purposes
+   * Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param tripId The ID of the trip   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param tripId The ID of the Trip you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetOrgTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -528,13 +528,13 @@ public class ReportsApi {
     }
   }
   /**
-  * Reports on Organisation timesheet file attachments
+  * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param skip 
-   * @param take 
-   * @param userIds 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param skip Skip this many items
+   * @param take Take this many items
+   * @param userIds The Ids of the users, if you want to filter the report data to particular users
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
   */
@@ -626,9 +626,9 @@ public class ReportsApi {
   }
 
       /**
-   * Reports on Organisation timesheet file attachments
+   * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param skip    * @param take    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds The Ids of the users, if you want to filter the report data to particular users   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -722,13 +722,13 @@ public class ReportsApi {
     }
   }
   /**
-  * Reports on Organisation trips (GPS tracking from whole organisation)
+  * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param skip 
-   * @param take 
-   * @param userIds 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param skip Skip this many items
+   * @param take Take this many items
+   * @param userIds The Ids of the users, if you want to filter the report data to particular users
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTrip
   */
@@ -820,9 +820,9 @@ public class ReportsApi {
   }
 
       /**
-   * Reports on Organisation trips (GPS tracking from whole organisation)
+   * Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param skip    * @param take    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds The Ids of the users, if you want to filter the report data to particular users   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -916,15 +916,15 @@ public class ReportsApi {
     }
   }
   /**
-  * Get Timesheets Raw Data
+  * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param userIds 
-   * @param sort 
-   * @param order 
-   * @param skip 
-   * @param take 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param userIds The Ids of the users, if you want to filter the report data to particular users
+   * @param sort Decide which column to sort on
+   * @param order Decide which direction to sort the column
+   * @param skip Skip this many rows
+   * @param take Take this many rows
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListRawReportItem
   */
@@ -1028,9 +1028,9 @@ public class ReportsApi {
   }
 
       /**
-   * Get Timesheets Raw Data
+   * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param userIds    * @param sort    * @param order    * @param skip    * @param take    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds The Ids of the users, if you want to filter the report data to particular users   * @param sort Decide which column to sort on   * @param order Decide which direction to sort the column   * @param skip Skip this many rows   * @param take Take this many rows   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1136,11 +1136,11 @@ public class ReportsApi {
     }
   }
   /**
-  * Gets project cost estimations VS actual cost for date range and users
+  * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param userIds 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param userIds The Ids of the users, if you want to filter the report data to particular users
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListProjectCostingReportItem
   */
@@ -1220,9 +1220,9 @@ public class ReportsApi {
   }
 
       /**
-   * Gets project cost estimations VS actual cost for date range and users
+   * Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param userIds    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds The Ids of the users, if you want to filter the report data to particular users   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseListProjectCostingReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1304,10 +1304,10 @@ public class ReportsApi {
     }
   }
   /**
-  * Timeseries jobs data for the logged in user
+  * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
   * 
-   * @param startDate 
-   * @param endDate 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListJobSeriesReportItem
   */
@@ -1381,9 +1381,9 @@ public class ReportsApi {
   }
 
       /**
-   * Timeseries jobs data for the logged in user
+   * Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
    * 
-   * @param startDate    * @param endDate    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void reportsUserJobsOverTime (Date startDate, Date endDate, String xChronosheetsAuth, final Response.Listener<CSApiResponseListJobSeriesReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
