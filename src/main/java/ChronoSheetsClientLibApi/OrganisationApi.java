@@ -189,7 +189,7 @@ public class OrganisationApi {
   /**
   * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
   * 
-   * @param request 
+   * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseUpdateOrganisationResponse
   */
@@ -264,7 +264,7 @@ public class OrganisationApi {
       /**
    * Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void organisationUpdateOrganisation (CSUpdateOrganisationRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseUpdateOrganisationResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

@@ -25,7 +25,7 @@ import com.android.volley.VolleyError;
 
 import ChronoSheetsClientLibModel.CSApiResponseBoolean;
 import ChronoSheetsClientLibModel.CSApiResponseDoLoginResponse;
-import ChronoSheetsClientLibModel.CSApiResponseSignupResponse;
+import ChronoSheetsClientLibModel.CSApiResponseUpdateProfileResponse;
 import ChronoSheetsClientLibModel.CSApiResponseUserProfile;
 import ChronoSheetsClientLibModel.CSDoLoginRequest;
 import ChronoSheetsClientLibModel.CSUpdateMyProfileRequest;
@@ -585,9 +585,9 @@ public class UserProfileApi {
   * 
    * @param request 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CSApiResponseSignupResponse
+   * @return CSApiResponseUpdateProfileResponse
   */
-  public CSApiResponseSignupResponse userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseUpdateProfileResponse userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = request;
     // verify the required parameter 'request' is set
     if (request == null) {
@@ -634,7 +634,7 @@ public class UserProfileApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CSApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseSignupResponse.class);
+         return (CSApiResponseUpdateProfileResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseUpdateProfileResponse.class);
       } else {
          return null;
       }
@@ -660,7 +660,7 @@ public class UserProfileApi {
    * 
    * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseSignupResponse> responseListener, final Response.ErrorListener errorListener) {
+  public void userProfileUpdateMyProfile (CSUpdateMyProfileRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseUpdateProfileResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
 
     // verify the required parameter 'request' is set
@@ -711,7 +711,7 @@ public class UserProfileApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CSApiResponseSignupResponse) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseSignupResponse.class));
+              responseListener.onResponse((CSApiResponseUpdateProfileResponse) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseUpdateProfileResponse.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

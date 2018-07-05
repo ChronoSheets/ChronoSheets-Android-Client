@@ -61,9 +61,9 @@ public class JobCodesApi {
   }
 
   /**
-  * Create a job code
+  * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert JobCode Request object containing values for the new JobCode to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -136,9 +136,9 @@ public class JobCodesApi {
   }
 
       /**
-   * Create a job code
+   * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert JobCode Request object containing values for the new JobCode to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void jobCodesCreateJobCode (CSInsertJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -207,9 +207,9 @@ public class JobCodesApi {
     }
   }
   /**
-  * Delete a job code
+  * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param jobCodeId The ID of the job code your want to delete
+   * @param jobCodeId The ID of the job code you want to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -277,9 +277,9 @@ public class JobCodesApi {
   }
 
       /**
-   * Delete a job code
+   * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param jobCodeId The ID of the job code your want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param jobCodeId The ID of the job code you want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void jobCodesDeleteJobCode (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -349,9 +349,9 @@ public class JobCodesApi {
     }
   }
   /**
-  * Get a particular job code by job code id
+  * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
   * 
-   * @param jobCodeId 
+   * @param jobCodeId The ID of the JobCode you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseJobCode
   */
@@ -419,9 +419,9 @@ public class JobCodesApi {
   }
 
       /**
-   * Get a particular job code by job code id
+   * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
    * 
-   * @param jobCodeId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param jobCodeId The ID of the JobCode you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void jobCodesGetJobCodeById (Integer jobCodeId, String xChronosheetsAuth, final Response.Listener<CSApiResponseJobCode> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -491,7 +491,7 @@ public class JobCodesApi {
     }
   }
   /**
-  * Get job codes for your organisation
+  * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListJobCode
@@ -554,7 +554,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Get job codes for your organisation
+   * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -620,9 +620,9 @@ public class JobCodesApi {
     }
   }
   /**
-  * Update a job code
+  * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param request 
+   * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -695,9 +695,9 @@ public class JobCodesApi {
   }
 
       /**
-   * Update a job code
+   * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void jobCodesUpdateJobCode (CSUpdateJobCodeRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

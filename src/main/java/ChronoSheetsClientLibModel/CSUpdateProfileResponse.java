@@ -17,7 +17,7 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class CSSignupResponse {
+public class CSUpdateProfileResponse {
   
   @SerializedName("OrganisationId")
   private Integer organisationId = null;
@@ -65,10 +65,10 @@ public class CSSignupResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSSignupResponse signupResponse = (CSSignupResponse) o;
-    return (this.organisationId == null ? signupResponse.organisationId == null : this.organisationId.equals(signupResponse.organisationId)) &&
-        (this.userId == null ? signupResponse.userId == null : this.userId.equals(signupResponse.userId)) &&
-        (this.validationErrors == null ? signupResponse.validationErrors == null : this.validationErrors.equals(signupResponse.validationErrors));
+    CSUpdateProfileResponse updateProfileResponse = (CSUpdateProfileResponse) o;
+    return (this.organisationId == null ? updateProfileResponse.organisationId == null : this.organisationId.equals(updateProfileResponse.organisationId)) &&
+        (this.userId == null ? updateProfileResponse.userId == null : this.userId.equals(updateProfileResponse.userId)) &&
+        (this.validationErrors == null ? updateProfileResponse.validationErrors == null : this.validationErrors.equals(updateProfileResponse.validationErrors));
   }
 
   @Override
@@ -83,7 +83,7 @@ public class CSSignupResponse {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSSignupResponse {\n");
+    sb.append("class CSUpdateProfileResponse {\n");
     
     sb.append("  organisationId: ").append(organisationId).append("\n");
     sb.append("  userId: ").append(userId).append("\n");

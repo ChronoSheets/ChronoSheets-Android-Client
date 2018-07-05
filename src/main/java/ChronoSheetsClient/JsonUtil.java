@@ -185,10 +185,6 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseProject>>(){}.getType();
     }
     
-    if ("CSApiResponseSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CSApiResponseSignupResponse>>(){}.getType();
-    }
-    
     if ("CSApiResponseTimesheetTask".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseTimesheetTask>>(){}.getType();
     }
@@ -199,6 +195,10 @@ public class JsonUtil {
     
     if ("CSApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseUpdateOrganisationResponse>>(){}.getType();
+    }
+    
+    if ("CSApiResponseUpdateProfileResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseUpdateProfileResponse>>(){}.getType();
     }
     
     if ("CSApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
@@ -361,10 +361,6 @@ public class JsonUtil {
       return new TypeToken<List<CSSetUsualHoursRequest>>(){}.getType();
     }
     
-    if ("CSSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CSSignupResponse>>(){}.getType();
-    }
-    
     if ("CSTaskSeriesReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSTaskSeriesReportItem>>(){}.getType();
     }
@@ -407,6 +403,10 @@ public class JsonUtil {
     
     if ("CSUpdateOrganisationResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSUpdateOrganisationResponse>>(){}.getType();
+    }
+    
+    if ("CSUpdateProfileResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateProfileResponse>>(){}.getType();
     }
     
     if ("CSUpdateProjectRequest".equalsIgnoreCase(className)) {
@@ -579,10 +579,6 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseProject>(){}.getType();
     }
     
-    if ("CSApiResponseSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CSApiResponseSignupResponse>(){}.getType();
-    }
-    
     if ("CSApiResponseTimesheetTask".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseTimesheetTask>(){}.getType();
     }
@@ -593,6 +589,10 @@ public class JsonUtil {
     
     if ("CSApiResponseUpdateOrganisationResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseUpdateOrganisationResponse>(){}.getType();
+    }
+    
+    if ("CSApiResponseUpdateProfileResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseUpdateProfileResponse>(){}.getType();
     }
     
     if ("CSApiResponseUpdateUserResponse".equalsIgnoreCase(className)) {
@@ -755,10 +755,6 @@ public class JsonUtil {
       return new TypeToken<CSSetUsualHoursRequest>(){}.getType();
     }
     
-    if ("CSSignupResponse".equalsIgnoreCase(className)) {
-      return new TypeToken<CSSignupResponse>(){}.getType();
-    }
-    
     if ("CSTaskSeriesReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<CSTaskSeriesReportItem>(){}.getType();
     }
@@ -801,6 +797,10 @@ public class JsonUtil {
     
     if ("CSUpdateOrganisationResponse".equalsIgnoreCase(className)) {
       return new TypeToken<CSUpdateOrganisationResponse>(){}.getType();
+    }
+    
+    if ("CSUpdateProfileResponse".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateProfileResponse>(){}.getType();
     }
     
     if ("CSUpdateProjectRequest".equalsIgnoreCase(className)) {

@@ -61,9 +61,9 @@ public class ClientsApi {
   }
 
   /**
-  * Create a client
+  * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert Client Request object containing values for the new Client to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -136,9 +136,9 @@ public class ClientsApi {
   }
 
       /**
-   * Create a client
+   * Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert Client Request object containing values for the new Client to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void clientsCreateClient (CSInsertClientRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -207,9 +207,9 @@ public class ClientsApi {
     }
   }
   /**
-  * Get a particular client
+  * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
-   * @param clientId The ID of the client you want to get
+   * @param clientId The ID of the Client you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseClient
   */
@@ -277,9 +277,9 @@ public class ClientsApi {
   }
 
       /**
-   * Get a particular client
+   * Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
-   * @param clientId The ID of the client you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param clientId The ID of the Client you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void clientsGetClient (Integer clientId, String xChronosheetsAuth, final Response.Listener<CSApiResponseClient> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -349,7 +349,7 @@ public class ClientsApi {
     }
   }
   /**
-  * Get a collection of clients that are under your organisation
+  * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListClient
@@ -412,7 +412,7 @@ public class ClientsApi {
   }
 
       /**
-   * Get a collection of clients that are under your organisation
+   * Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -478,9 +478,9 @@ public class ClientsApi {
     }
   }
   /**
-  * Update a client
+  * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
   * 
-   * @param request 
+   * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -553,9 +553,9 @@ public class ClientsApi {
   }
 
       /**
-   * Update a client
+   * Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void clientsUpdateClient (CSSaveClientRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

@@ -12,15 +12,15 @@
 
 package ChronoSheetsClientLibModel;
 
-import ChronoSheetsClientLibModel.CSSignupResponse;
+import ChronoSheetsClientLibModel.CSUpdateProfileResponse;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class CSApiResponseSignupResponse {
+public class CSApiResponseUpdateProfileResponse {
   
   @SerializedName("Data")
-  private CSSignupResponse data = null;
+  private CSUpdateProfileResponse data = null;
   public enum StatusEnum {
      Succeeded,  FatalException,  GeneralError,  ValidationError,  UnAuthorized,  SessionExpired, 
   };
@@ -32,10 +32,10 @@ public class CSApiResponseSignupResponse {
   /**
    **/
   @ApiModelProperty(value = "")
-  public CSSignupResponse getData() {
+  public CSUpdateProfileResponse getData() {
     return data;
   }
-  public void setData(CSSignupResponse data) {
+  public void setData(CSUpdateProfileResponse data) {
     this.data = data;
   }
 
@@ -68,10 +68,10 @@ public class CSApiResponseSignupResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseSignupResponse apiResponseSignupResponse = (CSApiResponseSignupResponse) o;
-    return (this.data == null ? apiResponseSignupResponse.data == null : this.data.equals(apiResponseSignupResponse.data)) &&
-        (this.status == null ? apiResponseSignupResponse.status == null : this.status.equals(apiResponseSignupResponse.status)) &&
-        (this.message == null ? apiResponseSignupResponse.message == null : this.message.equals(apiResponseSignupResponse.message));
+    CSApiResponseUpdateProfileResponse apiResponseUpdateProfileResponse = (CSApiResponseUpdateProfileResponse) o;
+    return (this.data == null ? apiResponseUpdateProfileResponse.data == null : this.data.equals(apiResponseUpdateProfileResponse.data)) &&
+        (this.status == null ? apiResponseUpdateProfileResponse.status == null : this.status.equals(apiResponseUpdateProfileResponse.status)) &&
+        (this.message == null ? apiResponseUpdateProfileResponse.message == null : this.message.equals(apiResponseUpdateProfileResponse.message));
   }
 
   @Override
@@ -86,7 +86,7 @@ public class CSApiResponseSignupResponse {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseSignupResponse {\n");
+    sb.append("class CSApiResponseUpdateProfileResponse {\n");
     
     sb.append("  data: ").append(data).append("\n");
     sb.append("  status: ").append(status).append("\n");

@@ -61,9 +61,9 @@ public class FleetApi {
   }
 
   /**
-  * Create a vehicle
+  * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert Vehicle Request object containing values for the new Vehicle to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -136,9 +136,9 @@ public class FleetApi {
   }
 
       /**
-   * Create a vehicle
+   * Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert Vehicle Request object containing values for the new Vehicle to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void fleetCreateVehicle (CSInsertVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -209,7 +209,7 @@ public class FleetApi {
   /**
   * Get a particular vehicle
   * 
-   * @param vehicleId The ID of the vehicle you want to get
+   * @param vehicleId The ID of the Vehicle you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseFleetVehicle
   */
@@ -279,7 +279,7 @@ public class FleetApi {
       /**
    * Get a particular vehicle
    * 
-   * @param vehicleId The ID of the vehicle you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param vehicleId The ID of the Vehicle you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void fleetGetVehicleById (Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CSApiResponseFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -351,7 +351,7 @@ public class FleetApi {
   /**
   * Get a collection of vehicles that are under your organisation
   * 
-   * @param includeDeleted 
+   * @param includeDeleted Whether or not to include deleted vehicles
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListFleetVehicle
   */
@@ -421,7 +421,7 @@ public class FleetApi {
       /**
    * Get a collection of vehicles that are under your organisation
    * 
-   * @param includeDeleted    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param includeDeleted Whether or not to include deleted vehicles   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth, final Response.Listener<CSApiResponseListFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -491,9 +491,9 @@ public class FleetApi {
     }
   }
   /**
-  * Update a vehicle
+  * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
   * 
-   * @param request 
+   * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -566,9 +566,9 @@ public class FleetApi {
   }
 
       /**
-   * Update a vehicle
+   * Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void fleetUpdateVehicle (CSSaveVehicleRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
