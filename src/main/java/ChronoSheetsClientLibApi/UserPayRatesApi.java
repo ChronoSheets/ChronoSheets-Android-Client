@@ -58,9 +58,9 @@ public class UserPayRatesApi {
   }
 
   /**
-  * Create a new pay rate for a particular user, archiving the previous pay rate
+  * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -133,9 +133,9 @@ public class UserPayRatesApi {
   }
 
       /**
-   * Create a new pay rate for a particular user, archiving the previous pay rate
+   * Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void userPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -204,9 +204,9 @@ public class UserPayRatesApi {
     }
   }
   /**
-  * Get a collection of pay rates for a particular user, specified by user id
+  * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
   * 
-   * @param userId 
+   * @param userId The ID of the User for which you want to get UserHourlyRate objects
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListUserHourlyRate
   */
@@ -274,9 +274,9 @@ public class UserPayRatesApi {
   }
 
       /**
-   * Get a collection of pay rates for a particular user, specified by user id
+   * Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
    * 
-   * @param userId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userId The ID of the User for which you want to get UserHourlyRate objects   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void userPayRatesGetPayRates (Integer userId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListUserHourlyRate> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**projectsCreateProject**](ProjectsApi.md#projectsCreateProject) | **PUT** /api/Projects/CreateProject | Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
-[**projectsGetProjectById**](ProjectsApi.md#projectsGetProjectById) | **GET** /api/Projects/GetProjectById | Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**projectsGetProjectsForClient**](ProjectsApi.md#projectsGetProjectsForClient) | **GET** /api/Projects/GetProjectsForClient | Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**projectsUpdateProject**](ProjectsApi.md#projectsUpdateProject) | **POST** /api/Projects/UpdateProject | Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**projectsCreateProject**](ProjectsApi.md#projectsCreateProject) | **PUT** /api/Projects/CreateProject | Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**projectsGetProjectById**](ProjectsApi.md#projectsGetProjectById) | **GET** /api/Projects/GetProjectById | Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**projectsGetProjectsForClient**](ProjectsApi.md#projectsGetProjectsForClient) | **GET** /api/Projects/GetProjectsForClient | Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**projectsUpdateProject**](ProjectsApi.md#projectsUpdateProject) | **POST** /api/Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 <a name="projectsCreateProject"></a>
 # **projectsCreateProject**
 > CSApiResponseInt32 projectsCreateProject(request, xChronosheetsAuth)
 
-Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
 ```java
@@ -57,7 +57,7 @@ No authorization required
 # **projectsGetProjectById**
 > CSApiResponseProject projectsGetProjectById(projectId, xChronosheetsAuth)
 
-Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
@@ -100,7 +100,7 @@ No authorization required
 # **projectsGetProjectsForClient**
 > CSApiResponseListProject projectsGetProjectsForClient(clientId, xChronosheetsAuth)
 
-Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
 ```java
@@ -143,7 +143,7 @@ No authorization required
 # **projectsUpdateProject**
 > CSApiResponseBoolean projectsUpdateProject(request, xChronosheetsAuth)
 
-Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
 ```java

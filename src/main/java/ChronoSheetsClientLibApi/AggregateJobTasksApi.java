@@ -56,7 +56,7 @@ public class AggregateJobTasksApi {
   }
 
   /**
-  * Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+  * Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListAggregateJobCode
@@ -119,7 +119,7 @@ public class AggregateJobTasksApi {
   }
 
       /**
-   * Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+   * Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */

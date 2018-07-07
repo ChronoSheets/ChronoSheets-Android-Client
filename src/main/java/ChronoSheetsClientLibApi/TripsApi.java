@@ -60,9 +60,9 @@ public class TripsApi {
   }
 
   /**
-  * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+  * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param request The create trip request
+   * @param request A Create Trip Request object containing values for the new Trip to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -135,9 +135,9 @@ public class TripsApi {
   }
 
       /**
-   * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+   * Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param request The create trip request   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Create Trip Request object containing values for the new Trip to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tripsCreateTrip (CSCreateTripRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -206,9 +206,9 @@ public class TripsApi {
     }
   }
   /**
-  * Get trip by Id
+  * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
   * 
-   * @param tripId The ID of the trip
+   * @param tripId The ID of the Trip you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseTrip
   */
@@ -276,9 +276,9 @@ public class TripsApi {
   }
 
       /**
-   * Get trip by Id
+   * Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
    * 
-   * @param tripId The ID of the trip   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param tripId The ID of the Trip you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tripsGetMyTripById (Integer tripId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -348,13 +348,13 @@ public class TripsApi {
     }
   }
   /**
-  * Get my trips
+  * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
   * 
-   * @param startDate 
-   * @param endDate 
-   * @param skip 
-   * @param take 
-   * @param vehicleId 
+   * @param startDate The Start date of the date range.  Trips after this date will be obtained.
+   * @param endDate The End date of the date range.  Trips before this date will be obtained.
+   * @param skip Skip this many Trips
+   * @param take Take this many Trips
+   * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListTrip
   */
@@ -446,9 +446,9 @@ public class TripsApi {
   }
 
       /**
-   * Get my trips
+   * Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
    * 
-   * @param startDate    * @param endDate    * @param skip    * @param take    * @param vehicleId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The Start date of the date range.  Trips after this date will be obtained.   * @param endDate The End date of the date range.  Trips before this date will be obtained.   * @param skip Skip this many Trips   * @param take Take this many Trips   * @param vehicleId Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tripsGetMyTrips (Date startDate, Date endDate, Integer skip, Integer take, Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

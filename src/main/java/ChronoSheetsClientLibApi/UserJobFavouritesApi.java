@@ -59,9 +59,9 @@ public class UserJobFavouritesApi {
   }
 
   /**
-  * Create a job favourite
+  * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -134,9 +134,9 @@ public class UserJobFavouritesApi {
   }
 
       /**
-   * Create a job favourite
+   * Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void userJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -205,9 +205,9 @@ public class UserJobFavouritesApi {
     }
   }
   /**
-  * Delete a job favourite
+  * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param jobId The ID of the Job
+   * @param jobId The ID of the Job for the Job Favourite you want to delete.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -275,9 +275,9 @@ public class UserJobFavouritesApi {
   }
 
       /**
-   * Delete a job favourite
+   * Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param jobId The ID of the Job   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param jobId The ID of the Job for the Job Favourite you want to delete.   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void userJobFavouritesDeleteJobFavourite (Integer jobId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -347,7 +347,7 @@ public class UserJobFavouritesApi {
     }
   }
   /**
-  * Get your job favourites
+  * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListUserJobFavourite
@@ -410,7 +410,7 @@ public class UserJobFavouritesApi {
   }
 
       /**
-   * Get your job favourites
+   * Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */

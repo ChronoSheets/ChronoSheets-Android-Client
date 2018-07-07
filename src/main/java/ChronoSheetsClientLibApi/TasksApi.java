@@ -61,9 +61,9 @@ public class TasksApi {
   }
 
   /**
-  * Create a task
+  * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert Task Request object containing values for the new Task to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -136,9 +136,9 @@ public class TasksApi {
   }
 
       /**
-   * Create a task
+   * Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert Task Request object containing values for the new Task to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tasksCreateTask (CSInsertTaskRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -207,9 +207,9 @@ public class TasksApi {
     }
   }
   /**
-  * Delete a task
+  * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param taskId 
+   * @param taskId The ID of the Task you want to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -277,9 +277,9 @@ public class TasksApi {
   }
 
       /**
-   * Delete a task
+   * Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param taskId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param taskId The ID of the Task you want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tasksDeleteTask (Integer taskId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -349,9 +349,9 @@ public class TasksApi {
     }
   }
   /**
-  * Get a particular task by id
+  * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
-   * @param taskId 
+   * @param taskId The ID of the TimesheetTask you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseTimesheetTask
   */
@@ -419,9 +419,9 @@ public class TasksApi {
   }
 
       /**
-   * Get a particular task by id
+   * Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
-   * @param taskId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param taskId The ID of the TimesheetTask you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tasksGetTaskById (Integer taskId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTimesheetTask> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -491,7 +491,7 @@ public class TasksApi {
     }
   }
   /**
-  * Get tasks in your organisation
+  * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListTimesheetTask
@@ -554,7 +554,7 @@ public class TasksApi {
   }
 
       /**
-   * Get tasks in your organisation
+   * Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -620,7 +620,7 @@ public class TasksApi {
     }
   }
   /**
-  * Get tasks for a particular job
+  * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
   * 
    * @param jobId The ID of the job
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -690,7 +690,7 @@ public class TasksApi {
   }
 
       /**
-   * Get tasks for a particular job
+   * Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
    * 
    * @param jobId The ID of the job   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -762,9 +762,9 @@ public class TasksApi {
     }
   }
   /**
-  * Update a task
+  * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
-   * @param request 
+   * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -837,9 +837,9 @@ public class TasksApi {
   }
 
       /**
-   * Update a task
+   * Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void tasksUpdateTask (CSUpdateTaskRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

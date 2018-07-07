@@ -62,9 +62,9 @@ public class TimesheetsApi {
   }
 
   /**
-  * Inserts a single timesheet record
+  * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param request The timesheet request object
+   * @param request A Timesheet Request object containing values for the new Timesheet to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -137,9 +137,9 @@ public class TimesheetsApi {
   }
 
       /**
-   * Inserts a single timesheet record
+   * Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param request The timesheet request object   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Timesheet Request object containing values for the new Timesheet to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void timesheetsCreateSingleTimesheet (CSTimesheet request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -208,9 +208,9 @@ public class TimesheetsApi {
     }
   }
   /**
-  * Delete a timesheet
+  * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param timesheetId The ID of the timesheet to delete
+   * @param timesheetId The ID of the Timesheet you want to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -278,9 +278,9 @@ public class TimesheetsApi {
   }
 
       /**
-   * Delete a timesheet
+   * Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param timesheetId The ID of the timesheet to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param timesheetId The ID of the Timesheet you want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void timesheetsDeleteTimesheet (Integer timesheetId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -350,7 +350,7 @@ public class TimesheetsApi {
     }
   }
   /**
-  * Get timesheets between start and end dates
+  * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
    * @param startDate The start date of the date range
    * @param endDate The end date of the date range
@@ -427,7 +427,7 @@ public class TimesheetsApi {
   }
 
       /**
-   * Get timesheets between start and end dates
+   * Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
    * @param startDate The start date of the date range   * @param endDate The end date of the date range   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -505,9 +505,9 @@ public class TimesheetsApi {
     }
   }
   /**
-  * Batch update timesheets
+  * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param request The batch update timesheets request
+   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListInt32
   */
@@ -580,9 +580,9 @@ public class TimesheetsApi {
   }
 
       /**
-   * Batch update timesheets
+   * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param request The batch update timesheets request   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void timesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseListInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

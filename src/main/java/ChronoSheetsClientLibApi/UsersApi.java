@@ -61,9 +61,9 @@ public class UsersApi {
   }
 
   /**
-  * Create a user in your organisation
+  * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
   * 
-   * @param request 
+   * @param request An Insert User Request object containing values for the new User to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInsertUserResponse
   */
@@ -136,9 +136,9 @@ public class UsersApi {
   }
 
       /**
-   * Create a user in your organisation
+   * Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert User Request object containing values for the new User to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void usersCreateTimesheetUser (CSInsertUserRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInsertUserResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
@@ -207,9 +207,9 @@ public class UsersApi {
     }
   }
   /**
-  * Get a particular user in your organisation
+  * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
   * 
-   * @param userId 
+   * @param userId The User ID of the UserForManagement you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseUserForManagement
   */
@@ -277,9 +277,9 @@ public class UsersApi {
   }
 
       /**
-   * Get a particular user in your organisation
+   * Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
    * 
-   * @param userId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userId The User ID of the UserForManagement you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void usersGetTimesheetUser (Integer userId, String xChronosheetsAuth, final Response.Listener<CSApiResponseUserForManagement> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -349,7 +349,7 @@ public class UsersApi {
     }
   }
   /**
-  * Get users for your organisation
+  * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListUserForManagement
@@ -412,7 +412,7 @@ public class UsersApi {
   }
 
       /**
-   * Get users for your organisation
+   * Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -478,9 +478,9 @@ public class UsersApi {
     }
   }
   /**
-  * Update a user
+  * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
   * 
-   * @param request 
+   * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseUpdateUserResponse
   */
@@ -553,9 +553,9 @@ public class UsersApi {
   }
 
       /**
-   * Update a user
+   * Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void usersUpdateTimesheetUser (CSUpdateUserRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseUpdateUserResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

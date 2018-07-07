@@ -58,9 +58,9 @@ public class UsualHoursApi {
   }
 
   /**
-  * Get usual hours (rostered hours) for an employee
+  * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
   * 
-   * @param userId 
+   * @param userId The ID of the User for which you want to get UsualHours for
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListUsualHoursDay
   */
@@ -128,9 +128,9 @@ public class UsualHoursApi {
   }
 
       /**
-   * Get usual hours (rostered hours) for an employee
+   * Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
    * 
-   * @param userId    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userId The ID of the User for which you want to get UsualHours for   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void usualHoursGetUsualHours (Integer userId, String xChronosheetsAuth, final Response.Listener<CSApiResponseListUsualHoursDay> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -200,9 +200,9 @@ public class UsualHoursApi {
     }
   }
   /**
-  * Set usual hours (rostered hours) for an employee
+  * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
   * 
-   * @param request 
+   * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseBoolean
   */
@@ -275,9 +275,9 @@ public class UsualHoursApi {
   }
 
       /**
-   * Set usual hours (rostered hours) for an employee
+   * Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
    * 
-   * @param request    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void usualHoursSetUsualHours (CSSetUsualHoursRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

@@ -61,7 +61,7 @@ public class JobCodesApi {
   }
 
   /**
-  * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+  * Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
    * @param request An Insert JobCode Request object containing values for the new JobCode to create
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -136,7 +136,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+   * Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
    * @param request An Insert JobCode Request object containing values for the new JobCode to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -207,7 +207,7 @@ public class JobCodesApi {
     }
   }
   /**
-  * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+  * Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
    * @param jobCodeId The ID of the job code you want to delete
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -277,7 +277,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+   * Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
    * @param jobCodeId The ID of the job code you want to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -349,7 +349,7 @@ public class JobCodesApi {
     }
   }
   /**
-  * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+  * Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
   * 
    * @param jobCodeId The ID of the JobCode you want to get
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -419,7 +419,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+   * Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
    * 
    * @param jobCodeId The ID of the JobCode you want to get   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -491,7 +491,7 @@ public class JobCodesApi {
     }
   }
   /**
-  * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+  * Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
   * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListJobCode
@@ -554,7 +554,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+   * Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
    * 
    * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -620,7 +620,7 @@ public class JobCodesApi {
     }
   }
   /**
-  * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+  * Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
   * 
    * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
    * @param xChronosheetsAuth The ChronoSheets Auth Token
@@ -695,7 +695,7 @@ public class JobCodesApi {
   }
 
       /**
-   * Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+   * Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
    * 
    * @param request A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
