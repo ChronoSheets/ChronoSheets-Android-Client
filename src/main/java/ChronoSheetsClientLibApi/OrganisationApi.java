@@ -238,7 +238,7 @@ public class OrganisationApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseUpdateOrganisationResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseUpdateOrganisationResponse.class);
       } else {
@@ -312,7 +312,7 @@ public class OrganisationApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {

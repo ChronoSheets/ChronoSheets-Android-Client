@@ -105,7 +105,7 @@ public class UserProfileApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseDoLoginResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseDoLoginResponse.class);
       } else {
@@ -173,7 +173,7 @@ public class UserProfileApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
@@ -632,7 +632,7 @@ public class UserProfileApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseUpdateProfileResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseUpdateProfileResponse.class);
       } else {
@@ -706,7 +706,7 @@ public class UserProfileApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {

@@ -112,7 +112,7 @@ public class UsersApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseInsertUserResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInsertUserResponse.class);
       } else {
@@ -186,7 +186,7 @@ public class UsersApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
@@ -529,7 +529,7 @@ public class UsersApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseUpdateUserResponse) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseUpdateUserResponse.class);
       } else {
@@ -603,7 +603,7 @@ public class UsersApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {

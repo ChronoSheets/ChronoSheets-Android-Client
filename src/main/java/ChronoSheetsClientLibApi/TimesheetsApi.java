@@ -113,7 +113,7 @@ public class TimesheetsApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseInt32.class);
       } else {
@@ -187,7 +187,7 @@ public class TimesheetsApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
@@ -556,7 +556,7 @@ public class TimesheetsApi {
     String[] authNames = new String[] {  };
 
     try {
-      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
          return (CSApiResponseListInt32) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListInt32.class);
       } else {
@@ -630,7 +630,7 @@ public class TimesheetsApi {
     String[] authNames = new String[] {  };
 
     try {
-      apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
+      apiInvoker.invokeAPI(basePath, path, "PUT", queryParams, postBody, headerParams, formParams, contentType, authNames,
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
