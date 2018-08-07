@@ -1,9 +1,18 @@
 
-# CSOrgReportTimesheetFileAttachment
+# CSOrgReportTranscript
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**finishedJob** | **Boolean** |  |  [optional]
+**completedProcessing** | [**Date**](Date.md) |  |  [optional]
+**created** | [**Date**](Date.md) |  |  [optional]
+**startedProcessing** | [**Date**](Date.md) |  |  [optional]
+**transcriptionId** | **Integer** |  |  [optional]
+**jobName** | **String** |  |  [optional]
+**contents** | **String** |  |  [optional]
+**mediaType** | [**MediaTypeEnum**](#MediaTypeEnum) |  |  [optional]
+**transcriptionStatus** | [**TranscriptionStatusEnum**](#TranscriptionStatusEnum) |  |  [optional]
 **username** | **String** |  |  [optional]
 **emailAddress** | **String** |  |  [optional]
 **firstName** | **String** |  |  [optional]
@@ -31,6 +40,18 @@ Name | Type | Description | Notes
 **dateUploaded** | [**Date**](Date.md) |  |  [optional]
 **dateImageCaptured** | [**Date**](Date.md) |  |  [optional]
 **storageAllocationBytes** | **Long** |  |  [optional]
+
+
+<a name="MediaTypeEnum"></a>
+## Enum: MediaTypeEnum
+Name | Value
+---- | -----
+
+
+<a name="TranscriptionStatusEnum"></a>
+## Enum: TranscriptionStatusEnum
+Name | Value
+---- | -----
 
 
 <a name="MobilePlatformEnum"></a>

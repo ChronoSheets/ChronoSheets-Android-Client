@@ -30,6 +30,8 @@ public class CSProjectCostingReportItem {
   private String clientName = null;
   @SerializedName("EstimatedCost")
   private Double estimatedCost = null;
+  @SerializedName("ActualCostFiltered")
+  private Double actualCostFiltered = null;
   @SerializedName("ActualCost")
   private Double actualCost = null;
 
@@ -96,6 +98,16 @@ public class CSProjectCostingReportItem {
   /**
    **/
   @ApiModelProperty(value = "")
+  public Double getActualCostFiltered() {
+    return actualCostFiltered;
+  }
+  public void setActualCostFiltered(Double actualCostFiltered) {
+    this.actualCostFiltered = actualCostFiltered;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Double getActualCost() {
     return actualCost;
   }
@@ -119,6 +131,7 @@ public class CSProjectCostingReportItem {
         (this.organisationId == null ? projectCostingReportItem.organisationId == null : this.organisationId.equals(projectCostingReportItem.organisationId)) &&
         (this.clientName == null ? projectCostingReportItem.clientName == null : this.clientName.equals(projectCostingReportItem.clientName)) &&
         (this.estimatedCost == null ? projectCostingReportItem.estimatedCost == null : this.estimatedCost.equals(projectCostingReportItem.estimatedCost)) &&
+        (this.actualCostFiltered == null ? projectCostingReportItem.actualCostFiltered == null : this.actualCostFiltered.equals(projectCostingReportItem.actualCostFiltered)) &&
         (this.actualCost == null ? projectCostingReportItem.actualCost == null : this.actualCost.equals(projectCostingReportItem.actualCost));
   }
 
@@ -131,6 +144,7 @@ public class CSProjectCostingReportItem {
     result = 31 * result + (this.organisationId == null ? 0: this.organisationId.hashCode());
     result = 31 * result + (this.clientName == null ? 0: this.clientName.hashCode());
     result = 31 * result + (this.estimatedCost == null ? 0: this.estimatedCost.hashCode());
+    result = 31 * result + (this.actualCostFiltered == null ? 0: this.actualCostFiltered.hashCode());
     result = 31 * result + (this.actualCost == null ? 0: this.actualCost.hashCode());
     return result;
   }
@@ -146,6 +160,7 @@ public class CSProjectCostingReportItem {
     sb.append("  organisationId: ").append(organisationId).append("\n");
     sb.append("  clientName: ").append(clientName).append("\n");
     sb.append("  estimatedCost: ").append(estimatedCost).append("\n");
+    sb.append("  actualCostFiltered: ").append(actualCostFiltered).append("\n");
     sb.append("  actualCost: ").append(actualCost).append("\n");
     sb.append("}\n");
     return sb.toString();

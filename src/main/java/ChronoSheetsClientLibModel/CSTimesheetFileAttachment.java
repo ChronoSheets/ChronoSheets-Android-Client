@@ -17,16 +17,8 @@ import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class CSOrgReportTimesheetFileAttachment {
+public class CSTimesheetFileAttachment {
   
-  @SerializedName("Username")
-  private String username = null;
-  @SerializedName("EmailAddress")
-  private String emailAddress = null;
-  @SerializedName("FirstName")
-  private String firstName = null;
-  @SerializedName("LastName")
-  private String lastName = null;
   @SerializedName("TimesheetId")
   private Integer timesheetId = null;
   @SerializedName("DocumentS3SignedUrl")
@@ -79,46 +71,6 @@ public class CSOrgReportTimesheetFileAttachment {
   private Date dateImageCaptured = null;
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getUsername() {
-    return username;
-  }
-  public void setUsername(String username) {
-    this.username = username;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getEmailAddress() {
-    return emailAddress;
-  }
-  public void setEmailAddress(String emailAddress) {
-    this.emailAddress = emailAddress;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getFirstName() {
-    return firstName;
-  }
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public String getLastName() {
-    return lastName;
-  }
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
 
   /**
    **/
@@ -359,43 +311,35 @@ public class CSOrgReportTimesheetFileAttachment {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSOrgReportTimesheetFileAttachment orgReportTimesheetFileAttachment = (CSOrgReportTimesheetFileAttachment) o;
-    return (this.username == null ? orgReportTimesheetFileAttachment.username == null : this.username.equals(orgReportTimesheetFileAttachment.username)) &&
-        (this.emailAddress == null ? orgReportTimesheetFileAttachment.emailAddress == null : this.emailAddress.equals(orgReportTimesheetFileAttachment.emailAddress)) &&
-        (this.firstName == null ? orgReportTimesheetFileAttachment.firstName == null : this.firstName.equals(orgReportTimesheetFileAttachment.firstName)) &&
-        (this.lastName == null ? orgReportTimesheetFileAttachment.lastName == null : this.lastName.equals(orgReportTimesheetFileAttachment.lastName)) &&
-        (this.timesheetId == null ? orgReportTimesheetFileAttachment.timesheetId == null : this.timesheetId.equals(orgReportTimesheetFileAttachment.timesheetId)) &&
-        (this.documentS3SignedUrl == null ? orgReportTimesheetFileAttachment.documentS3SignedUrl == null : this.documentS3SignedUrl.equals(orgReportTimesheetFileAttachment.documentS3SignedUrl)) &&
-        (this.imageLargeS3SignedUrl == null ? orgReportTimesheetFileAttachment.imageLargeS3SignedUrl == null : this.imageLargeS3SignedUrl.equals(orgReportTimesheetFileAttachment.imageLargeS3SignedUrl)) &&
-        (this.imageMediumS3SignedUrl == null ? orgReportTimesheetFileAttachment.imageMediumS3SignedUrl == null : this.imageMediumS3SignedUrl.equals(orgReportTimesheetFileAttachment.imageMediumS3SignedUrl)) &&
-        (this.imageSmallS3SignedUrl == null ? orgReportTimesheetFileAttachment.imageSmallS3SignedUrl == null : this.imageSmallS3SignedUrl.equals(orgReportTimesheetFileAttachment.imageSmallS3SignedUrl)) &&
-        (this.timesheetStart == null ? orgReportTimesheetFileAttachment.timesheetStart == null : this.timesheetStart.equals(orgReportTimesheetFileAttachment.timesheetStart)) &&
-        (this.timesheetEnd == null ? orgReportTimesheetFileAttachment.timesheetEnd == null : this.timesheetEnd.equals(orgReportTimesheetFileAttachment.timesheetEnd)) &&
-        (this.fileAttachmentId == null ? orgReportTimesheetFileAttachment.fileAttachmentId == null : this.fileAttachmentId.equals(orgReportTimesheetFileAttachment.fileAttachmentId)) &&
-        (this.userId == null ? orgReportTimesheetFileAttachment.userId == null : this.userId.equals(orgReportTimesheetFileAttachment.userId)) &&
-        (this.orgId == null ? orgReportTimesheetFileAttachment.orgId == null : this.orgId.equals(orgReportTimesheetFileAttachment.orgId)) &&
-        (this.mobilePlatform == null ? orgReportTimesheetFileAttachment.mobilePlatform == null : this.mobilePlatform.equals(orgReportTimesheetFileAttachment.mobilePlatform)) &&
-        (this.attachmentType == null ? orgReportTimesheetFileAttachment.attachmentType == null : this.attachmentType.equals(orgReportTimesheetFileAttachment.attachmentType)) &&
-        (this.notes == null ? orgReportTimesheetFileAttachment.notes == null : this.notes.equals(orgReportTimesheetFileAttachment.notes)) &&
-        (this.nonImageFilePath == null ? orgReportTimesheetFileAttachment.nonImageFilePath == null : this.nonImageFilePath.equals(orgReportTimesheetFileAttachment.nonImageFilePath)) &&
-        (this.imageLargeFilePath == null ? orgReportTimesheetFileAttachment.imageLargeFilePath == null : this.imageLargeFilePath.equals(orgReportTimesheetFileAttachment.imageLargeFilePath)) &&
-        (this.imageMediumFilePath == null ? orgReportTimesheetFileAttachment.imageMediumFilePath == null : this.imageMediumFilePath.equals(orgReportTimesheetFileAttachment.imageMediumFilePath)) &&
-        (this.imageSmallFilePath == null ? orgReportTimesheetFileAttachment.imageSmallFilePath == null : this.imageSmallFilePath.equals(orgReportTimesheetFileAttachment.imageSmallFilePath)) &&
-        (this.originalFileName == null ? orgReportTimesheetFileAttachment.originalFileName == null : this.originalFileName.equals(orgReportTimesheetFileAttachment.originalFileName)) &&
-        (this.latitude == null ? orgReportTimesheetFileAttachment.latitude == null : this.latitude.equals(orgReportTimesheetFileAttachment.latitude)) &&
-        (this.longitude == null ? orgReportTimesheetFileAttachment.longitude == null : this.longitude.equals(orgReportTimesheetFileAttachment.longitude)) &&
-        (this.dateUploaded == null ? orgReportTimesheetFileAttachment.dateUploaded == null : this.dateUploaded.equals(orgReportTimesheetFileAttachment.dateUploaded)) &&
-        (this.dateImageCaptured == null ? orgReportTimesheetFileAttachment.dateImageCaptured == null : this.dateImageCaptured.equals(orgReportTimesheetFileAttachment.dateImageCaptured)) &&
-        (this.storageAllocationBytes == null ? orgReportTimesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(orgReportTimesheetFileAttachment.storageAllocationBytes));
+    CSTimesheetFileAttachment timesheetFileAttachment = (CSTimesheetFileAttachment) o;
+    return (this.timesheetId == null ? timesheetFileAttachment.timesheetId == null : this.timesheetId.equals(timesheetFileAttachment.timesheetId)) &&
+        (this.documentS3SignedUrl == null ? timesheetFileAttachment.documentS3SignedUrl == null : this.documentS3SignedUrl.equals(timesheetFileAttachment.documentS3SignedUrl)) &&
+        (this.imageLargeS3SignedUrl == null ? timesheetFileAttachment.imageLargeS3SignedUrl == null : this.imageLargeS3SignedUrl.equals(timesheetFileAttachment.imageLargeS3SignedUrl)) &&
+        (this.imageMediumS3SignedUrl == null ? timesheetFileAttachment.imageMediumS3SignedUrl == null : this.imageMediumS3SignedUrl.equals(timesheetFileAttachment.imageMediumS3SignedUrl)) &&
+        (this.imageSmallS3SignedUrl == null ? timesheetFileAttachment.imageSmallS3SignedUrl == null : this.imageSmallS3SignedUrl.equals(timesheetFileAttachment.imageSmallS3SignedUrl)) &&
+        (this.timesheetStart == null ? timesheetFileAttachment.timesheetStart == null : this.timesheetStart.equals(timesheetFileAttachment.timesheetStart)) &&
+        (this.timesheetEnd == null ? timesheetFileAttachment.timesheetEnd == null : this.timesheetEnd.equals(timesheetFileAttachment.timesheetEnd)) &&
+        (this.fileAttachmentId == null ? timesheetFileAttachment.fileAttachmentId == null : this.fileAttachmentId.equals(timesheetFileAttachment.fileAttachmentId)) &&
+        (this.userId == null ? timesheetFileAttachment.userId == null : this.userId.equals(timesheetFileAttachment.userId)) &&
+        (this.orgId == null ? timesheetFileAttachment.orgId == null : this.orgId.equals(timesheetFileAttachment.orgId)) &&
+        (this.mobilePlatform == null ? timesheetFileAttachment.mobilePlatform == null : this.mobilePlatform.equals(timesheetFileAttachment.mobilePlatform)) &&
+        (this.attachmentType == null ? timesheetFileAttachment.attachmentType == null : this.attachmentType.equals(timesheetFileAttachment.attachmentType)) &&
+        (this.notes == null ? timesheetFileAttachment.notes == null : this.notes.equals(timesheetFileAttachment.notes)) &&
+        (this.nonImageFilePath == null ? timesheetFileAttachment.nonImageFilePath == null : this.nonImageFilePath.equals(timesheetFileAttachment.nonImageFilePath)) &&
+        (this.imageLargeFilePath == null ? timesheetFileAttachment.imageLargeFilePath == null : this.imageLargeFilePath.equals(timesheetFileAttachment.imageLargeFilePath)) &&
+        (this.imageMediumFilePath == null ? timesheetFileAttachment.imageMediumFilePath == null : this.imageMediumFilePath.equals(timesheetFileAttachment.imageMediumFilePath)) &&
+        (this.imageSmallFilePath == null ? timesheetFileAttachment.imageSmallFilePath == null : this.imageSmallFilePath.equals(timesheetFileAttachment.imageSmallFilePath)) &&
+        (this.originalFileName == null ? timesheetFileAttachment.originalFileName == null : this.originalFileName.equals(timesheetFileAttachment.originalFileName)) &&
+        (this.latitude == null ? timesheetFileAttachment.latitude == null : this.latitude.equals(timesheetFileAttachment.latitude)) &&
+        (this.longitude == null ? timesheetFileAttachment.longitude == null : this.longitude.equals(timesheetFileAttachment.longitude)) &&
+        (this.dateUploaded == null ? timesheetFileAttachment.dateUploaded == null : this.dateUploaded.equals(timesheetFileAttachment.dateUploaded)) &&
+        (this.dateImageCaptured == null ? timesheetFileAttachment.dateImageCaptured == null : this.dateImageCaptured.equals(timesheetFileAttachment.dateImageCaptured)) &&
+        (this.storageAllocationBytes == null ? timesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(timesheetFileAttachment.storageAllocationBytes));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.username == null ? 0: this.username.hashCode());
-    result = 31 * result + (this.emailAddress == null ? 0: this.emailAddress.hashCode());
-    result = 31 * result + (this.firstName == null ? 0: this.firstName.hashCode());
-    result = 31 * result + (this.lastName == null ? 0: this.lastName.hashCode());
     result = 31 * result + (this.timesheetId == null ? 0: this.timesheetId.hashCode());
     result = 31 * result + (this.documentS3SignedUrl == null ? 0: this.documentS3SignedUrl.hashCode());
     result = 31 * result + (this.imageLargeS3SignedUrl == null ? 0: this.imageLargeS3SignedUrl.hashCode());
@@ -425,12 +369,8 @@ public class CSOrgReportTimesheetFileAttachment {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSOrgReportTimesheetFileAttachment {\n");
+    sb.append("class CSTimesheetFileAttachment {\n");
     
-    sb.append("  username: ").append(username).append("\n");
-    sb.append("  emailAddress: ").append(emailAddress).append("\n");
-    sb.append("  firstName: ").append(firstName).append("\n");
-    sb.append("  lastName: ").append(lastName).append("\n");
     sb.append("  timesheetId: ").append(timesheetId).append("\n");
     sb.append("  documentS3SignedUrl: ").append(documentS3SignedUrl).append("\n");
     sb.append("  imageLargeS3SignedUrl: ").append(imageLargeS3SignedUrl).append("\n");

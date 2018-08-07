@@ -57,12 +57,20 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("CSAggregateClient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSAggregateClient>>(){}.getType();
+    }
+    
     if ("CSAggregateJobCode".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSAggregateJobCode>>(){}.getType();
     }
     
     if ("CSAggregateJobTask".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSAggregateJobTask>>(){}.getType();
+    }
+    
+    if ("CSAggregateProject".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSAggregateProject>>(){}.getType();
     }
     
     if ("CSApiResponseBoolean".equalsIgnoreCase(className)) {
@@ -89,12 +97,20 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>>(){}.getType();
     }
     
+    if ("CSApiResponseForPaginatedListOrgReportTranscript".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTranscript>>(){}.getType();
+    }
+    
     if ("CSApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTrip>>(){}.getType();
     }
     
     if ("CSApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseForPaginatedListRawReportItem>>(){}.getType();
+    }
+    
+    if ("CSApiResponseForPaginatedListTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListTimesheetFileAttachment>>(){}.getType();
     }
     
     if ("CSApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
@@ -113,12 +129,20 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseJobCode>>(){}.getType();
     }
     
+    if ("CSApiResponseListAggregateClient".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListAggregateClient>>(){}.getType();
+    }
+    
     if ("CSApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseListAggregateJobCode>>(){}.getType();
     }
     
     if ("CSApiResponseListClient".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseListClient>>(){}.getType();
+    }
+    
+    if ("CSApiResponseListFleetSummaryReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseListFleetSummaryReportItem>>(){}.getType();
     }
     
     if ("CSApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
@@ -249,6 +273,10 @@ public class JsonUtil {
       return new TypeToken<List<CSDoLoginResponse>>(){}.getType();
     }
     
+    if ("CSFleetSummaryReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSFleetSummaryReportItem>>(){}.getType();
+    }
+    
     if ("CSFleetVehicle".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSFleetVehicle>>(){}.getType();
     }
@@ -307,6 +335,10 @@ public class JsonUtil {
     
     if ("CSOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSOrgReportTimesheetFileAttachment>>(){}.getType();
+    }
+    
+    if ("CSOrgReportTranscript".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrgReportTranscript>>(){}.getType();
     }
     
     if ("CSOrgReportTrip".equalsIgnoreCase(className)) {
@@ -375,6 +407,10 @@ public class JsonUtil {
     
     if ("CSTimesheet".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSTimesheet>>(){}.getType();
+    }
+    
+    if ("CSTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTimesheetFileAttachment>>(){}.getType();
     }
     
     if ("CSTimesheetTask".equalsIgnoreCase(className)) {
@@ -451,12 +487,20 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("CSAggregateClient".equalsIgnoreCase(className)) {
+      return new TypeToken<CSAggregateClient>(){}.getType();
+    }
+    
     if ("CSAggregateJobCode".equalsIgnoreCase(className)) {
       return new TypeToken<CSAggregateJobCode>(){}.getType();
     }
     
     if ("CSAggregateJobTask".equalsIgnoreCase(className)) {
       return new TypeToken<CSAggregateJobTask>(){}.getType();
+    }
+    
+    if ("CSAggregateProject".equalsIgnoreCase(className)) {
+      return new TypeToken<CSAggregateProject>(){}.getType();
     }
     
     if ("CSApiResponseBoolean".equalsIgnoreCase(className)) {
@@ -483,12 +527,20 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
     }
     
+    if ("CSApiResponseForPaginatedListOrgReportTranscript".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListOrgReportTranscript>(){}.getType();
+    }
+    
     if ("CSApiResponseForPaginatedListOrgReportTrip".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseForPaginatedListOrgReportTrip>(){}.getType();
     }
     
     if ("CSApiResponseForPaginatedListRawReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseForPaginatedListRawReportItem>(){}.getType();
+    }
+    
+    if ("CSApiResponseForPaginatedListTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListTimesheetFileAttachment>(){}.getType();
     }
     
     if ("CSApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
@@ -507,12 +559,20 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseJobCode>(){}.getType();
     }
     
+    if ("CSApiResponseListAggregateClient".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListAggregateClient>(){}.getType();
+    }
+    
     if ("CSApiResponseListAggregateJobCode".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseListAggregateJobCode>(){}.getType();
     }
     
     if ("CSApiResponseListClient".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseListClient>(){}.getType();
+    }
+    
+    if ("CSApiResponseListFleetSummaryReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseListFleetSummaryReportItem>(){}.getType();
     }
     
     if ("CSApiResponseListFleetVehicle".equalsIgnoreCase(className)) {
@@ -643,6 +703,10 @@ public class JsonUtil {
       return new TypeToken<CSDoLoginResponse>(){}.getType();
     }
     
+    if ("CSFleetSummaryReportItem".equalsIgnoreCase(className)) {
+      return new TypeToken<CSFleetSummaryReportItem>(){}.getType();
+    }
+    
     if ("CSFleetVehicle".equalsIgnoreCase(className)) {
       return new TypeToken<CSFleetVehicle>(){}.getType();
     }
@@ -701,6 +765,10 @@ public class JsonUtil {
     
     if ("CSOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
       return new TypeToken<CSOrgReportTimesheetFileAttachment>(){}.getType();
+    }
+    
+    if ("CSOrgReportTranscript".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrgReportTranscript>(){}.getType();
     }
     
     if ("CSOrgReportTrip".equalsIgnoreCase(className)) {
@@ -769,6 +837,10 @@ public class JsonUtil {
     
     if ("CSTimesheet".equalsIgnoreCase(className)) {
       return new TypeToken<CSTimesheet>(){}.getType();
+    }
+    
+    if ("CSTimesheetFileAttachment".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTimesheetFileAttachment>(){}.getType();
     }
     
     if ("CSTimesheetTask".equalsIgnoreCase(className)) {

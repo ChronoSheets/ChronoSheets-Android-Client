@@ -25,8 +25,10 @@ import com.android.volley.VolleyError;
 
 import ChronoSheetsClientLibModel.CSApiResponseCombinedReportsData;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTrip;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListRawReportItem;
+import ChronoSheetsClientLibModel.CSApiResponseListFleetSummaryReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListJobSeriesReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseListProjectCostingReportItem;
 import ChronoSheetsClientLibModel.CSApiResponseTrip;
@@ -386,6 +388,174 @@ public class ReportsApi {
     }
   }
   /**
+  * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+  * 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CSApiResponseListFleetSummaryReportItem
+  */
+  public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'startDate' is set
+    if (startDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'startDate' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'startDate' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'endDate' is set
+    if (endDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'userIds' is set
+    if (userIds == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin"));
+    }
+
+    // create path and map variables
+    String path = "/api/Reports/GetFleetSummaryAdmin";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseListFleetSummaryReportItem) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseListFleetSummaryReportItem.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+   * 
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseListFleetSummaryReportItem> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'startDate' is set
+    if (startDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'startDate' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'startDate' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'endDate' is set
+    if (endDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'userIds' is set
+    if (userIds == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling reportsGetFleetSummaryAdmin"));
+    }
+
+    // create path and map variables
+    String path = "/api/Reports/GetFleetSummaryAdmin".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseListFleetSummaryReportItem) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseListFleetSummaryReportItem.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
   * 
    * @param tripId The ID of the Trip you want to get
@@ -528,7 +698,7 @@ public class ReportsApi {
     }
   }
   /**
-  * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+  * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
@@ -626,7 +796,7 @@ public class ReportsApi {
   }
 
       /**
-   * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+   * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
    * 
    * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
@@ -707,6 +877,213 @@ public class ReportsApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+  * 
+   * @param startDate The start date for the date range.  Report data in the response is after this date
+   * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param skip Skip this many items
+   * @param take Take this many items
+   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+   * @param keywords Search the transcripts by keyword(s)
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CSApiResponseForPaginatedListOrgReportTranscript
+  */
+  public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'startDate' is set
+    if (startDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'startDate' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'startDate' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'endDate' is set
+    if (endDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'skip' is set
+    if (skip == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'take' is set
+    if (take == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'userIds' is set
+    if (userIds == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'keywords' is set
+    if (keywords == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts"));
+    }
+
+    // create path and map variables
+    String path = "/api/Reports/GetOrganisationTranscripts";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Skip", skip));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Take", take));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Keywords", keywords));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseForPaginatedListOrgReportTranscript) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListOrgReportTranscript.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+   * 
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param keywords Search the transcripts by keyword(s)   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void reportsGetOrganisationTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTranscript> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'startDate' is set
+    if (startDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'startDate' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'startDate' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'endDate' is set
+    if (endDate == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'skip' is set
+    if (skip == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'take' is set
+    if (take == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'userIds' is set
+    if (userIds == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'keywords' is set
+    if (keywords == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling reportsGetOrganisationTranscripts"));
+    }
+
+    // create path and map variables
+    String path = "/api/Reports/GetOrganisationTranscripts".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Skip", skip));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Take", take));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Keywords", keywords));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseForPaginatedListOrgReportTranscript) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListOrgReportTranscript.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
