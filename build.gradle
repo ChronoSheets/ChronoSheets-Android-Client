@@ -1,4 +1,4 @@
-group = 'io.swagger'
+group = 'com.chronosheets.api.android'
 project.version = '1.0.0'
 
 buildscript {
