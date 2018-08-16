@@ -71,6 +71,8 @@ public class CSTimesheetFileAttachment {
   private Date dateImageCaptured = null;
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
+  @SerializedName("AudioDurationSeconds")
+  private Integer audioDurationSeconds = null;
 
   /**
    **/
@@ -302,6 +304,16 @@ public class CSTimesheetFileAttachment {
     this.storageAllocationBytes = storageAllocationBytes;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getAudioDurationSeconds() {
+    return audioDurationSeconds;
+  }
+  public void setAudioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -334,7 +346,8 @@ public class CSTimesheetFileAttachment {
         (this.longitude == null ? timesheetFileAttachment.longitude == null : this.longitude.equals(timesheetFileAttachment.longitude)) &&
         (this.dateUploaded == null ? timesheetFileAttachment.dateUploaded == null : this.dateUploaded.equals(timesheetFileAttachment.dateUploaded)) &&
         (this.dateImageCaptured == null ? timesheetFileAttachment.dateImageCaptured == null : this.dateImageCaptured.equals(timesheetFileAttachment.dateImageCaptured)) &&
-        (this.storageAllocationBytes == null ? timesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(timesheetFileAttachment.storageAllocationBytes));
+        (this.storageAllocationBytes == null ? timesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(timesheetFileAttachment.storageAllocationBytes)) &&
+        (this.audioDurationSeconds == null ? timesheetFileAttachment.audioDurationSeconds == null : this.audioDurationSeconds.equals(timesheetFileAttachment.audioDurationSeconds));
   }
 
   @Override
@@ -363,6 +376,7 @@ public class CSTimesheetFileAttachment {
     result = 31 * result + (this.dateUploaded == null ? 0: this.dateUploaded.hashCode());
     result = 31 * result + (this.dateImageCaptured == null ? 0: this.dateImageCaptured.hashCode());
     result = 31 * result + (this.storageAllocationBytes == null ? 0: this.storageAllocationBytes.hashCode());
+    result = 31 * result + (this.audioDurationSeconds == null ? 0: this.audioDurationSeconds.hashCode());
     return result;
   }
 
@@ -394,6 +408,7 @@ public class CSTimesheetFileAttachment {
     sb.append("  dateUploaded: ").append(dateUploaded).append("\n");
     sb.append("  dateImageCaptured: ").append(dateImageCaptured).append("\n");
     sb.append("  storageAllocationBytes: ").append(storageAllocationBytes).append("\n");
+    sb.append("  audioDurationSeconds: ").append(audioDurationSeconds).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

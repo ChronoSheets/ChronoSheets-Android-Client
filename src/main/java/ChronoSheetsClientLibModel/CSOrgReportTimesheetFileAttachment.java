@@ -79,6 +79,8 @@ public class CSOrgReportTimesheetFileAttachment {
   private Date dateImageCaptured = null;
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
+  @SerializedName("AudioDurationSeconds")
+  private Integer audioDurationSeconds = null;
 
   /**
    **/
@@ -350,6 +352,16 @@ public class CSOrgReportTimesheetFileAttachment {
     this.storageAllocationBytes = storageAllocationBytes;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getAudioDurationSeconds() {
+    return audioDurationSeconds;
+  }
+  public void setAudioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -386,7 +398,8 @@ public class CSOrgReportTimesheetFileAttachment {
         (this.longitude == null ? orgReportTimesheetFileAttachment.longitude == null : this.longitude.equals(orgReportTimesheetFileAttachment.longitude)) &&
         (this.dateUploaded == null ? orgReportTimesheetFileAttachment.dateUploaded == null : this.dateUploaded.equals(orgReportTimesheetFileAttachment.dateUploaded)) &&
         (this.dateImageCaptured == null ? orgReportTimesheetFileAttachment.dateImageCaptured == null : this.dateImageCaptured.equals(orgReportTimesheetFileAttachment.dateImageCaptured)) &&
-        (this.storageAllocationBytes == null ? orgReportTimesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(orgReportTimesheetFileAttachment.storageAllocationBytes));
+        (this.storageAllocationBytes == null ? orgReportTimesheetFileAttachment.storageAllocationBytes == null : this.storageAllocationBytes.equals(orgReportTimesheetFileAttachment.storageAllocationBytes)) &&
+        (this.audioDurationSeconds == null ? orgReportTimesheetFileAttachment.audioDurationSeconds == null : this.audioDurationSeconds.equals(orgReportTimesheetFileAttachment.audioDurationSeconds));
   }
 
   @Override
@@ -419,6 +432,7 @@ public class CSOrgReportTimesheetFileAttachment {
     result = 31 * result + (this.dateUploaded == null ? 0: this.dateUploaded.hashCode());
     result = 31 * result + (this.dateImageCaptured == null ? 0: this.dateImageCaptured.hashCode());
     result = 31 * result + (this.storageAllocationBytes == null ? 0: this.storageAllocationBytes.hashCode());
+    result = 31 * result + (this.audioDurationSeconds == null ? 0: this.audioDurationSeconds.hashCode());
     return result;
   }
 
@@ -454,6 +468,7 @@ public class CSOrgReportTimesheetFileAttachment {
     sb.append("  dateUploaded: ").append(dateUploaded).append("\n");
     sb.append("  dateImageCaptured: ").append(dateImageCaptured).append("\n");
     sb.append("  storageAllocationBytes: ").append(storageAllocationBytes).append("\n");
+    sb.append("  audioDurationSeconds: ").append(audioDurationSeconds).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -23,6 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import ChronoSheetsClientLibModel.CSApiResponseBoolean;
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTimesheetFileAttachment;
 import java.util.Date;
 
@@ -56,6 +57,148 @@ public class FileAttachmentsApi {
     return basePath;
   }
 
+  /**
+  * Delete a particular timesheet file attachment
+  * 
+   * @param fileAttachmentId The Id of the file attachment to delete
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CSApiResponseBoolean
+  */
+  public CSApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment (Integer fileAttachmentId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'fileAttachmentId' is set
+    if (fileAttachmentId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'fileAttachmentId' when calling fileAttachmentsDeleteTimesheetFileAttachment",
+        new ApiException(400, "Missing the required parameter 'fileAttachmentId' when calling fileAttachmentsDeleteTimesheetFileAttachment"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fileAttachmentsDeleteTimesheetFileAttachment",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling fileAttachmentsDeleteTimesheetFileAttachment"));
+    }
+
+    // create path and map variables
+    String path = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "FileAttachmentId", fileAttachmentId));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Delete a particular timesheet file attachment
+   * 
+   * @param fileAttachmentId The Id of the file attachment to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void fileAttachmentsDeleteTimesheetFileAttachment (Integer fileAttachmentId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'fileAttachmentId' is set
+    if (fileAttachmentId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'fileAttachmentId' when calling fileAttachmentsDeleteTimesheetFileAttachment",
+        new ApiException(400, "Missing the required parameter 'fileAttachmentId' when calling fileAttachmentsDeleteTimesheetFileAttachment"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fileAttachmentsDeleteTimesheetFileAttachment",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling fileAttachmentsDeleteTimesheetFileAttachment"));
+    }
+
+    // create path and map variables
+    String path = "/api/FileAttachments/DeleteTimesheetFileAttachment".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "FileAttachmentId", fileAttachmentId));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Get my file attachments.  Get files you&#39;ve attached to timesheets.
   * 

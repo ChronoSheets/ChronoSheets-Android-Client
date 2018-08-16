@@ -353,6 +353,10 @@ public class JsonUtil {
       return new TypeToken<List<CSOrganisationGroup>>(){}.getType();
     }
     
+    if ("CSOrganisationPricingPlan".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSOrganisationPricingPlan>>(){}.getType();
+    }
+    
     if ("CSProject".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSProject>>(){}.getType();
     }
@@ -781,6 +785,10 @@ public class JsonUtil {
     
     if ("CSOrganisationGroup".equalsIgnoreCase(className)) {
       return new TypeToken<CSOrganisationGroup>(){}.getType();
+    }
+    
+    if ("CSOrganisationPricingPlan".equalsIgnoreCase(className)) {
+      return new TypeToken<CSOrganisationPricingPlan>(){}.getType();
     }
     
     if ("CSProject".equalsIgnoreCase(className)) {

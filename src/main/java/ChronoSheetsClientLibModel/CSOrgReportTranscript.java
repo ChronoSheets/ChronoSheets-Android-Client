@@ -103,6 +103,8 @@ public class CSOrgReportTranscript {
   private Date dateImageCaptured = null;
   @SerializedName("StorageAllocationBytes")
   private Long storageAllocationBytes = null;
+  @SerializedName("AudioDurationSeconds")
+  private Integer audioDurationSeconds = null;
 
   /**
    **/
@@ -464,6 +466,16 @@ public class CSOrgReportTranscript {
     this.storageAllocationBytes = storageAllocationBytes;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getAudioDurationSeconds() {
+    return audioDurationSeconds;
+  }
+  public void setAudioDurationSeconds(Integer audioDurationSeconds) {
+    this.audioDurationSeconds = audioDurationSeconds;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -509,7 +521,8 @@ public class CSOrgReportTranscript {
         (this.longitude == null ? orgReportTranscript.longitude == null : this.longitude.equals(orgReportTranscript.longitude)) &&
         (this.dateUploaded == null ? orgReportTranscript.dateUploaded == null : this.dateUploaded.equals(orgReportTranscript.dateUploaded)) &&
         (this.dateImageCaptured == null ? orgReportTranscript.dateImageCaptured == null : this.dateImageCaptured.equals(orgReportTranscript.dateImageCaptured)) &&
-        (this.storageAllocationBytes == null ? orgReportTranscript.storageAllocationBytes == null : this.storageAllocationBytes.equals(orgReportTranscript.storageAllocationBytes));
+        (this.storageAllocationBytes == null ? orgReportTranscript.storageAllocationBytes == null : this.storageAllocationBytes.equals(orgReportTranscript.storageAllocationBytes)) &&
+        (this.audioDurationSeconds == null ? orgReportTranscript.audioDurationSeconds == null : this.audioDurationSeconds.equals(orgReportTranscript.audioDurationSeconds));
   }
 
   @Override
@@ -551,6 +564,7 @@ public class CSOrgReportTranscript {
     result = 31 * result + (this.dateUploaded == null ? 0: this.dateUploaded.hashCode());
     result = 31 * result + (this.dateImageCaptured == null ? 0: this.dateImageCaptured.hashCode());
     result = 31 * result + (this.storageAllocationBytes == null ? 0: this.storageAllocationBytes.hashCode());
+    result = 31 * result + (this.audioDurationSeconds == null ? 0: this.audioDurationSeconds.hashCode());
     return result;
   }
 
@@ -595,6 +609,7 @@ public class CSOrgReportTranscript {
     sb.append("  dateUploaded: ").append(dateUploaded).append("\n");
     sb.append("  dateImageCaptured: ").append(dateImageCaptured).append("\n");
     sb.append("  storageAllocationBytes: ").append(storageAllocationBytes).append("\n");
+    sb.append("  audioDurationSeconds: ").append(audioDurationSeconds).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

@@ -12,6 +12,9 @@
 
 package ChronoSheetsClientLibModel;
 
+import ChronoSheetsClientLibModel.CSOrganisationPricingPlan;
+import java.util.*;
+import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -42,12 +45,14 @@ public class CSOrganisation {
   private String timezone = null;
   @SerializedName("SubscriptionCustomerId")
   private String subscriptionCustomerId = null;
-  @SerializedName("SubscriptionPlanId")
-  private String subscriptionPlanId = null;
   @SerializedName("SignupToken")
   private String signupToken = null;
-  @SerializedName("NumberSeatsAvailable")
-  private Integer numberSeatsAvailable = null;
+  @SerializedName("SubscriptionCycleStart")
+  private Date subscriptionCycleStart = null;
+  @SerializedName("SubscriptionCycleEnd")
+  private Date subscriptionCycleEnd = null;
+  @SerializedName("PricingPlans")
+  private List<CSOrganisationPricingPlan> pricingPlans = null;
 
   /**
    **/
@@ -172,16 +177,6 @@ public class CSOrganisation {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getSubscriptionPlanId() {
-    return subscriptionPlanId;
-  }
-  public void setSubscriptionPlanId(String subscriptionPlanId) {
-    this.subscriptionPlanId = subscriptionPlanId;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
   public String getSignupToken() {
     return signupToken;
   }
@@ -192,11 +187,31 @@ public class CSOrganisation {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Integer getNumberSeatsAvailable() {
-    return numberSeatsAvailable;
+  public Date getSubscriptionCycleStart() {
+    return subscriptionCycleStart;
   }
-  public void setNumberSeatsAvailable(Integer numberSeatsAvailable) {
-    this.numberSeatsAvailable = numberSeatsAvailable;
+  public void setSubscriptionCycleStart(Date subscriptionCycleStart) {
+    this.subscriptionCycleStart = subscriptionCycleStart;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Date getSubscriptionCycleEnd() {
+    return subscriptionCycleEnd;
+  }
+  public void setSubscriptionCycleEnd(Date subscriptionCycleEnd) {
+    this.subscriptionCycleEnd = subscriptionCycleEnd;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public List<CSOrganisationPricingPlan> getPricingPlans() {
+    return pricingPlans;
+  }
+  public void setPricingPlans(List<CSOrganisationPricingPlan> pricingPlans) {
+    this.pricingPlans = pricingPlans;
   }
 
 
@@ -221,9 +236,10 @@ public class CSOrganisation {
         (this.emailAddress == null ? organisation.emailAddress == null : this.emailAddress.equals(organisation.emailAddress)) &&
         (this.timezone == null ? organisation.timezone == null : this.timezone.equals(organisation.timezone)) &&
         (this.subscriptionCustomerId == null ? organisation.subscriptionCustomerId == null : this.subscriptionCustomerId.equals(organisation.subscriptionCustomerId)) &&
-        (this.subscriptionPlanId == null ? organisation.subscriptionPlanId == null : this.subscriptionPlanId.equals(organisation.subscriptionPlanId)) &&
         (this.signupToken == null ? organisation.signupToken == null : this.signupToken.equals(organisation.signupToken)) &&
-        (this.numberSeatsAvailable == null ? organisation.numberSeatsAvailable == null : this.numberSeatsAvailable.equals(organisation.numberSeatsAvailable));
+        (this.subscriptionCycleStart == null ? organisation.subscriptionCycleStart == null : this.subscriptionCycleStart.equals(organisation.subscriptionCycleStart)) &&
+        (this.subscriptionCycleEnd == null ? organisation.subscriptionCycleEnd == null : this.subscriptionCycleEnd.equals(organisation.subscriptionCycleEnd)) &&
+        (this.pricingPlans == null ? organisation.pricingPlans == null : this.pricingPlans.equals(organisation.pricingPlans));
   }
 
   @Override
@@ -241,9 +257,10 @@ public class CSOrganisation {
     result = 31 * result + (this.emailAddress == null ? 0: this.emailAddress.hashCode());
     result = 31 * result + (this.timezone == null ? 0: this.timezone.hashCode());
     result = 31 * result + (this.subscriptionCustomerId == null ? 0: this.subscriptionCustomerId.hashCode());
-    result = 31 * result + (this.subscriptionPlanId == null ? 0: this.subscriptionPlanId.hashCode());
     result = 31 * result + (this.signupToken == null ? 0: this.signupToken.hashCode());
-    result = 31 * result + (this.numberSeatsAvailable == null ? 0: this.numberSeatsAvailable.hashCode());
+    result = 31 * result + (this.subscriptionCycleStart == null ? 0: this.subscriptionCycleStart.hashCode());
+    result = 31 * result + (this.subscriptionCycleEnd == null ? 0: this.subscriptionCycleEnd.hashCode());
+    result = 31 * result + (this.pricingPlans == null ? 0: this.pricingPlans.hashCode());
     return result;
   }
 
@@ -264,9 +281,10 @@ public class CSOrganisation {
     sb.append("  emailAddress: ").append(emailAddress).append("\n");
     sb.append("  timezone: ").append(timezone).append("\n");
     sb.append("  subscriptionCustomerId: ").append(subscriptionCustomerId).append("\n");
-    sb.append("  subscriptionPlanId: ").append(subscriptionPlanId).append("\n");
     sb.append("  signupToken: ").append(signupToken).append("\n");
-    sb.append("  numberSeatsAvailable: ").append(numberSeatsAvailable).append("\n");
+    sb.append("  subscriptionCycleStart: ").append(subscriptionCycleStart).append("\n");
+    sb.append("  subscriptionCycleEnd: ").append(subscriptionCycleEnd).append("\n");
+    sb.append("  pricingPlans: ").append(pricingPlans).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

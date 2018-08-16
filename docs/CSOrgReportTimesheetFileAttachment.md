@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **dateUploaded** | [**Date**](Date.md) |  |  [optional]
 **dateImageCaptured** | [**Date**](Date.md) |  |  [optional]
 **storageAllocationBytes** | **Long** |  |  [optional]
+**audioDurationSeconds** | **Integer** |  |  [optional]
 
 
 <a name="MobilePlatformEnum"></a>
