@@ -29,6 +29,8 @@ public class CSProject {
   private String projectName = null;
   @SerializedName("CostEstimation")
   private Double costEstimation = null;
+  @SerializedName("CostActual")
+  private Double costActual = null;
   @SerializedName("StartDate")
   private Date startDate = null;
   @SerializedName("EndDate")
@@ -87,6 +89,16 @@ public class CSProject {
   /**
    **/
   @ApiModelProperty(value = "")
+  public Double getCostActual() {
+    return costActual;
+  }
+  public void setCostActual(Double costActual) {
+    this.costActual = costActual;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Date getStartDate() {
     return startDate;
   }
@@ -119,6 +131,7 @@ public class CSProject {
         (this.organisationId == null ? project.organisationId == null : this.organisationId.equals(project.organisationId)) &&
         (this.projectName == null ? project.projectName == null : this.projectName.equals(project.projectName)) &&
         (this.costEstimation == null ? project.costEstimation == null : this.costEstimation.equals(project.costEstimation)) &&
+        (this.costActual == null ? project.costActual == null : this.costActual.equals(project.costActual)) &&
         (this.startDate == null ? project.startDate == null : this.startDate.equals(project.startDate)) &&
         (this.endDate == null ? project.endDate == null : this.endDate.equals(project.endDate));
   }
@@ -131,6 +144,7 @@ public class CSProject {
     result = 31 * result + (this.organisationId == null ? 0: this.organisationId.hashCode());
     result = 31 * result + (this.projectName == null ? 0: this.projectName.hashCode());
     result = 31 * result + (this.costEstimation == null ? 0: this.costEstimation.hashCode());
+    result = 31 * result + (this.costActual == null ? 0: this.costActual.hashCode());
     result = 31 * result + (this.startDate == null ? 0: this.startDate.hashCode());
     result = 31 * result + (this.endDate == null ? 0: this.endDate.hashCode());
     return result;
@@ -146,6 +160,7 @@ public class CSProject {
     sb.append("  organisationId: ").append(organisationId).append("\n");
     sb.append("  projectName: ").append(projectName).append("\n");
     sb.append("  costEstimation: ").append(costEstimation).append("\n");
+    sb.append("  costActual: ").append(costActual).append("\n");
     sb.append("  startDate: ").append(startDate).append("\n");
     sb.append("  endDate: ").append(endDate).append("\n");
     sb.append("}\n");

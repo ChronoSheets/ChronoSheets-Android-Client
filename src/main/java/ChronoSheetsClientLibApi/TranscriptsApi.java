@@ -61,13 +61,13 @@ public class TranscriptsApi {
   * 
    * @param startDate The Start date of the date range.  Transcripts after this date will be obtained.
    * @param endDate The End date of the date range.  Transcripts before this date will be obtained.
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param skip Skip this many transcripts
    * @param take Take this many transcripts
    * @param keyword Search the text content of the transcript keywords
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTranscript
   */
-  public CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTranscript transcriptsGetMyTranscripts (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -78,21 +78,6 @@ public class TranscriptsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling transcriptsGetMyTranscripts",
         new ApiException(400, "Missing the required parameter 'endDate' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'skip' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'take' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'keyword' is set
-    if (keyword == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'keyword' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'keyword' when calling transcriptsGetMyTranscripts"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -157,9 +142,9 @@ public class TranscriptsApi {
       /**
    * Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
    * 
-   * @param startDate The Start date of the date range.  Transcripts after this date will be obtained.   * @param endDate The End date of the date range.  Transcripts before this date will be obtained.   * @param skip Skip this many transcripts   * @param take Take this many transcripts   * @param keyword Search the text content of the transcript keywords   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The Start date of the date range.  Transcripts after this date will be obtained.   * @param endDate The End date of the date range.  Transcripts before this date will be obtained.   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many transcripts   * @param take Take this many transcripts   * @param keyword Search the text content of the transcript keywords
   */
-  public void transcriptsGetMyTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String keyword, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTranscript> responseListener, final Response.ErrorListener errorListener) {
+  public void transcriptsGetMyTranscripts (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String keyword, final Response.Listener<CSApiResponseForPaginatedListOrgReportTranscript> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -171,21 +156,6 @@ public class TranscriptsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling transcriptsGetMyTranscripts",
         new ApiException(400, "Missing the required parameter 'endDate' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'skip' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'take' when calling transcriptsGetMyTranscripts"));
-    }
-    // verify the required parameter 'keyword' is set
-    if (keyword == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'keyword' when calling transcriptsGetMyTranscripts",
-        new ApiException(400, "Missing the required parameter 'keyword' when calling transcriptsGetMyTranscripts"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {

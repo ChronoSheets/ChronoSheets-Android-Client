@@ -204,12 +204,12 @@ public class FileAttachmentsApi {
   * 
    * @param startDate The Start date of the date range.  File attachments after this date will be obtained.
    * @param endDate The End date of the date range.  File attachments before this date will be obtained.
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param skip Skip this many File attachments
    * @param take Take this many File attachments
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListTimesheetFileAttachment
   */
-  public CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -220,16 +220,6 @@ public class FileAttachmentsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling fileAttachmentsGetMyFileAttachments",
         new ApiException(400, "Missing the required parameter 'endDate' when calling fileAttachmentsGetMyFileAttachments"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling fileAttachmentsGetMyFileAttachments",
-        new ApiException(400, "Missing the required parameter 'skip' when calling fileAttachmentsGetMyFileAttachments"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling fileAttachmentsGetMyFileAttachments",
-        new ApiException(400, "Missing the required parameter 'take' when calling fileAttachmentsGetMyFileAttachments"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -293,9 +283,9 @@ public class FileAttachmentsApi {
       /**
    * Get my file attachments.  Get files you&#39;ve attached to timesheets.
    * 
-   * @param startDate The Start date of the date range.  File attachments after this date will be obtained.   * @param endDate The End date of the date range.  File attachments before this date will be obtained.   * @param skip Skip this many File attachments   * @param take Take this many File attachments   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The Start date of the date range.  File attachments after this date will be obtained.   * @param endDate The End date of the date range.  File attachments before this date will be obtained.   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many File attachments   * @param take Take this many File attachments
   */
-  public void fileAttachmentsGetMyFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
+  public void fileAttachmentsGetMyFileAttachments (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, final Response.Listener<CSApiResponseForPaginatedListTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -307,16 +297,6 @@ public class FileAttachmentsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling fileAttachmentsGetMyFileAttachments",
         new ApiException(400, "Missing the required parameter 'endDate' when calling fileAttachmentsGetMyFileAttachments"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling fileAttachmentsGetMyFileAttachments",
-        new ApiException(400, "Missing the required parameter 'skip' when calling fileAttachmentsGetMyFileAttachments"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling fileAttachmentsGetMyFileAttachments",
-        new ApiException(400, "Missing the required parameter 'take' when calling fileAttachmentsGetMyFileAttachments"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {

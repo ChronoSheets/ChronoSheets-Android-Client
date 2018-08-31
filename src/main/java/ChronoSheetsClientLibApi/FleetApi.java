@@ -351,17 +351,12 @@ public class FleetApi {
   /**
   * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
   * 
-   * @param includeDeleted Whether or not to include deleted vehicles
    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param includeDeleted Whether or not to include deleted vehicles
    * @return CSApiResponseListFleetVehicle
   */
-  public CSApiResponseListFleetVehicle fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListFleetVehicle fleetGetVehicles (String xChronosheetsAuth, Boolean includeDeleted) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
-    // verify the required parameter 'includeDeleted' is set
-    if (includeDeleted == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'includeDeleted' when calling fleetGetVehicles",
-        new ApiException(400, "Missing the required parameter 'includeDeleted' when calling fleetGetVehicles"));
-    }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fleetGetVehicles",
@@ -421,16 +416,11 @@ public class FleetApi {
       /**
    * Get a collection of vehicles that are under your organisation.    Does not require any special permission.
    * 
-   * @param includeDeleted Whether or not to include deleted vehicles   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param includeDeleted Whether or not to include deleted vehicles
   */
-  public void fleetGetVehicles (Boolean includeDeleted, String xChronosheetsAuth, final Response.Listener<CSApiResponseListFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
+  public void fleetGetVehicles (String xChronosheetsAuth, Boolean includeDeleted, final Response.Listener<CSApiResponseListFleetVehicle> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
-    // verify the required parameter 'includeDeleted' is set
-    if (includeDeleted == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'includeDeleted' when calling fleetGetVehicles",
-        new ApiException(400, "Missing the required parameter 'includeDeleted' when calling fleetGetVehicles"));
-    }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fleetGetVehicles",

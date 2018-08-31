@@ -69,11 +69,11 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
-   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @return CSApiResponseCombinedReportsData
   */
-  public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -84,11 +84,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetAllChartsDataAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetAllChartsDataAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetAllChartsDataAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetAllChartsDataAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -151,9 +146,9 @@ public class ReportsApi {
       /**
    * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   */
-  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -165,11 +160,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetAllChartsDataAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetAllChartsDataAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetAllChartsDataAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetAllChartsDataAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -392,11 +382,11 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
-   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @return CSApiResponseListFleetSummaryReportItem
   */
-  public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -407,11 +397,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -474,9 +459,9 @@ public class ReportsApi {
       /**
    * Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   */
-  public void reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseListFleetSummaryReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetFleetSummaryAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, final Response.Listener<CSApiResponseListFleetSummaryReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -488,11 +473,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetFleetSummaryAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetFleetSummaryAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -702,13 +682,13 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param skip Skip this many items
    * @param take Take this many items
    * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment
   */
-  public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -719,21 +699,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTimesheetFileAttachments",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTimesheetFileAttachments"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -798,9 +763,9 @@ public class ReportsApi {
       /**
    * Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   */
-  public void reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrganisationTimesheetFileAttachments (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final Response.Listener<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -812,21 +777,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTimesheetFileAttachments",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTimesheetFileAttachments"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTimesheetFileAttachments",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTimesheetFileAttachments"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -896,14 +846,14 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param skip Skip this many items
    * @param take Take this many items
    * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @param keywords Search the transcripts by keyword(s)
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTranscript
   */
-  public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -914,26 +864,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'keywords' is set
-    if (keywords == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -999,9 +929,9 @@ public class ReportsApi {
       /**
    * Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param keywords Search the transcripts by keyword(s)   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param keywords Search the transcripts by keyword(s)
   */
-  public void reportsGetOrganisationTranscripts (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String keywords, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTranscript> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrganisationTranscripts (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, String keywords, final Response.Listener<CSApiResponseForPaginatedListOrgReportTranscript> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1013,26 +943,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTranscripts"));
-    }
-    // verify the required parameter 'keywords' is set
-    if (keywords == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts",
-        new ApiException(400, "Missing the required parameter 'keywords' when calling reportsGetOrganisationTranscripts"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1103,13 +1013,13 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param skip Skip this many items
    * @param take Take this many items
    * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListOrgReportTrip
   */
-  public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1120,21 +1030,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTrips",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTrips"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1199,9 +1094,9 @@ public class ReportsApi {
       /**
    * Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many items   * @param take Take this many items   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   */
-  public void reportsGetOrganisationTrips (Date startDate, Date endDate, Integer skip, Integer take, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListOrgReportTrip> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetOrganisationTrips (Date startDate, Date endDate, String xChronosheetsAuth, Integer skip, Integer take, String userIds, final Response.Listener<CSApiResponseForPaginatedListOrgReportTrip> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1213,21 +1108,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetOrganisationTrips",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetOrganisationTrips"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetOrganisationTrips",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetOrganisationTrips"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1297,15 +1177,15 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @param sort Decide which column to sort on
    * @param order Decide which direction to sort the column
    * @param skip Skip this many rows
    * @param take Take this many rows
-   * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseForPaginatedListRawReportItem
   */
-  public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1316,31 +1196,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetRawDataAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'sort' is set
-    if (sort == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sort' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'sort' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'order' is set
-    if (order == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'order' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'order' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetRawDataAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1407,9 +1262,9 @@ public class ReportsApi {
       /**
    * Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param sort Decide which column to sort on   * @param order Decide which direction to sort the column   * @param skip Skip this many rows   * @param take Take this many rows   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param sort Decide which column to sort on   * @param order Decide which direction to sort the column   * @param skip Skip this many rows   * @param take Take this many rows
   */
-  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String userIds, String sort, String order, Integer skip, Integer take, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetRawDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, String sort, String order, Integer skip, Integer take, final Response.Listener<CSApiResponseForPaginatedListRawReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1421,31 +1276,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsGetRawDataAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'sort' is set
-    if (sort == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'sort' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'sort' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'order' is set
-    if (order == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'order' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'order' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'skip' is set
-    if (skip == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'skip' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'skip' when calling reportsGetRawDataAdmin"));
-    }
-    // verify the required parameter 'take' is set
-    if (take == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'take' when calling reportsGetRawDataAdmin",
-        new ApiException(400, "Missing the required parameter 'take' when calling reportsGetRawDataAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1517,11 +1347,11 @@ public class ReportsApi {
   * 
    * @param startDate The start date for the date range.  Report data in the response is after this date
    * @param endDate The end date for the date range.  Report data in the response is before this date
-   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
    * @return CSApiResponseListProjectCostingReportItem
   */
-  public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -1532,11 +1362,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsProjectCostingsAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsProjectCostingsAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsProjectCostingsAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsProjectCostingsAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
@@ -1599,9 +1424,9 @@ public class ReportsApi {
       /**
    * Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
   */
-  public void reportsProjectCostingsAdmin (Date startDate, Date endDate, String userIds, String xChronosheetsAuth, final Response.Listener<CSApiResponseListProjectCostingReportItem> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsProjectCostingsAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, final Response.Listener<CSApiResponseListProjectCostingReportItem> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -1613,11 +1438,6 @@ public class ReportsApi {
     if (endDate == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'endDate' when calling reportsProjectCostingsAdmin",
         new ApiException(400, "Missing the required parameter 'endDate' when calling reportsProjectCostingsAdmin"));
-    }
-    // verify the required parameter 'userIds' is set
-    if (userIds == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'userIds' when calling reportsProjectCostingsAdmin",
-        new ApiException(400, "Missing the required parameter 'userIds' when calling reportsProjectCostingsAdmin"));
     }
     // verify the required parameter 'xChronosheetsAuth' is set
     if (xChronosheetsAuth == null) {
