@@ -47,6 +47,8 @@ public class CSOrganisation {
   private String subscriptionCustomerId = null;
   @SerializedName("SignupToken")
   private String signupToken = null;
+  @SerializedName("IsActive")
+  private Boolean isActive = null;
   @SerializedName("SubscriptionCycleStart")
   private Date subscriptionCycleStart = null;
   @SerializedName("SubscriptionCycleEnd")
@@ -187,6 +189,16 @@ public class CSOrganisation {
   /**
    **/
   @ApiModelProperty(value = "")
+  public Boolean getIsActive() {
+    return isActive;
+  }
+  public void setIsActive(Boolean isActive) {
+    this.isActive = isActive;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Date getSubscriptionCycleStart() {
     return subscriptionCycleStart;
   }
@@ -237,6 +249,7 @@ public class CSOrganisation {
         (this.timezone == null ? organisation.timezone == null : this.timezone.equals(organisation.timezone)) &&
         (this.subscriptionCustomerId == null ? organisation.subscriptionCustomerId == null : this.subscriptionCustomerId.equals(organisation.subscriptionCustomerId)) &&
         (this.signupToken == null ? organisation.signupToken == null : this.signupToken.equals(organisation.signupToken)) &&
+        (this.isActive == null ? organisation.isActive == null : this.isActive.equals(organisation.isActive)) &&
         (this.subscriptionCycleStart == null ? organisation.subscriptionCycleStart == null : this.subscriptionCycleStart.equals(organisation.subscriptionCycleStart)) &&
         (this.subscriptionCycleEnd == null ? organisation.subscriptionCycleEnd == null : this.subscriptionCycleEnd.equals(organisation.subscriptionCycleEnd)) &&
         (this.pricingPlans == null ? organisation.pricingPlans == null : this.pricingPlans.equals(organisation.pricingPlans));
@@ -258,6 +271,7 @@ public class CSOrganisation {
     result = 31 * result + (this.timezone == null ? 0: this.timezone.hashCode());
     result = 31 * result + (this.subscriptionCustomerId == null ? 0: this.subscriptionCustomerId.hashCode());
     result = 31 * result + (this.signupToken == null ? 0: this.signupToken.hashCode());
+    result = 31 * result + (this.isActive == null ? 0: this.isActive.hashCode());
     result = 31 * result + (this.subscriptionCycleStart == null ? 0: this.subscriptionCycleStart.hashCode());
     result = 31 * result + (this.subscriptionCycleEnd == null ? 0: this.subscriptionCycleEnd.hashCode());
     result = 31 * result + (this.pricingPlans == null ? 0: this.pricingPlans.hashCode());
@@ -282,6 +296,7 @@ public class CSOrganisation {
     sb.append("  timezone: ").append(timezone).append("\n");
     sb.append("  subscriptionCustomerId: ").append(subscriptionCustomerId).append("\n");
     sb.append("  signupToken: ").append(signupToken).append("\n");
+    sb.append("  isActive: ").append(isActive).append("\n");
     sb.append("  subscriptionCycleStart: ").append(subscriptionCycleStart).append("\n");
     sb.append("  subscriptionCycleEnd: ").append(subscriptionCycleEnd).append("\n");
     sb.append("  pricingPlans: ").append(pricingPlans).append("\n");

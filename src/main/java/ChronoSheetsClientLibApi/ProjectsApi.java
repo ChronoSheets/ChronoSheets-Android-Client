@@ -63,7 +63,7 @@ public class ProjectsApi {
   /**
   * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
   * 
-   * @param request An Insert Project Request object containing values for the new Project to create
+   * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseInt32
   */
@@ -138,7 +138,7 @@ public class ProjectsApi {
       /**
    * Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
    * 
-   * @param request An Insert Project Request object containing values for the new Project to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void projectsCreateProject (CSInsertProjectRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;

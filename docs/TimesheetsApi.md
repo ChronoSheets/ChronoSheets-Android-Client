@@ -153,7 +153,7 @@ Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
 //import ChronoSheetsClientLibApi.TimesheetsApi;
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-CSBatchUpdateTimesheetRequest request = new CSBatchUpdateTimesheetRequest(); // CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+CSBatchUpdateTimesheetRequest request = new CSBatchUpdateTimesheetRequest(); // CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 try {
     CSApiResponseListInt32 result = apiInstance.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
@@ -168,7 +168,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create |
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
 
 ### Return type

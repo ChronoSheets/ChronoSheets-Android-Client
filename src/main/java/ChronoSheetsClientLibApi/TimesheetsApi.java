@@ -507,7 +507,7 @@ public class TimesheetsApi {
   /**
   * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
   * 
-   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create
+   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @return CSApiResponseListInt32
   */
@@ -582,7 +582,7 @@ public class TimesheetsApi {
       /**
    * Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
    * 
-   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param request A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
   public void timesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, String xChronosheetsAuth, final Response.Listener<CSApiResponseListInt32> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = request;
