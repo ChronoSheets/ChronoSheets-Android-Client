@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="reportsGetAllChartsDataAdmin"></a>
 # **reportsGetAllChartsDataAdmin**
-> CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds)
+> CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 
@@ -32,8 +32,9 @@ Date startDate = new Date(); // Date | The start date for the date range.  Repor
 Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
 String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
 String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String forceOnlyThisChart = "forceOnlyThisChart_example"; // String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
 try {
-    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetAllChartsDataAdmin");
@@ -49,6 +50,7 @@ Name | Type | Description  | Notes
  **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
  **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
  **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
+ **forceOnlyThisChart** | **String**| A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. | [optional] [enum: NotForced, SeriesJobCodes, SeriesClients, SeriesProjects, SeriesTasks, TotalsClients, TotalsJobCodes, TotalsProjects, TotalsTasks]
 
 ### Return type
 

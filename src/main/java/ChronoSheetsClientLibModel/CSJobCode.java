@@ -36,8 +36,9 @@ public class CSJobCode {
   private Boolean isDeleted = null;
 
   /**
+   * The ID of the job code (not the code itself)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the job code (not the code itself)")
   public Integer getId() {
     return id;
   }
@@ -46,8 +47,9 @@ public class CSJobCode {
   }
 
   /**
+   * The job code itself
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The job code itself")
   public String getCode() {
     return code;
   }
@@ -56,8 +58,9 @@ public class CSJobCode {
   }
 
   /**
+   * The name of the client
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the client")
   public String getClient() {
     return client;
   }
@@ -66,8 +69,9 @@ public class CSJobCode {
   }
 
   /**
+   * The ID of the client
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client")
   public Integer getClientId() {
     return clientId;
   }
@@ -76,8 +80,9 @@ public class CSJobCode {
   }
 
   /**
+   * The name of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the project")
   public String getProject() {
     return project;
   }
@@ -86,8 +91,9 @@ public class CSJobCode {
   }
 
   /**
+   * The ID of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
   public Integer getProjectId() {
     return projectId;
   }
@@ -96,8 +102,9 @@ public class CSJobCode {
   }
 
   /**
+   * Your organisation ID
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Your organisation ID")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -106,8 +113,9 @@ public class CSJobCode {
   }
 
   /**
+   * A flag indicating whether or not the job code has been marked as deleted
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A flag indicating whether or not the job code has been marked as deleted")
   public Boolean getIsDeleted() {
     return isDeleted;
   }

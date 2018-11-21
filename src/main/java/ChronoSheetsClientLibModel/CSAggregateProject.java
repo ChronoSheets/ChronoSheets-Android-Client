@@ -35,8 +35,9 @@ public class CSAggregateProject {
   private Date endDate = null;
 
   /**
+   * The ID of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
   public Integer getId() {
     return id;
   }
@@ -45,8 +46,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The ID of the client that this project is assigned to
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client that this project is assigned to")
   public Integer getClientId() {
     return clientId;
   }
@@ -55,8 +57,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The ID of your organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of your organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -65,8 +68,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The name of the project (can be viewed in PROJECT TIMELINES)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the project (can be viewed in PROJECT TIMELINES)")
   public String getProjectName() {
     return projectName;
   }
@@ -75,8 +79,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The estimated cost of the project (can be viewed in PROJECT TIMELINES)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The estimated cost of the project (can be viewed in PROJECT TIMELINES)")
   public Double getCostEstimation() {
     return costEstimation;
   }
@@ -85,8 +90,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The start date of the project (can be viewed in PROJECT TIMELINES)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date of the project (can be viewed in PROJECT TIMELINES)")
   public Date getStartDate() {
     return startDate;
   }
@@ -95,8 +101,9 @@ public class CSAggregateProject {
   }
 
   /**
+   * The end date of the project (can be viewed in PROJECT TIMELINES)
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date of the project (can be viewed in PROJECT TIMELINES)")
   public Date getEndDate() {
     return endDate;
   }

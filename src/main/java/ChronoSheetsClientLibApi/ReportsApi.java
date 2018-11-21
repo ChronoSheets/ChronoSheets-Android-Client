@@ -71,9 +71,10 @@ public class ReportsApi {
    * @param endDate The end date for the date range.  Report data in the response is before this date
    * @param xChronosheetsAuth The ChronoSheets Auth Token
    * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+   * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option.
    * @return CSApiResponseCombinedReportsData
   */
-  public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'startDate' is set
     if (startDate == null) {
@@ -103,6 +104,7 @@ public class ReportsApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "ForceOnlyThisChart", forceOnlyThisChart));
     headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
     String[] contentTypes = {
     };
@@ -146,9 +148,9 @@ public class ReportsApi {
       /**
    * Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
    * 
-   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+   * @param startDate The start date for the date range.  Report data in the response is after this date   * @param endDate The end date for the date range.  Report data in the response is before this date   * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param userIds A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.   * @param forceOnlyThisChart A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option.
   */
-  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
+  public void reportsGetAllChartsDataAdmin (Date startDate, Date endDate, String xChronosheetsAuth, String userIds, String forceOnlyThisChart, final Response.Listener<CSApiResponseCombinedReportsData> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'startDate' is set
@@ -180,6 +182,7 @@ public class ReportsApi {
     queryParams.addAll(ApiInvoker.parameterToPairs("", "StartDate", startDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "EndDate", endDate));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "UserIds", userIds));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "ForceOnlyThisChart", forceOnlyThisChart));
 
     headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
 

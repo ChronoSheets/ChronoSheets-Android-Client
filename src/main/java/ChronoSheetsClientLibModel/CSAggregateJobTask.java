@@ -26,8 +26,9 @@ public class CSAggregateJobTask {
   private Boolean isDeleted = null;
 
   /**
+   * The Id of the task
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The Id of the task")
   public Integer getId() {
     return id;
   }
@@ -36,8 +37,9 @@ public class CSAggregateJobTask {
   }
 
   /**
+   * The label of the task
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The label of the task")
   public String getLabel() {
     return label;
   }
@@ -46,8 +48,9 @@ public class CSAggregateJobTask {
   }
 
   /**
+   * A flag indicating that this task has been marked as deleted
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A flag indicating that this task has been marked as deleted")
   public Boolean getIsDeleted() {
     return isDeleted;
   }
