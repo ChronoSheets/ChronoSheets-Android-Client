@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedTranscription;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -56,6 +57,148 @@ public class TranscriptsApi {
     return basePath;
   }
 
+  /**
+  * Get an audio to text transcript for a particular audio file attachment
+  * 
+   * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CSApiResponseForPaginatedTranscription
+  */
+  public CSApiResponseForPaginatedTranscription transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'fileAttachmentId' is set
+    if (fileAttachmentId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'fileAttachmentId' when calling transcriptsGetMyTranscript",
+        new ApiException(400, "Missing the required parameter 'fileAttachmentId' when calling transcriptsGetMyTranscript"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling transcriptsGetMyTranscript",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling transcriptsGetMyTranscript"));
+    }
+
+    // create path and map variables
+    String path = "/api/Transcripts/GetMyTranscript";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "FileAttachmentId", fileAttachmentId));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseForPaginatedTranscription) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedTranscription.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Get an audio to text transcript for a particular audio file attachment
+   * 
+   * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment.   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedTranscription> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'fileAttachmentId' is set
+    if (fileAttachmentId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'fileAttachmentId' when calling transcriptsGetMyTranscript",
+        new ApiException(400, "Missing the required parameter 'fileAttachmentId' when calling transcriptsGetMyTranscript"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling transcriptsGetMyTranscript",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling transcriptsGetMyTranscript"));
+    }
+
+    // create path and map variables
+    String path = "/api/Transcripts/GetMyTranscript".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "FileAttachmentId", fileAttachmentId));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseForPaginatedTranscription) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedTranscription.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
   /**
   * Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
   * 

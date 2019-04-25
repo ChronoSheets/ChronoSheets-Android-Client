@@ -18,9 +18,25 @@ Name | Type | Description | Notes
 **subscriptionCustomerId** | **String** |  |  [optional]
 **signupToken** | **String** |  |  [optional]
 **isActive** | **Boolean** |  |  [optional]
+**stripeCouponCode** | **String** |  |  [optional]
+**subscriptionSource** | [**SubscriptionSourceEnum**](#SubscriptionSourceEnum) |  |  [optional]
+**signUpSource** | [**SignUpSourceEnum**](#SignUpSourceEnum) |  |  [optional]
+**mobileSignUpCode** | **String** |  |  [optional]
 **subscriptionCycleStart** | [**Date**](Date.md) |  |  [optional]
 **subscriptionCycleEnd** | [**Date**](Date.md) |  |  [optional]
 **pricingPlans** | [**List&lt;CSOrganisationPricingPlan&gt;**](CSOrganisationPricingPlan.md) |  |  [optional]
+
+
+<a name="SubscriptionSourceEnum"></a>
+## Enum: SubscriptionSourceEnum
+Name | Value
+---- | -----
+
+
+<a name="SignUpSourceEnum"></a>
+## Enum: SignUpSourceEnum
+Name | Value
+---- | -----
 
 
 

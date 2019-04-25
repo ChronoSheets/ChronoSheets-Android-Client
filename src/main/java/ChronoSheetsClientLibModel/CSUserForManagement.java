@@ -43,6 +43,8 @@ public class CSUserForManagement {
   private Boolean isSubscribedToNewsletter = null;
   @SerializedName("Organisation")
   private CSOrganisation organisation = null;
+  @SerializedName("IsPrimaryAccount")
+  private Boolean isPrimaryAccount = null;
 
   /**
    **/
@@ -164,6 +166,16 @@ public class CSUserForManagement {
     this.organisation = organisation;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean getIsPrimaryAccount() {
+    return isPrimaryAccount;
+  }
+  public void setIsPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -185,7 +197,8 @@ public class CSUserForManagement {
         (this.alertSettings == null ? userForManagement.alertSettings == null : this.alertSettings.equals(userForManagement.alertSettings)) &&
         (this.setupWizardRequired == null ? userForManagement.setupWizardRequired == null : this.setupWizardRequired.equals(userForManagement.setupWizardRequired)) &&
         (this.isSubscribedToNewsletter == null ? userForManagement.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(userForManagement.isSubscribedToNewsletter)) &&
-        (this.organisation == null ? userForManagement.organisation == null : this.organisation.equals(userForManagement.organisation));
+        (this.organisation == null ? userForManagement.organisation == null : this.organisation.equals(userForManagement.organisation)) &&
+        (this.isPrimaryAccount == null ? userForManagement.isPrimaryAccount == null : this.isPrimaryAccount.equals(userForManagement.isPrimaryAccount));
   }
 
   @Override
@@ -203,6 +216,7 @@ public class CSUserForManagement {
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
     result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.organisation == null ? 0: this.organisation.hashCode());
+    result = 31 * result + (this.isPrimaryAccount == null ? 0: this.isPrimaryAccount.hashCode());
     return result;
   }
 
@@ -223,6 +237,7 @@ public class CSUserForManagement {
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");
     sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  organisation: ").append(organisation).append("\n");
+    sb.append("  isPrimaryAccount: ").append(isPrimaryAccount).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

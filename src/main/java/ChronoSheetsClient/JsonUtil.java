@@ -117,6 +117,10 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseForPaginatedListTrip>>(){}.getType();
     }
     
+    if ("CSApiResponseForPaginatedTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedTranscription>>(){}.getType();
+    }
+    
     if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseInsertUserResponse>>(){}.getType();
     }
@@ -421,6 +425,10 @@ public class JsonUtil {
       return new TypeToken<List<CSTimesheetTask>>(){}.getType();
     }
     
+    if ("CSTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSTranscription>>(){}.getType();
+    }
+    
     if ("CSTrip".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSTrip>>(){}.getType();
     }
@@ -549,6 +557,10 @@ public class JsonUtil {
     
     if ("CSApiResponseForPaginatedListTrip".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
+    }
+    
+    if ("CSApiResponseForPaginatedTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedTranscription>(){}.getType();
     }
     
     if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
@@ -853,6 +865,10 @@ public class JsonUtil {
     
     if ("CSTimesheetTask".equalsIgnoreCase(className)) {
       return new TypeToken<CSTimesheetTask>(){}.getType();
+    }
+    
+    if ("CSTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<CSTranscription>(){}.getType();
     }
     
     if ("CSTrip".equalsIgnoreCase(className)) {

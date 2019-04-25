@@ -41,6 +41,8 @@ public class CSClientSideUser {
   private Boolean isSubscribedToNewsletter = null;
   @SerializedName("Organisation")
   private CSOrganisation organisation = null;
+  @SerializedName("IsPrimaryAccount")
+  private Boolean isPrimaryAccount = null;
 
   /**
    **/
@@ -152,6 +154,16 @@ public class CSClientSideUser {
     this.organisation = organisation;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean getIsPrimaryAccount() {
+    return isPrimaryAccount;
+  }
+  public void setIsPrimaryAccount(Boolean isPrimaryAccount) {
+    this.isPrimaryAccount = isPrimaryAccount;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -172,7 +184,8 @@ public class CSClientSideUser {
         (this.alertSettings == null ? clientSideUser.alertSettings == null : this.alertSettings.equals(clientSideUser.alertSettings)) &&
         (this.setupWizardRequired == null ? clientSideUser.setupWizardRequired == null : this.setupWizardRequired.equals(clientSideUser.setupWizardRequired)) &&
         (this.isSubscribedToNewsletter == null ? clientSideUser.isSubscribedToNewsletter == null : this.isSubscribedToNewsletter.equals(clientSideUser.isSubscribedToNewsletter)) &&
-        (this.organisation == null ? clientSideUser.organisation == null : this.organisation.equals(clientSideUser.organisation));
+        (this.organisation == null ? clientSideUser.organisation == null : this.organisation.equals(clientSideUser.organisation)) &&
+        (this.isPrimaryAccount == null ? clientSideUser.isPrimaryAccount == null : this.isPrimaryAccount.equals(clientSideUser.isPrimaryAccount));
   }
 
   @Override
@@ -189,6 +202,7 @@ public class CSClientSideUser {
     result = 31 * result + (this.setupWizardRequired == null ? 0: this.setupWizardRequired.hashCode());
     result = 31 * result + (this.isSubscribedToNewsletter == null ? 0: this.isSubscribedToNewsletter.hashCode());
     result = 31 * result + (this.organisation == null ? 0: this.organisation.hashCode());
+    result = 31 * result + (this.isPrimaryAccount == null ? 0: this.isPrimaryAccount.hashCode());
     return result;
   }
 
@@ -208,6 +222,7 @@ public class CSClientSideUser {
     sb.append("  setupWizardRequired: ").append(setupWizardRequired).append("\n");
     sb.append("  isSubscribedToNewsletter: ").append(isSubscribedToNewsletter).append("\n");
     sb.append("  organisation: ").append(organisation).append("\n");
+    sb.append("  isPrimaryAccount: ").append(isPrimaryAccount).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

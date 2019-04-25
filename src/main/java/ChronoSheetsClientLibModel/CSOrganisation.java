@@ -49,6 +49,20 @@ public class CSOrganisation {
   private String signupToken = null;
   @SerializedName("IsActive")
   private Boolean isActive = null;
+  @SerializedName("StripeCouponCode")
+  private String stripeCouponCode = null;
+  public enum SubscriptionSourceEnum {
+     None,  Stripe,  AppleInApp,  GoogleInApp, 
+  };
+  @SerializedName("SubscriptionSource")
+  private SubscriptionSourceEnum subscriptionSource = null;
+  public enum SignUpSourceEnum {
+     Desktop,  MobileiOS,  MobileAndroid, 
+  };
+  @SerializedName("SignUpSource")
+  private SignUpSourceEnum signUpSource = null;
+  @SerializedName("MobileSignUpCode")
+  private String mobileSignUpCode = null;
   @SerializedName("SubscriptionCycleStart")
   private Date subscriptionCycleStart = null;
   @SerializedName("SubscriptionCycleEnd")
@@ -199,6 +213,46 @@ public class CSOrganisation {
   /**
    **/
   @ApiModelProperty(value = "")
+  public String getStripeCouponCode() {
+    return stripeCouponCode;
+  }
+  public void setStripeCouponCode(String stripeCouponCode) {
+    this.stripeCouponCode = stripeCouponCode;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public SubscriptionSourceEnum getSubscriptionSource() {
+    return subscriptionSource;
+  }
+  public void setSubscriptionSource(SubscriptionSourceEnum subscriptionSource) {
+    this.subscriptionSource = subscriptionSource;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public SignUpSourceEnum getSignUpSource() {
+    return signUpSource;
+  }
+  public void setSignUpSource(SignUpSourceEnum signUpSource) {
+    this.signUpSource = signUpSource;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public String getMobileSignUpCode() {
+    return mobileSignUpCode;
+  }
+  public void setMobileSignUpCode(String mobileSignUpCode) {
+    this.mobileSignUpCode = mobileSignUpCode;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
   public Date getSubscriptionCycleStart() {
     return subscriptionCycleStart;
   }
@@ -250,6 +304,10 @@ public class CSOrganisation {
         (this.subscriptionCustomerId == null ? organisation.subscriptionCustomerId == null : this.subscriptionCustomerId.equals(organisation.subscriptionCustomerId)) &&
         (this.signupToken == null ? organisation.signupToken == null : this.signupToken.equals(organisation.signupToken)) &&
         (this.isActive == null ? organisation.isActive == null : this.isActive.equals(organisation.isActive)) &&
+        (this.stripeCouponCode == null ? organisation.stripeCouponCode == null : this.stripeCouponCode.equals(organisation.stripeCouponCode)) &&
+        (this.subscriptionSource == null ? organisation.subscriptionSource == null : this.subscriptionSource.equals(organisation.subscriptionSource)) &&
+        (this.signUpSource == null ? organisation.signUpSource == null : this.signUpSource.equals(organisation.signUpSource)) &&
+        (this.mobileSignUpCode == null ? organisation.mobileSignUpCode == null : this.mobileSignUpCode.equals(organisation.mobileSignUpCode)) &&
         (this.subscriptionCycleStart == null ? organisation.subscriptionCycleStart == null : this.subscriptionCycleStart.equals(organisation.subscriptionCycleStart)) &&
         (this.subscriptionCycleEnd == null ? organisation.subscriptionCycleEnd == null : this.subscriptionCycleEnd.equals(organisation.subscriptionCycleEnd)) &&
         (this.pricingPlans == null ? organisation.pricingPlans == null : this.pricingPlans.equals(organisation.pricingPlans));
@@ -272,6 +330,10 @@ public class CSOrganisation {
     result = 31 * result + (this.subscriptionCustomerId == null ? 0: this.subscriptionCustomerId.hashCode());
     result = 31 * result + (this.signupToken == null ? 0: this.signupToken.hashCode());
     result = 31 * result + (this.isActive == null ? 0: this.isActive.hashCode());
+    result = 31 * result + (this.stripeCouponCode == null ? 0: this.stripeCouponCode.hashCode());
+    result = 31 * result + (this.subscriptionSource == null ? 0: this.subscriptionSource.hashCode());
+    result = 31 * result + (this.signUpSource == null ? 0: this.signUpSource.hashCode());
+    result = 31 * result + (this.mobileSignUpCode == null ? 0: this.mobileSignUpCode.hashCode());
     result = 31 * result + (this.subscriptionCycleStart == null ? 0: this.subscriptionCycleStart.hashCode());
     result = 31 * result + (this.subscriptionCycleEnd == null ? 0: this.subscriptionCycleEnd.hashCode());
     result = 31 * result + (this.pricingPlans == null ? 0: this.pricingPlans.hashCode());
@@ -297,6 +359,10 @@ public class CSOrganisation {
     sb.append("  subscriptionCustomerId: ").append(subscriptionCustomerId).append("\n");
     sb.append("  signupToken: ").append(signupToken).append("\n");
     sb.append("  isActive: ").append(isActive).append("\n");
+    sb.append("  stripeCouponCode: ").append(stripeCouponCode).append("\n");
+    sb.append("  subscriptionSource: ").append(subscriptionSource).append("\n");
+    sb.append("  signUpSource: ").append(signUpSource).append("\n");
+    sb.append("  mobileSignUpCode: ").append(mobileSignUpCode).append("\n");
     sb.append("  subscriptionCycleStart: ").append(subscriptionCycleStart).append("\n");
     sb.append("  subscriptionCycleEnd: ").append(subscriptionCycleEnd).append("\n");
     sb.append("  pricingPlans: ").append(pricingPlans).append("\n");
