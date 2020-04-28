@@ -4,7 +4,8 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
+[**fileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileAttachmentsDeleteTimesheetFileAttachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
+[**fileAttachmentsGetFileAttachmentById**](FileAttachmentsApi.md#fileAttachmentsGetFileAttachmentById) | **GET** /api/FileAttachments/GetFileAttachmentById | Get a particular file attachment by ID.  User must own the file attachment for access.
 [**fileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
@@ -12,7 +13,7 @@ Method | HTTP request | Description
 # **fileAttachmentsDeleteTimesheetFileAttachment**
 > CSApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth)
 
-Delete a particular timesheet file attachment
+Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
 ```java
@@ -41,6 +42,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+<a name="fileAttachmentsGetFileAttachmentById"></a>
+# **fileAttachmentsGetFileAttachmentById**
+> CSApiResponseTimesheetFileAttachment fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth)
+
+Get a particular file attachment by ID.  User must own the file attachment for access.
+
+### Example
+```java
+// Import classes:
+//import ChronoSheetsClientLibApi.FileAttachmentsApi;
+
+FileAttachmentsApi apiInstance = new FileAttachmentsApi();
+Integer fileAttachmentId = 56; // Integer | The ID of the file attachment
+String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+try {
+    CSApiResponseTimesheetFileAttachment result = apiInstance.fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsGetFileAttachmentById");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **Integer**| The ID of the file attachment |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+
+### Return type
+
+[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
 
 ### Authorization
 

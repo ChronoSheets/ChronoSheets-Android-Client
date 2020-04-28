@@ -1,6 +1,6 @@
 /**
  * ChronoSheets API
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -192,6 +192,148 @@ public class FleetApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
+  * 
+   * @param vehicleId The unique ID of the vehicle you wish to delete
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @return CSApiResponseBoolean
+  */
+  public CSApiResponseBoolean fleetDeleteVehicle (Integer vehicleId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'vehicleId' is set
+    if (vehicleId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'vehicleId' when calling fleetDeleteVehicle",
+        new ApiException(400, "Missing the required parameter 'vehicleId' when calling fleetDeleteVehicle"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fleetDeleteVehicle",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling fleetDeleteVehicle"));
+    }
+
+    // create path and map variables
+    String path = "/api/Fleet/DeleteVehicle";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "VehicleId", vehicleId));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseBoolean.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
+   * 
+   * @param vehicleId The unique ID of the vehicle you wish to delete   * @param xChronosheetsAuth The ChronoSheets Auth Token
+  */
+  public void fleetDeleteVehicle (Integer vehicleId, String xChronosheetsAuth, final Response.Listener<CSApiResponseBoolean> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'vehicleId' is set
+    if (vehicleId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'vehicleId' when calling fleetDeleteVehicle",
+        new ApiException(400, "Missing the required parameter 'vehicleId' when calling fleetDeleteVehicle"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling fleetDeleteVehicle",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling fleetDeleteVehicle"));
+    }
+
+    // create path and map variables
+    String path = "/api/Fleet/DeleteVehicle".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "VehicleId", vehicleId));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "DELETE", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseBoolean) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseBoolean.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

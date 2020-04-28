@@ -1,6 +1,6 @@
 /**
  * ChronoSheets API
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -51,6 +51,10 @@ public class CSRawReportItem {
   private Double tripCost = null;
   @SerializedName("TripDistanceMeters")
   private Double tripDistanceMeters = null;
+  @SerializedName("SpanSecondsNormalTime")
+  private Integer spanSecondsNormalTime = null;
+  @SerializedName("SpanSecondsOvertime")
+  private Integer spanSecondsOvertime = null;
 
   /**
    **/
@@ -212,6 +216,26 @@ public class CSRawReportItem {
     this.tripDistanceMeters = tripDistanceMeters;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getSpanSecondsNormalTime() {
+    return spanSecondsNormalTime;
+  }
+  public void setSpanSecondsNormalTime(Integer spanSecondsNormalTime) {
+    this.spanSecondsNormalTime = spanSecondsNormalTime;
+  }
+
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Integer getSpanSecondsOvertime() {
+    return spanSecondsOvertime;
+  }
+  public void setSpanSecondsOvertime(Integer spanSecondsOvertime) {
+    this.spanSecondsOvertime = spanSecondsOvertime;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -237,7 +261,9 @@ public class CSRawReportItem {
         (this.payAmount == null ? rawReportItem.payAmount == null : this.payAmount.equals(rawReportItem.payAmount)) &&
         (this.payOvertimeAmount == null ? rawReportItem.payOvertimeAmount == null : this.payOvertimeAmount.equals(rawReportItem.payOvertimeAmount)) &&
         (this.tripCost == null ? rawReportItem.tripCost == null : this.tripCost.equals(rawReportItem.tripCost)) &&
-        (this.tripDistanceMeters == null ? rawReportItem.tripDistanceMeters == null : this.tripDistanceMeters.equals(rawReportItem.tripDistanceMeters));
+        (this.tripDistanceMeters == null ? rawReportItem.tripDistanceMeters == null : this.tripDistanceMeters.equals(rawReportItem.tripDistanceMeters)) &&
+        (this.spanSecondsNormalTime == null ? rawReportItem.spanSecondsNormalTime == null : this.spanSecondsNormalTime.equals(rawReportItem.spanSecondsNormalTime)) &&
+        (this.spanSecondsOvertime == null ? rawReportItem.spanSecondsOvertime == null : this.spanSecondsOvertime.equals(rawReportItem.spanSecondsOvertime));
   }
 
   @Override
@@ -259,6 +285,8 @@ public class CSRawReportItem {
     result = 31 * result + (this.payOvertimeAmount == null ? 0: this.payOvertimeAmount.hashCode());
     result = 31 * result + (this.tripCost == null ? 0: this.tripCost.hashCode());
     result = 31 * result + (this.tripDistanceMeters == null ? 0: this.tripDistanceMeters.hashCode());
+    result = 31 * result + (this.spanSecondsNormalTime == null ? 0: this.spanSecondsNormalTime.hashCode());
+    result = 31 * result + (this.spanSecondsOvertime == null ? 0: this.spanSecondsOvertime.hashCode());
     return result;
   }
 
@@ -283,6 +311,8 @@ public class CSRawReportItem {
     sb.append("  payOvertimeAmount: ").append(payOvertimeAmount).append("\n");
     sb.append("  tripCost: ").append(tripCost).append("\n");
     sb.append("  tripDistanceMeters: ").append(tripDistanceMeters).append("\n");
+    sb.append("  spanSecondsNormalTime: ").append(spanSecondsNormalTime).append("\n");
+    sb.append("  spanSecondsOvertime: ").append(spanSecondsOvertime).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

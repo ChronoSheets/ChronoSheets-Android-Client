@@ -12,18 +12,15 @@
 
 package ChronoSheetsClientLibModel;
 
-import ChronoSheetsClientLibModel.CSTrip;
-import java.util.*;
+import ChronoSheetsClientLibModel.CSTimesheetFileAttachment;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 @ApiModel(description = "")
-public class CSApiResponseForPaginatedListTrip {
+public class CSApiResponseTimesheetFileAttachment {
   
-  @SerializedName("TotalSetCount")
-  private Integer totalSetCount = null;
   @SerializedName("Data")
-  private List<CSTrip> data = null;
+  private CSTimesheetFileAttachment data = null;
   public enum StatusEnum {
      Succeeded,  FatalException,  GeneralError,  ValidationError,  UnAuthorized,  SessionExpired, 
   };
@@ -35,20 +32,10 @@ public class CSApiResponseForPaginatedListTrip {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Integer getTotalSetCount() {
-    return totalSetCount;
-  }
-  public void setTotalSetCount(Integer totalSetCount) {
-    this.totalSetCount = totalSetCount;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public List<CSTrip> getData() {
+  public CSTimesheetFileAttachment getData() {
     return data;
   }
-  public void setData(List<CSTrip> data) {
+  public void setData(CSTimesheetFileAttachment data) {
     this.data = data;
   }
 
@@ -81,17 +68,15 @@ public class CSApiResponseForPaginatedListTrip {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseForPaginatedListTrip apiResponseForPaginatedListTrip = (CSApiResponseForPaginatedListTrip) o;
-    return (this.totalSetCount == null ? apiResponseForPaginatedListTrip.totalSetCount == null : this.totalSetCount.equals(apiResponseForPaginatedListTrip.totalSetCount)) &&
-        (this.data == null ? apiResponseForPaginatedListTrip.data == null : this.data.equals(apiResponseForPaginatedListTrip.data)) &&
-        (this.status == null ? apiResponseForPaginatedListTrip.status == null : this.status.equals(apiResponseForPaginatedListTrip.status)) &&
-        (this.message == null ? apiResponseForPaginatedListTrip.message == null : this.message.equals(apiResponseForPaginatedListTrip.message));
+    CSApiResponseTimesheetFileAttachment apiResponseTimesheetFileAttachment = (CSApiResponseTimesheetFileAttachment) o;
+    return (this.data == null ? apiResponseTimesheetFileAttachment.data == null : this.data.equals(apiResponseTimesheetFileAttachment.data)) &&
+        (this.status == null ? apiResponseTimesheetFileAttachment.status == null : this.status.equals(apiResponseTimesheetFileAttachment.status)) &&
+        (this.message == null ? apiResponseTimesheetFileAttachment.message == null : this.message.equals(apiResponseTimesheetFileAttachment.message));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.totalSetCount == null ? 0: this.totalSetCount.hashCode());
     result = 31 * result + (this.data == null ? 0: this.data.hashCode());
     result = 31 * result + (this.status == null ? 0: this.status.hashCode());
     result = 31 * result + (this.message == null ? 0: this.message.hashCode());
@@ -101,9 +86,8 @@ public class CSApiResponseForPaginatedListTrip {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseForPaginatedListTrip {\n");
+    sb.append("class CSApiResponseTimesheetFileAttachment {\n");
     
-    sb.append("  totalSetCount: ").append(totalSetCount).append("\n");
     sb.append("  data: ").append(data).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  message: ").append(message).append("\n");
