@@ -93,6 +93,10 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseFleetVehicle>>(){}.getType();
     }
     
+    if ("CSApiResponseForPaginatedListExtendedGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseForPaginatedListExtendedGeofence>>(){}.getType();
+    }
+    
     if ("CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>>(){}.getType();
     }
@@ -117,8 +121,8 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseForPaginatedListTrip>>(){}.getType();
     }
     
-    if ("CSApiResponseForPaginatedTranscription".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CSApiResponseForPaginatedTranscription>>(){}.getType();
+    if ("CSApiResponseGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseGeofence>>(){}.getType();
     }
     
     if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
@@ -221,6 +225,10 @@ public class JsonUtil {
       return new TypeToken<List<CSApiResponseTimesheetTask>>(){}.getType();
     }
     
+    if ("CSApiResponseTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSApiResponseTranscription>>(){}.getType();
+    }
+    
     if ("CSApiResponseTrip".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseTrip>>(){}.getType();
     }
@@ -243,6 +251,10 @@ public class JsonUtil {
     
     if ("CSApiResponseUserProfile".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSApiResponseUserProfile>>(){}.getType();
+    }
+    
+    if ("CSBasicCoordinate".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSBasicCoordinate>>(){}.getType();
     }
     
     if ("CSBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
@@ -269,6 +281,14 @@ public class JsonUtil {
       return new TypeToken<List<CSCombinedReportsData>>(){}.getType();
     }
     
+    if ("CSCreateAutomationStepRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSCreateAutomationStepRequest>>(){}.getType();
+    }
+    
+    if ("CSCreateGeoFenceRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSCreateGeoFenceRequest>>(){}.getType();
+    }
+    
     if ("CSCreateTripRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSCreateTripRequest>>(){}.getType();
     }
@@ -281,12 +301,20 @@ public class JsonUtil {
       return new TypeToken<List<CSDoLoginResponse>>(){}.getType();
     }
     
+    if ("CSExtendedGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSExtendedGeofence>>(){}.getType();
+    }
+    
     if ("CSFleetSummaryReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSFleetSummaryReportItem>>(){}.getType();
     }
     
     if ("CSFleetVehicle".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSFleetVehicle>>(){}.getType();
+    }
+    
+    if ("CSGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSGeofence>>(){}.getType();
     }
     
     if ("CSInsertClientRequest".equalsIgnoreCase(className)) {
@@ -441,6 +469,10 @@ public class JsonUtil {
       return new TypeToken<List<CSTripCoordinate>>(){}.getType();
     }
     
+    if ("CSUpdateGeoFenceRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<List<CSUpdateGeoFenceRequest>>(){}.getType();
+    }
+    
     if ("CSUpdateJobCodeRequest".equalsIgnoreCase(className)) {
       return new TypeToken<List<CSUpdateJobCodeRequest>>(){}.getType();
     }
@@ -539,6 +571,10 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseFleetVehicle>(){}.getType();
     }
     
+    if ("CSApiResponseForPaginatedListExtendedGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseForPaginatedListExtendedGeofence>(){}.getType();
+    }
+    
     if ("CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(){}.getType();
     }
@@ -563,8 +599,8 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseForPaginatedListTrip>(){}.getType();
     }
     
-    if ("CSApiResponseForPaginatedTranscription".equalsIgnoreCase(className)) {
-      return new TypeToken<CSApiResponseForPaginatedTranscription>(){}.getType();
+    if ("CSApiResponseGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseGeofence>(){}.getType();
     }
     
     if ("CSApiResponseInsertUserResponse".equalsIgnoreCase(className)) {
@@ -667,6 +703,10 @@ public class JsonUtil {
       return new TypeToken<CSApiResponseTimesheetTask>(){}.getType();
     }
     
+    if ("CSApiResponseTranscription".equalsIgnoreCase(className)) {
+      return new TypeToken<CSApiResponseTranscription>(){}.getType();
+    }
+    
     if ("CSApiResponseTrip".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseTrip>(){}.getType();
     }
@@ -689,6 +729,10 @@ public class JsonUtil {
     
     if ("CSApiResponseUserProfile".equalsIgnoreCase(className)) {
       return new TypeToken<CSApiResponseUserProfile>(){}.getType();
+    }
+    
+    if ("CSBasicCoordinate".equalsIgnoreCase(className)) {
+      return new TypeToken<CSBasicCoordinate>(){}.getType();
     }
     
     if ("CSBatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
@@ -715,6 +759,14 @@ public class JsonUtil {
       return new TypeToken<CSCombinedReportsData>(){}.getType();
     }
     
+    if ("CSCreateAutomationStepRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSCreateAutomationStepRequest>(){}.getType();
+    }
+    
+    if ("CSCreateGeoFenceRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSCreateGeoFenceRequest>(){}.getType();
+    }
+    
     if ("CSCreateTripRequest".equalsIgnoreCase(className)) {
       return new TypeToken<CSCreateTripRequest>(){}.getType();
     }
@@ -727,12 +779,20 @@ public class JsonUtil {
       return new TypeToken<CSDoLoginResponse>(){}.getType();
     }
     
+    if ("CSExtendedGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<CSExtendedGeofence>(){}.getType();
+    }
+    
     if ("CSFleetSummaryReportItem".equalsIgnoreCase(className)) {
       return new TypeToken<CSFleetSummaryReportItem>(){}.getType();
     }
     
     if ("CSFleetVehicle".equalsIgnoreCase(className)) {
       return new TypeToken<CSFleetVehicle>(){}.getType();
+    }
+    
+    if ("CSGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<CSGeofence>(){}.getType();
     }
     
     if ("CSInsertClientRequest".equalsIgnoreCase(className)) {
@@ -885,6 +945,10 @@ public class JsonUtil {
     
     if ("CSTripCoordinate".equalsIgnoreCase(className)) {
       return new TypeToken<CSTripCoordinate>(){}.getType();
+    }
+    
+    if ("CSUpdateGeoFenceRequest".equalsIgnoreCase(className)) {
+      return new TypeToken<CSUpdateGeoFenceRequest>(){}.getType();
     }
     
     if ("CSUpdateJobCodeRequest".equalsIgnoreCase(className)) {

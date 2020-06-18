@@ -12,17 +12,18 @@
 
 package ChronoSheetsClientLibModel;
 
-import ChronoSheetsClientLibModel.CSTranscription;
+import ChronoSheetsClientLibModel.CSGeofence;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
-public class CSApiResponseForPaginatedTranscription {
+/**
+ * A standard API response
+ **/
+@ApiModel(description = "A standard API response")
+public class CSApiResponseGeofence {
   
-  @SerializedName("TotalSetCount")
-  private Integer totalSetCount = null;
   @SerializedName("Data")
-  private CSTranscription data = null;
+  private CSGeofence data = null;
   public enum StatusEnum {
      Succeeded,  FatalException,  GeneralError,  ValidationError,  UnAuthorized,  SessionExpired, 
   };
@@ -32,28 +33,20 @@ public class CSApiResponseForPaginatedTranscription {
   private String message = null;
 
   /**
+   * The main Data of the response
    **/
-  @ApiModelProperty(value = "")
-  public Integer getTotalSetCount() {
-    return totalSetCount;
-  }
-  public void setTotalSetCount(Integer totalSetCount) {
-    this.totalSetCount = totalSetCount;
-  }
-
-  /**
-   **/
-  @ApiModelProperty(value = "")
-  public CSTranscription getData() {
+  @ApiModelProperty(value = "The main Data of the response")
+  public CSGeofence getData() {
     return data;
   }
-  public void setData(CSTranscription data) {
+  public void setData(CSGeofence data) {
     this.data = data;
   }
 
   /**
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -62,8 +55,9 @@ public class CSApiResponseForPaginatedTranscription {
   }
 
   /**
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }
@@ -80,17 +74,15 @@ public class CSApiResponseForPaginatedTranscription {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CSApiResponseForPaginatedTranscription apiResponseForPaginatedTranscription = (CSApiResponseForPaginatedTranscription) o;
-    return (this.totalSetCount == null ? apiResponseForPaginatedTranscription.totalSetCount == null : this.totalSetCount.equals(apiResponseForPaginatedTranscription.totalSetCount)) &&
-        (this.data == null ? apiResponseForPaginatedTranscription.data == null : this.data.equals(apiResponseForPaginatedTranscription.data)) &&
-        (this.status == null ? apiResponseForPaginatedTranscription.status == null : this.status.equals(apiResponseForPaginatedTranscription.status)) &&
-        (this.message == null ? apiResponseForPaginatedTranscription.message == null : this.message.equals(apiResponseForPaginatedTranscription.message));
+    CSApiResponseGeofence apiResponseGeofence = (CSApiResponseGeofence) o;
+    return (this.data == null ? apiResponseGeofence.data == null : this.data.equals(apiResponseGeofence.data)) &&
+        (this.status == null ? apiResponseGeofence.status == null : this.status.equals(apiResponseGeofence.status)) &&
+        (this.message == null ? apiResponseGeofence.message == null : this.message.equals(apiResponseGeofence.message));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.totalSetCount == null ? 0: this.totalSetCount.hashCode());
     result = 31 * result + (this.data == null ? 0: this.data.hashCode());
     result = 31 * result + (this.status == null ? 0: this.status.hashCode());
     result = 31 * result + (this.message == null ? 0: this.message.hashCode());
@@ -100,9 +92,8 @@ public class CSApiResponseForPaginatedTranscription {
   @Override
   public String toString()  {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CSApiResponseForPaginatedTranscription {\n");
+    sb.append("class CSApiResponseGeofence {\n");
     
-    sb.append("  totalSetCount: ").append(totalSetCount).append("\n");
     sb.append("  data: ").append(data).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  message: ").append(message).append("\n");

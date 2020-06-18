@@ -17,7 +17,10 @@ import java.util.*;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A paginated API repsonse
+ **/
+@ApiModel(description = "A paginated API repsonse")
 public class CSApiResponseForPaginatedListOrgReportTrip {
   
   @SerializedName("TotalSetCount")
@@ -33,8 +36,9 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   private String message = null;
 
   /**
+   * The count of total records that are being paginated
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The count of total records that are being paginated")
   public Integer getTotalSetCount() {
     return totalSetCount;
   }
@@ -43,8 +47,9 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
   /**
+   * The main Data of the response
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The main Data of the response")
   public List<CSOrgReportTrip> getData() {
     return data;
   }
@@ -53,8 +58,9 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
   /**
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -63,8 +69,9 @@ public class CSApiResponseForPaginatedListOrgReportTrip {
   }
 
   /**
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }

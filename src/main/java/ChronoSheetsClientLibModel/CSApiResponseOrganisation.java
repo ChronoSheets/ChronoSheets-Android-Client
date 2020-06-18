@@ -16,7 +16,10 @@ import ChronoSheetsClientLibModel.CSOrganisation;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A standard API response
+ **/
+@ApiModel(description = "A standard API response")
 public class CSApiResponseOrganisation {
   
   @SerializedName("Data")
@@ -30,8 +33,9 @@ public class CSApiResponseOrganisation {
   private String message = null;
 
   /**
+   * The main Data of the response
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The main Data of the response")
   public CSOrganisation getData() {
     return data;
   }
@@ -40,8 +44,9 @@ public class CSApiResponseOrganisation {
   }
 
   /**
+   * The API response status. Indicates if the request was successful, failed or was unauthorised.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The API response status. Indicates if the request was successful, failed or was unauthorised.")
   public StatusEnum getStatus() {
     return status;
   }
@@ -50,8 +55,9 @@ public class CSApiResponseOrganisation {
   }
 
   /**
+   * A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.")
   public String getMessage() {
     return message;
   }

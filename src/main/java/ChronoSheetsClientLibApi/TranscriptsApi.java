@@ -24,7 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListOrgReportTranscript;
-import ChronoSheetsClientLibModel.CSApiResponseForPaginatedTranscription;
+import ChronoSheetsClientLibModel.CSApiResponseTranscription;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -62,9 +62,9 @@ public class TranscriptsApi {
   * 
    * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment.
    * @param xChronosheetsAuth The ChronoSheets Auth Token
-   * @return CSApiResponseForPaginatedTranscription
+   * @return CSApiResponseTranscription
   */
-  public CSApiResponseForPaginatedTranscription transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public CSApiResponseTranscription transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'fileAttachmentId' is set
     if (fileAttachmentId == null) {
@@ -106,7 +106,7 @@ public class TranscriptsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (CSApiResponseForPaginatedTranscription) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedTranscription.class);
+         return (CSApiResponseTranscription) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseTranscription.class);
       } else {
          return null;
       }
@@ -132,7 +132,7 @@ public class TranscriptsApi {
    * 
    * @param fileAttachmentId The ID of the file attachment that has a transcript.  It should be an audio file attachment.   * @param xChronosheetsAuth The ChronoSheets Auth Token
   */
-  public void transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth, final Response.Listener<CSApiResponseForPaginatedTranscription> responseListener, final Response.ErrorListener errorListener) {
+  public void transcriptsGetMyTranscript (Integer fileAttachmentId, String xChronosheetsAuth, final Response.Listener<CSApiResponseTranscription> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'fileAttachmentId' is set
@@ -184,7 +184,7 @@ public class TranscriptsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((CSApiResponseForPaginatedTranscription) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedTranscription.class));
+              responseListener.onResponse((CSApiResponseTranscription) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseTranscription.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }
