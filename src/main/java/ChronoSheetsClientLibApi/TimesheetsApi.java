@@ -42,7 +42,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TimesheetsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -82,7 +82,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/CreateSingleTimesheet";
+    String path = "/Timesheets/CreateSingleTimesheet";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -156,7 +156,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/CreateSingleTimesheet".replaceAll("\\{format\\}","json");
+    String path = "/Timesheets/CreateSingleTimesheet".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -228,7 +228,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/DeleteTimesheet";
+    String path = "/Timesheets/DeleteTimesheet";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -297,7 +297,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/DeleteTimesheet".replaceAll("\\{format\\}","json");
+    String path = "/Timesheets/DeleteTimesheet".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -376,7 +376,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/GetTimesheets";
+    String path = "/Timesheets/GetTimesheets";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -451,7 +451,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/GetTimesheets".replaceAll("\\{format\\}","json");
+    String path = "/Timesheets/GetTimesheets".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -525,7 +525,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/UpdateTimesheets";
+    String path = "/Timesheets/UpdateTimesheets";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -599,7 +599,7 @@ public class TimesheetsApi {
     }
 
     // create path and map variables
-    String path = "/api/Timesheets/UpdateTimesheets".replaceAll("\\{format\\}","json");
+    String path = "/Timesheets/UpdateTimesheets".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

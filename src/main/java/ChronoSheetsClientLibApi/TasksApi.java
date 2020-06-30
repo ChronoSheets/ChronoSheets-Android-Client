@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TasksApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -81,7 +81,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/CreateTask";
+    String path = "/Tasks/CreateTask";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -155,7 +155,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/CreateTask".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/CreateTask".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -227,7 +227,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/DeleteTask";
+    String path = "/Tasks/DeleteTask";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/DeleteTask".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/DeleteTask".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -369,7 +369,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTaskById";
+    String path = "/Tasks/GetTaskById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -438,7 +438,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTaskById".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/GetTaskById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -505,7 +505,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTasks";
+    String path = "/Tasks/GetTasks";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -568,7 +568,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTasks".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/GetTasks".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -640,7 +640,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTasksForJob";
+    String path = "/Tasks/GetTasksForJob";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -709,7 +709,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/GetTasksForJob".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/GetTasksForJob".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -782,7 +782,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/UpdateTask";
+    String path = "/Tasks/UpdateTask";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -856,7 +856,7 @@ public class TasksApi {
     }
 
     // create path and map variables
-    String path = "/api/Tasks/UpdateTask".replaceAll("\\{format\\}","json");
+    String path = "/Tasks/UpdateTask".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

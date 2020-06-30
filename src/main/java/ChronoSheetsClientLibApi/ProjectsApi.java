@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class ProjectsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -81,7 +81,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/CreateProject";
+    String path = "/Projects/CreateProject";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -155,7 +155,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/CreateProject".replaceAll("\\{format\\}","json");
+    String path = "/Projects/CreateProject".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -227,7 +227,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/GetProjectById";
+    String path = "/Projects/GetProjectById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/GetProjectById".replaceAll("\\{format\\}","json");
+    String path = "/Projects/GetProjectById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -369,7 +369,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/GetProjectsForClient";
+    String path = "/Projects/GetProjectsForClient";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -438,7 +438,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/GetProjectsForClient".replaceAll("\\{format\\}","json");
+    String path = "/Projects/GetProjectsForClient".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -511,7 +511,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/UpdateProject";
+    String path = "/Projects/UpdateProject";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -585,7 +585,7 @@ public class ProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/Projects/UpdateProject".replaceAll("\\{format\\}","json");
+    String path = "/Projects/UpdateProject".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

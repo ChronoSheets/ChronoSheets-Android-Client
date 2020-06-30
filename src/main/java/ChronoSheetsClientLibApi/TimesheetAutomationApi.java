@@ -23,6 +23,7 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import ChronoSheetsClientLibModel.CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence;
 import ChronoSheetsClientLibModel.CSApiResponseInt32;
 import ChronoSheetsClientLibModel.CSCreateAutomationStepRequest;
 
@@ -37,7 +38,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TimesheetAutomationApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -77,7 +78,7 @@ public class TimesheetAutomationApi {
     }
 
     // create path and map variables
-    String path = "/api/TimesheetAutomation/CreateAutomationStep";
+    String path = "/TimesheetAutomation/CreateAutomationStep";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -151,7 +152,7 @@ public class TimesheetAutomationApi {
     }
 
     // create path and map variables
-    String path = "/api/TimesheetAutomation/CreateAutomationStep".replaceAll("\\{format\\}","json");
+    String path = "/TimesheetAutomation/CreateAutomationStep".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -188,6 +189,193 @@ public class TimesheetAutomationApi {
           public void onResponse(String localVarResponse) {
             try {
               responseListener.onResponse((CSApiResponseInt32) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseInt32.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+  * 
+   * @param geofenceId The ID of the Geofence
+   * @param userId 
+   * @param sort 
+   * @param order 
+   * @param xChronosheetsAuth The ChronoSheets Auth Token
+   * @param skip Skip this many records
+   * @param take Take this many records
+   * @return CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence
+  */
+  public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+    // verify the required parameter 'geofenceId' is set
+    if (geofenceId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'userId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'sort' is set
+    if (sort == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sort' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'sort' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'order' is set
+    if (order == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'order' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'order' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+
+    // create path and map variables
+    String path = "/TimesheetAutomation/GetTimesheetAutomationAuditTrail";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "GeofenceId", geofenceId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserId", userId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Sort", sort));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Order", order));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Skip", skip));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Take", take));
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence) ApiInvoker.deserialize(localVarResponse, "", CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+   * 
+   * @param geofenceId The ID of the Geofence   * @param userId    * @param sort    * @param order    * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many records   * @param take Take this many records
+  */
+  public void timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final Response.Listener<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+    // verify the required parameter 'geofenceId' is set
+    if (geofenceId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'userId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'userId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'sort' is set
+    if (sort == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'sort' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'sort' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'order' is set
+    if (order == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'order' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'order' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'xChronosheetsAuth' is set
+    if (xChronosheetsAuth == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'xChronosheetsAuth' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'xChronosheetsAuth' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+
+    // create path and map variables
+    String path = "/TimesheetAutomation/GetTimesheetAutomationAuditTrail".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "GeofenceId", geofenceId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "UserId", userId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Sort", sort));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Order", order));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Skip", skip));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "Take", take));
+
+    headerParams.put("x-chronosheets-auth", ApiInvoker.parameterToString(xChronosheetsAuth));
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence) ApiInvoker.deserialize(localVarResponse,  "", CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

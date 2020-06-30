@@ -40,7 +40,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TripsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -80,7 +80,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/CreateTrip";
+    String path = "/Trips/CreateTrip";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -154,7 +154,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/CreateTrip".replaceAll("\\{format\\}","json");
+    String path = "/Trips/CreateTrip".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -226,7 +226,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/GetMyTripById";
+    String path = "/Trips/GetMyTripById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -295,7 +295,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/GetMyTripById".replaceAll("\\{format\\}","json");
+    String path = "/Trips/GetMyTripById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -377,7 +377,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/GetMyTrips";
+    String path = "/Trips/GetMyTrips";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -455,7 +455,7 @@ public class TripsApi {
     }
 
     // create path and map variables
-    String path = "/api/Trips/GetMyTrips".replaceAll("\\{format\\}","json");
+    String path = "/Trips/GetMyTrips".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

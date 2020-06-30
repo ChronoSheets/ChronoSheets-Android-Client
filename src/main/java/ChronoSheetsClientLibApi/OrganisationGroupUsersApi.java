@@ -38,7 +38,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class OrganisationGroupUsersApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -78,7 +78,7 @@ public class OrganisationGroupUsersApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroupUsers/GetOrganisationGroupUsers";
+    String path = "/OrganisationGroupUsers/GetOrganisationGroupUsers";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -147,7 +147,7 @@ public class OrganisationGroupUsersApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroupUsers/GetOrganisationGroupUsers".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroupUsers/GetOrganisationGroupUsers".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -220,7 +220,7 @@ public class OrganisationGroupUsersApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
+    String path = "/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -294,7 +294,7 @@ public class OrganisationGroupUsersApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroupUsers/UpdateOrganisationGroupUsers".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroupUsers/UpdateOrganisationGroupUsers".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

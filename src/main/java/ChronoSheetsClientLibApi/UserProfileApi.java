@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class UserProfileApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -75,7 +75,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/DoLogin";
+    String path = "/UserProfile/DoLogin";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -143,7 +143,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/DoLogin".replaceAll("\\{format\\}","json");
+    String path = "/UserProfile/DoLogin".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -208,7 +208,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/DoLogout";
+    String path = "/UserProfile/DoLogout";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -271,7 +271,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/DoLogout".replaceAll("\\{format\\}","json");
+    String path = "/UserProfile/DoLogout".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -337,7 +337,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/GetMyProfile";
+    String path = "/UserProfile/GetMyProfile";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -400,7 +400,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/GetMyProfile".replaceAll("\\{format\\}","json");
+    String path = "/UserProfile/GetMyProfile".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -466,7 +466,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/KeepSessionAlive";
+    String path = "/UserProfile/KeepSessionAlive";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -529,7 +529,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/KeepSessionAlive".replaceAll("\\{format\\}","json");
+    String path = "/UserProfile/KeepSessionAlive".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -601,7 +601,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/UpdateMyProfile";
+    String path = "/UserProfile/UpdateMyProfile";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -675,7 +675,7 @@ public class UserProfileApi {
     }
 
     // create path and map variables
-    String path = "/api/UserProfile/UpdateMyProfile".replaceAll("\\{format\\}","json");
+    String path = "/UserProfile/UpdateMyProfile".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

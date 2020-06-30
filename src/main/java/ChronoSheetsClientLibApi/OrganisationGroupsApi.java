@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class OrganisationGroupsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -81,7 +81,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/CreateOrganisationGroup";
+    String path = "/OrganisationGroups/CreateOrganisationGroup";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -155,7 +155,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/CreateOrganisationGroup".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/CreateOrganisationGroup".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -227,7 +227,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/DeleteOrganisationGroup";
+    String path = "/OrganisationGroups/DeleteOrganisationGroup";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/DeleteOrganisationGroup".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/DeleteOrganisationGroup".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -369,7 +369,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroup";
+    String path = "/OrganisationGroups/GetOrganisationGroup";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -438,7 +438,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroup".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/GetOrganisationGroup".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -505,7 +505,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroups";
+    String path = "/OrganisationGroups/GetOrganisationGroups";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -568,7 +568,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroups".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/GetOrganisationGroups".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -640,7 +640,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroupsForJob";
+    String path = "/OrganisationGroups/GetOrganisationGroupsForJob";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -709,7 +709,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroupsForJob".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/GetOrganisationGroupsForJob".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -782,7 +782,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroupsForVehicle";
+    String path = "/OrganisationGroups/GetOrganisationGroupsForVehicle";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -851,7 +851,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/GetOrganisationGroupsForVehicle".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/GetOrganisationGroupsForVehicle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -924,7 +924,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/UpdateOrganisationGroup";
+    String path = "/OrganisationGroups/UpdateOrganisationGroup";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -998,7 +998,7 @@ public class OrganisationGroupsApi {
     }
 
     // create path and map variables
-    String path = "/api/OrganisationGroups/UpdateOrganisationGroup".replaceAll("\\{format\\}","json");
+    String path = "/OrganisationGroups/UpdateOrganisationGroup".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

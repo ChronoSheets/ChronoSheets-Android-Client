@@ -39,7 +39,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class UserJobFavouritesApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -79,7 +79,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/CreateJobFavourite";
+    String path = "/UserJobFavourites/CreateJobFavourite";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -153,7 +153,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/CreateJobFavourite".replaceAll("\\{format\\}","json");
+    String path = "/UserJobFavourites/CreateJobFavourite".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -225,7 +225,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/DeleteJobFavourite";
+    String path = "/UserJobFavourites/DeleteJobFavourite";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -294,7 +294,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/DeleteJobFavourite".replaceAll("\\{format\\}","json");
+    String path = "/UserJobFavourites/DeleteJobFavourite".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -361,7 +361,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/GetJobFavourites";
+    String path = "/UserJobFavourites/GetJobFavourites";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -424,7 +424,7 @@ public class UserJobFavouritesApi {
     }
 
     // create path and map variables
-    String path = "/api/UserJobFavourites/GetJobFavourites".replaceAll("\\{format\\}","json");
+    String path = "/UserJobFavourites/GetJobFavourites".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

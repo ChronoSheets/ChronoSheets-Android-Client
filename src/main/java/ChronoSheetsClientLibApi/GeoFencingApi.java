@@ -40,7 +40,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class GeoFencingApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -80,7 +80,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/CreateGeofence";
+    String path = "/GeoFencing/CreateGeofence";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -154,7 +154,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/CreateGeofence".replaceAll("\\{format\\}","json");
+    String path = "/GeoFencing/CreateGeofence".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -226,7 +226,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/DeleteGeofence";
+    String path = "/GeoFencing/DeleteGeofence";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -295,7 +295,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/DeleteGeofence".replaceAll("\\{format\\}","json");
+    String path = "/GeoFencing/DeleteGeofence".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -368,7 +368,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/GetGeofenceById";
+    String path = "/GeoFencing/GetGeofenceById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -437,7 +437,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/GetGeofenceById".replaceAll("\\{format\\}","json");
+    String path = "/GeoFencing/GetGeofenceById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -506,7 +506,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/GetGeofences";
+    String path = "/GeoFencing/GetGeofences";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -571,7 +571,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/GetGeofences".replaceAll("\\{format\\}","json");
+    String path = "/GeoFencing/GetGeofences".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -645,7 +645,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/UpdateGeofence";
+    String path = "/GeoFencing/UpdateGeofence";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -719,7 +719,7 @@ public class GeoFencingApi {
     }
 
     // create path and map variables
-    String path = "/api/GeoFencing/UpdateGeofence".replaceAll("\\{format\\}","json");
+    String path = "/GeoFencing/UpdateGeofence".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

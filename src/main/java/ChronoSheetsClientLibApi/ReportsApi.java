@@ -45,7 +45,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class ReportsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -93,7 +93,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetAllChartsDataAdmin";
+    String path = "/Reports/GetAllChartsDataAdmin";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -170,7 +170,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetAllChartsDataAdmin".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetAllChartsDataAdmin".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -252,7 +252,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetAllChartsDataUser";
+    String path = "/Reports/GetAllChartsDataUser";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -327,7 +327,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetAllChartsDataUser".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetAllChartsDataUser".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -408,7 +408,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetFleetSummaryAdmin";
+    String path = "/Reports/GetFleetSummaryAdmin";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -484,7 +484,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetFleetSummaryAdmin".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetFleetSummaryAdmin".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -559,7 +559,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrgTripById";
+    String path = "/Reports/GetOrgTripById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -628,7 +628,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrgTripById".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetOrgTripById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -710,7 +710,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTimesheetFileAttachments";
+    String path = "/Reports/GetOrganisationTimesheetFileAttachments";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -788,7 +788,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTimesheetFileAttachments".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetOrganisationTimesheetFileAttachments".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -875,7 +875,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTranscripts";
+    String path = "/Reports/GetOrganisationTranscripts";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -954,7 +954,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTranscripts".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetOrganisationTranscripts".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1041,7 +1041,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTrips";
+    String path = "/Reports/GetOrganisationTrips";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1119,7 +1119,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetOrganisationTrips".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetOrganisationTrips".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1207,7 +1207,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetRawDataAdmin";
+    String path = "/Reports/GetRawDataAdmin";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1287,7 +1287,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/GetRawDataAdmin".replaceAll("\\{format\\}","json");
+    String path = "/Reports/GetRawDataAdmin".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1373,7 +1373,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/ProjectCostingsAdmin";
+    String path = "/Reports/ProjectCostingsAdmin";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1449,7 +1449,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/ProjectCostingsAdmin".replaceAll("\\{format\\}","json");
+    String path = "/Reports/ProjectCostingsAdmin".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1530,7 +1530,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/UserJobsOverTime";
+    String path = "/Reports/UserJobsOverTime";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1605,7 +1605,7 @@ public class ReportsApi {
     }
 
     // create path and map variables
-    String path = "/api/Reports/UserJobsOverTime".replaceAll("\\{format\\}","json");
+    String path = "/Reports/UserJobsOverTime".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

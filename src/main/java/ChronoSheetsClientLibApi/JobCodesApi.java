@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class JobCodesApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -81,7 +81,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/CreateJobCode";
+    String path = "/JobCodes/CreateJobCode";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -155,7 +155,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/CreateJobCode".replaceAll("\\{format\\}","json");
+    String path = "/JobCodes/CreateJobCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -227,7 +227,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/DeleteJobCode";
+    String path = "/JobCodes/DeleteJobCode";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/DeleteJobCode".replaceAll("\\{format\\}","json");
+    String path = "/JobCodes/DeleteJobCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -369,7 +369,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/GetJobCodeById";
+    String path = "/JobCodes/GetJobCodeById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -438,7 +438,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/GetJobCodeById".replaceAll("\\{format\\}","json");
+    String path = "/JobCodes/GetJobCodeById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -505,7 +505,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/GetJobCodes";
+    String path = "/JobCodes/GetJobCodes";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -568,7 +568,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/GetJobCodes".replaceAll("\\{format\\}","json");
+    String path = "/JobCodes/GetJobCodes".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -640,7 +640,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/UpdateJobCode";
+    String path = "/JobCodes/UpdateJobCode";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -714,7 +714,7 @@ public class JobCodesApi {
     }
 
     // create path and map variables
-    String path = "/api/JobCodes/UpdateJobCode".replaceAll("\\{format\\}","json");
+    String path = "/JobCodes/UpdateJobCode".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

@@ -39,7 +39,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class FileAttachmentsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -79,7 +79,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+    String path = "/FileAttachments/DeleteTimesheetFileAttachment";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -148,7 +148,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/DeleteTimesheetFileAttachment".replaceAll("\\{format\\}","json");
+    String path = "/FileAttachments/DeleteTimesheetFileAttachment".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -221,7 +221,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/GetFileAttachmentById";
+    String path = "/FileAttachments/GetFileAttachmentById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -290,7 +290,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/GetFileAttachmentById".replaceAll("\\{format\\}","json");
+    String path = "/FileAttachments/GetFileAttachmentById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -371,7 +371,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/GetMyFileAttachments";
+    String path = "/FileAttachments/GetMyFileAttachments";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -448,7 +448,7 @@ public class FileAttachmentsApi {
     }
 
     // create path and map variables
-    String path = "/api/FileAttachments/GetMyFileAttachments".replaceAll("\\{format\\}","json");
+    String path = "/FileAttachments/GetMyFileAttachments".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

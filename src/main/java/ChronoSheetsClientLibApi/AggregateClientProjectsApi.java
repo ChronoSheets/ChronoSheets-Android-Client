@@ -36,7 +36,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class AggregateClientProjectsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -70,7 +70,7 @@ public class AggregateClientProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/AggregateClientProjects/GetAggregateClientProjects";
+    String path = "/AggregateClientProjects/GetAggregateClientProjects";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -133,7 +133,7 @@ public class AggregateClientProjectsApi {
     }
 
     // create path and map variables
-    String path = "/api/AggregateClientProjects/GetAggregateClientProjects".replaceAll("\\{format\\}","json");
+    String path = "/AggregateClientProjects/GetAggregateClientProjects".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

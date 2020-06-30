@@ -12,6 +12,7 @@
 
 package ChronoSheetsClientLibModel;
 
+import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
@@ -31,6 +32,8 @@ public class CSCreateAutomationStepRequest {
   private Double latitude = null;
   @SerializedName("Longitude")
   private Double longitude = null;
+  @SerializedName("ClientTime")
+  private Date clientTime = null;
 
   /**
    **/
@@ -82,6 +85,16 @@ public class CSCreateAutomationStepRequest {
     this.longitude = longitude;
   }
 
+  /**
+   **/
+  @ApiModelProperty(value = "")
+  public Date getClientTime() {
+    return clientTime;
+  }
+  public void setClientTime(Date clientTime) {
+    this.clientTime = clientTime;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -96,7 +109,8 @@ public class CSCreateAutomationStepRequest {
         (this.nfcId == null ? createAutomationStepRequest.nfcId == null : this.nfcId.equals(createAutomationStepRequest.nfcId)) &&
         (this.automationActionType == null ? createAutomationStepRequest.automationActionType == null : this.automationActionType.equals(createAutomationStepRequest.automationActionType)) &&
         (this.latitude == null ? createAutomationStepRequest.latitude == null : this.latitude.equals(createAutomationStepRequest.latitude)) &&
-        (this.longitude == null ? createAutomationStepRequest.longitude == null : this.longitude.equals(createAutomationStepRequest.longitude));
+        (this.longitude == null ? createAutomationStepRequest.longitude == null : this.longitude.equals(createAutomationStepRequest.longitude)) &&
+        (this.clientTime == null ? createAutomationStepRequest.clientTime == null : this.clientTime.equals(createAutomationStepRequest.clientTime));
   }
 
   @Override
@@ -107,6 +121,7 @@ public class CSCreateAutomationStepRequest {
     result = 31 * result + (this.automationActionType == null ? 0: this.automationActionType.hashCode());
     result = 31 * result + (this.latitude == null ? 0: this.latitude.hashCode());
     result = 31 * result + (this.longitude == null ? 0: this.longitude.hashCode());
+    result = 31 * result + (this.clientTime == null ? 0: this.clientTime.hashCode());
     return result;
   }
 
@@ -120,6 +135,7 @@ public class CSCreateAutomationStepRequest {
     sb.append("  automationActionType: ").append(automationActionType).append("\n");
     sb.append("  latitude: ").append(latitude).append("\n");
     sb.append("  longitude: ").append(longitude).append("\n");
+    sb.append("  clientTime: ").append(clientTime).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

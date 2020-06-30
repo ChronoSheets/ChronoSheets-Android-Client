@@ -41,7 +41,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class FleetApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -81,7 +81,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/CreateVehicle";
+    String path = "/Fleet/CreateVehicle";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -155,7 +155,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/CreateVehicle".replaceAll("\\{format\\}","json");
+    String path = "/Fleet/CreateVehicle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -227,7 +227,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/DeleteVehicle";
+    String path = "/Fleet/DeleteVehicle";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/DeleteVehicle".replaceAll("\\{format\\}","json");
+    String path = "/Fleet/DeleteVehicle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -369,7 +369,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/GetVehicleById";
+    String path = "/Fleet/GetVehicleById";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -438,7 +438,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/GetVehicleById".replaceAll("\\{format\\}","json");
+    String path = "/Fleet/GetVehicleById".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -506,7 +506,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/GetVehicles";
+    String path = "/Fleet/GetVehicles";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -570,7 +570,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/GetVehicles".replaceAll("\\{format\\}","json");
+    String path = "/Fleet/GetVehicles".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -643,7 +643,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/UpdateVehicle";
+    String path = "/Fleet/UpdateVehicle";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -717,7 +717,7 @@ public class FleetApi {
     }
 
     // create path and map variables
-    String path = "/api/Fleet/UpdateVehicle".replaceAll("\\{format\\}","json");
+    String path = "/Fleet/UpdateVehicle".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

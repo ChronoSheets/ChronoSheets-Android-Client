@@ -38,7 +38,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 public class TranscriptsApi {
-  String basePath = "https://www.chronosheets.com";
+  String basePath = "https://api.chronosheets.com";
   ApiInvoker apiInvoker = ApiInvoker.getInstance();
 
   public void addHeader(String key, String value) {
@@ -78,7 +78,7 @@ public class TranscriptsApi {
     }
 
     // create path and map variables
-    String path = "/api/Transcripts/GetMyTranscript";
+    String path = "/Transcripts/GetMyTranscript";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -147,7 +147,7 @@ public class TranscriptsApi {
     }
 
     // create path and map variables
-    String path = "/api/Transcripts/GetMyTranscript".replaceAll("\\{format\\}","json");
+    String path = "/Transcripts/GetMyTranscript".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -229,7 +229,7 @@ public class TranscriptsApi {
     }
 
     // create path and map variables
-    String path = "/api/Transcripts/GetMyTranscripts";
+    String path = "/Transcripts/GetMyTranscripts";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -307,7 +307,7 @@ public class TranscriptsApi {
     }
 
     // create path and map variables
-    String path = "/api/Transcripts/GetMyTranscripts".replaceAll("\\{format\\}","json");
+    String path = "/Transcripts/GetMyTranscripts".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
