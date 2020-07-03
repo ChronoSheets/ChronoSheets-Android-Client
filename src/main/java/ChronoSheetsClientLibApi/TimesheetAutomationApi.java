@@ -207,6 +207,7 @@ public class TimesheetAutomationApi {
   * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
   * 
    * @param geofenceId The ID of the Geofence
+   * @param nfcId 
    * @param userId 
    * @param sort 
    * @param order 
@@ -215,12 +216,17 @@ public class TimesheetAutomationApi {
    * @param take Take this many records
    * @return ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence
   */
-  public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'geofenceId' is set
     if (geofenceId == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
         new ApiException(400, "Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'nfcId' is set
+    if (nfcId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'nfcId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'nfcId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
     }
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -253,6 +259,7 @@ public class TimesheetAutomationApi {
     // form params
     Map<String, String> formParams = new HashMap<String, String>();
     queryParams.addAll(ApiInvoker.parameterToPairs("", "GeofenceId", geofenceId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "NfcId", nfcId));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "UserId", userId));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "Sort", sort));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "Order", order));
@@ -301,15 +308,20 @@ public class TimesheetAutomationApi {
       /**
    * Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
    * 
-   * @param geofenceId The ID of the Geofence   * @param userId    * @param sort    * @param order    * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many records   * @param take Take this many records
+   * @param geofenceId The ID of the Geofence   * @param nfcId    * @param userId    * @param sort    * @param order    * @param xChronosheetsAuth The ChronoSheets Auth Token   * @param skip Skip this many records   * @param take Take this many records
   */
-  public void timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final Response.Listener<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> responseListener, final Response.ErrorListener errorListener) {
+  public void timesheetAutomationGetTimesheetAutomationAuditTrail (Integer geofenceId, Integer nfcId, Integer userId, String sort, String order, String xChronosheetsAuth, Integer skip, Integer take, final Response.Listener<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'geofenceId' is set
     if (geofenceId == null) {
       VolleyError error = new VolleyError("Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
         new ApiException(400, "Missing the required parameter 'geofenceId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
+    }
+    // verify the required parameter 'nfcId' is set
+    if (nfcId == null) {
+      VolleyError error = new VolleyError("Missing the required parameter 'nfcId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail",
+        new ApiException(400, "Missing the required parameter 'nfcId' when calling timesheetAutomationGetTimesheetAutomationAuditTrail"));
     }
     // verify the required parameter 'userId' is set
     if (userId == null) {
@@ -343,6 +355,7 @@ public class TimesheetAutomationApi {
     Map<String, String> formParams = new HashMap<String, String>();
 
     queryParams.addAll(ApiInvoker.parameterToPairs("", "GeofenceId", geofenceId));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "NfcId", nfcId));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "UserId", userId));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "Sort", sort));
     queryParams.addAll(ApiInvoker.parameterToPairs("", "Order", order));

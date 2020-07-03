@@ -57,7 +57,7 @@ No authorization required
 
 ## timesheetAutomationGetTimesheetAutomationAuditTrail
 
-> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take)
+> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take)
 
 Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
 
@@ -69,6 +69,7 @@ Retrieve the timesheet automation / alerts for geofences activities or NFC tap o
 
 TimesheetAutomationApi apiInstance = new TimesheetAutomationApi();
 Integer geofenceId = null; // Integer | The ID of the Geofence
+Integer nfcId = null; // Integer | 
 Integer userId = null; // Integer | 
 String sort = null; // String | 
 String order = null; // String | 
@@ -76,7 +77,7 @@ String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 Integer skip = null; // Integer | Skip this many records
 Integer take = null; // Integer | Take this many records
 try {
-    ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+    ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.timesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetAutomationApi#timesheetAutomationGetTimesheetAutomationAuditTrail");
@@ -90,6 +91,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geofenceId** | **Integer**| The ID of the Geofence | [default to null]
+ **nfcId** | **Integer**|  | [default to null]
  **userId** | **Integer**|  | [default to null]
  **sort** | **String**|  | [default to null] [enum: UserName, AutomationActionType, ClientDateTime, IsProcessed]
  **order** | **String**|  | [default to null] [enum: Ascending, Descending]
