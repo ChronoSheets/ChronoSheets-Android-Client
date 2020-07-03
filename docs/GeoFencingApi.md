@@ -11,22 +11,24 @@ Method | HTTP request | Description
 [**geoFencingUpdateGeofence**](GeoFencingApi.md#geoFencingUpdateGeofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
-<a name="geoFencingCreateGeofence"></a>
-# **geoFencingCreateGeofence**
-> CSApiResponseInt32 geoFencingCreateGeofence(request, xChronosheetsAuth)
+
+## geoFencingCreateGeofence
+
+> ApiResponseInt32 geoFencingCreateGeofence(xChronosheetsAuth, request)
 
 Create a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.GeoFencingApi;
 
 GeoFencingApi apiInstance = new GeoFencingApi();
-CSCreateGeoFenceRequest request = new CSCreateGeoFenceRequest(); // CSCreateGeoFenceRequest | 
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+CreateGeoFenceRequest request = new CreateGeoFenceRequest(); // CreateGeoFenceRequest | 
 try {
-    CSApiResponseInt32 result = apiInstance.geoFencingCreateGeofence(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.geoFencingCreateGeofence(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling GeoFencingApi#geoFencingCreateGeofence");
@@ -36,14 +38,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSCreateGeoFenceRequest**](CSCreateGeoFenceRequest.md)|  |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**CreateGeoFenceRequest**](CreateGeoFenceRequest.md)|  |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -51,25 +54,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="geoFencingDeleteGeofence"></a>
-# **geoFencingDeleteGeofence**
-> CSApiResponseGeofence geoFencingDeleteGeofence(geofenceId, xChronosheetsAuth)
+
+## geoFencingDeleteGeofence
+
+> ApiResponseGeofence geoFencingDeleteGeofence(geofenceId, xChronosheetsAuth)
 
 Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.GeoFencingApi;
 
 GeoFencingApi apiInstance = new GeoFencingApi();
-Integer geofenceId = 56; // Integer | Specify the geofence you want to delete with the geofence ID.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer geofenceId = null; // Integer | Specify the geofence you want to delete with the geofence ID.
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseGeofence result = apiInstance.geoFencingDeleteGeofence(geofenceId, xChronosheetsAuth);
+    ApiResponseGeofence result = apiInstance.geoFencingDeleteGeofence(geofenceId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling GeoFencingApi#geoFencingDeleteGeofence");
@@ -79,14 +84,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **geofenceId** | **Integer**| Specify the geofence you want to delete with the geofence ID. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **geofenceId** | **Integer**| Specify the geofence you want to delete with the geofence ID. | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseGeofence**](CSApiResponseGeofence.md)
+[**ApiResponseGeofence**](ApiResponseGeofence.md)
 
 ### Authorization
 
@@ -94,25 +100,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="geoFencingGetGeofenceById"></a>
-# **geoFencingGetGeofenceById**
-> CSApiResponseGeofence geoFencingGetGeofenceById(geofenceId, xChronosheetsAuth)
+
+## geoFencingGetGeofenceById
+
+> ApiResponseGeofence geoFencingGetGeofenceById(geofenceId, xChronosheetsAuth)
 
 Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.GeoFencingApi;
 
 GeoFencingApi apiInstance = new GeoFencingApi();
-Integer geofenceId = 56; // Integer | The ID of the geofence you want to obtain
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer geofenceId = null; // Integer | The ID of the geofence you want to obtain
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseGeofence result = apiInstance.geoFencingGetGeofenceById(geofenceId, xChronosheetsAuth);
+    ApiResponseGeofence result = apiInstance.geoFencingGetGeofenceById(geofenceId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling GeoFencingApi#geoFencingGetGeofenceById");
@@ -122,14 +130,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **geofenceId** | **Integer**| The ID of the geofence you want to obtain |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **geofenceId** | **Integer**| The ID of the geofence you want to obtain | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseGeofence**](CSApiResponseGeofence.md)
+[**ApiResponseGeofence**](ApiResponseGeofence.md)
 
 ### Authorization
 
@@ -137,26 +146,28 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="geoFencingGetGeofences"></a>
-# **geoFencingGetGeofences**
-> CSApiResponseForPaginatedListExtendedGeofence geoFencingGetGeofences(xChronosheetsAuth, skip, take)
+
+## geoFencingGetGeofences
+
+> ApiResponseForPaginatedListExtendedGeofence geoFencingGetGeofences(xChronosheetsAuth, skip, take)
 
 Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.GeoFencingApi;
 
 GeoFencingApi apiInstance = new GeoFencingApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Number of records to skip
-Integer take = 56; // Integer | Number of records to take
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Number of records to skip
+Integer take = null; // Integer | Number of records to take
 try {
-    CSApiResponseForPaginatedListExtendedGeofence result = apiInstance.geoFencingGetGeofences(xChronosheetsAuth, skip, take);
+    ApiResponseForPaginatedListExtendedGeofence result = apiInstance.geoFencingGetGeofences(xChronosheetsAuth, skip, take);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling GeoFencingApi#geoFencingGetGeofences");
@@ -166,15 +177,16 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Number of records to skip | [optional]
- **take** | **Integer**| Number of records to take | [optional]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Number of records to skip | [optional] [default to null]
+ **take** | **Integer**| Number of records to take | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListExtendedGeofence**](CSApiResponseForPaginatedListExtendedGeofence.md)
+[**ApiResponseForPaginatedListExtendedGeofence**](ApiResponseForPaginatedListExtendedGeofence.md)
 
 ### Authorization
 
@@ -182,25 +194,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="geoFencingUpdateGeofence"></a>
-# **geoFencingUpdateGeofence**
-> CSApiResponseInt32 geoFencingUpdateGeofence(request, xChronosheetsAuth)
+
+## geoFencingUpdateGeofence
+
+> ApiResponseInt32 geoFencingUpdateGeofence(xChronosheetsAuth, request)
 
 Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.GeoFencingApi;
 
 GeoFencingApi apiInstance = new GeoFencingApi();
-CSUpdateGeoFenceRequest request = new CSUpdateGeoFenceRequest(); // CSUpdateGeoFenceRequest | 
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+UpdateGeoFenceRequest request = new UpdateGeoFenceRequest(); // UpdateGeoFenceRequest | 
 try {
-    CSApiResponseInt32 result = apiInstance.geoFencingUpdateGeofence(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.geoFencingUpdateGeofence(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling GeoFencingApi#geoFencingUpdateGeofence");
@@ -210,14 +224,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateGeoFenceRequest**](CSUpdateGeoFenceRequest.md)|  |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**UpdateGeoFenceRequest**](UpdateGeoFenceRequest.md)|  |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -225,6 +240,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

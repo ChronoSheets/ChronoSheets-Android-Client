@@ -11,22 +11,24 @@ Method | HTTP request | Description
 [**jobCodesUpdateJobCode**](JobCodesApi.md#jobCodesUpdateJobCode) | **PUT** /JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
-<a name="jobCodesCreateJobCode"></a>
-# **jobCodesCreateJobCode**
-> CSApiResponseInt32 jobCodesCreateJobCode(request, xChronosheetsAuth)
+
+## jobCodesCreateJobCode
+
+> ApiResponseInt32 jobCodesCreateJobCode(xChronosheetsAuth, request)
 
 Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-CSInsertJobCodeRequest request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+InsertJobCodeRequest request = new InsertJobCodeRequest(); // InsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
 try {
-    CSApiResponseInt32 result = apiInstance.jobCodesCreateJobCode(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.jobCodesCreateJobCode(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesCreateJobCode");
@@ -36,14 +38,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**InsertJobCodeRequest**](InsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -51,25 +54,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="jobCodesDeleteJobCode"></a>
-# **jobCodesDeleteJobCode**
-> CSApiResponseBoolean jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth)
+
+## jobCodesDeleteJobCode
+
+> ApiResponseBoolean jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth)
 
 Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-Integer jobCodeId = 56; // Integer | The ID of the job code you want to delete
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer jobCodeId = null; // Integer | The ID of the job code you want to delete
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.jobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesDeleteJobCode");
@@ -79,14 +84,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **Integer**| The ID of the job code you want to delete |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **jobCodeId** | **Integer**| The ID of the job code you want to delete | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -94,25 +100,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="jobCodesGetJobCodeById"></a>
-# **jobCodesGetJobCodeById**
-> CSApiResponseJobCode jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth)
+
+## jobCodesGetJobCodeById
+
+> ApiResponseJobCode jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth)
 
 Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-Integer jobCodeId = 56; // Integer | The ID of the JobCode you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer jobCodeId = null; // Integer | The ID of the JobCode you want to get
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseJobCode result = apiInstance.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
+    ApiResponseJobCode result = apiInstance.jobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesGetJobCodeById");
@@ -122,14 +130,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **Integer**| The ID of the JobCode you want to get |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **jobCodeId** | **Integer**| The ID of the JobCode you want to get | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseJobCode**](CSApiResponseJobCode.md)
+[**ApiResponseJobCode**](ApiResponseJobCode.md)
 
 ### Authorization
 
@@ -137,24 +146,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="jobCodesGetJobCodes"></a>
-# **jobCodesGetJobCodes**
-> CSApiResponseListJobCode jobCodesGetJobCodes(xChronosheetsAuth)
+
+## jobCodesGetJobCodes
+
+> ApiResponseListJobCode jobCodesGetJobCodes(xChronosheetsAuth)
 
 Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseListJobCode result = apiInstance.jobCodesGetJobCodes(xChronosheetsAuth);
+    ApiResponseListJobCode result = apiInstance.jobCodesGetJobCodes(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesGetJobCodes");
@@ -164,13 +175,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseListJobCode**](CSApiResponseListJobCode.md)
+[**ApiResponseListJobCode**](ApiResponseListJobCode.md)
 
 ### Authorization
 
@@ -178,25 +190,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="jobCodesUpdateJobCode"></a>
-# **jobCodesUpdateJobCode**
-> CSApiResponseBoolean jobCodesUpdateJobCode(request, xChronosheetsAuth)
+
+## jobCodesUpdateJobCode
+
+> ApiResponseBoolean jobCodesUpdateJobCode(xChronosheetsAuth, request)
 
 Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.JobCodesApi;
 
 JobCodesApi apiInstance = new JobCodesApi();
-CSUpdateJobCodeRequest request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+UpdateJobCodeRequest request = new UpdateJobCodeRequest(); // UpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
 try {
-    CSApiResponseBoolean result = apiInstance.jobCodesUpdateJobCode(request, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.jobCodesUpdateJobCode(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling JobCodesApi#jobCodesUpdateJobCode");
@@ -206,14 +220,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**UpdateJobCodeRequest**](UpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update |
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -221,6 +236,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

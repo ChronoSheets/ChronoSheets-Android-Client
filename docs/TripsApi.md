@@ -9,22 +9,24 @@ Method | HTTP request | Description
 [**tripsGetMyTrips**](TripsApi.md#tripsGetMyTrips) | **GET** /Trips/GetMyTrips | Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 
 
-<a name="tripsCreateTrip"></a>
-# **tripsCreateTrip**
-> CSApiResponseInt32 tripsCreateTrip(request, xChronosheetsAuth)
+
+## tripsCreateTrip
+
+> ApiResponseInt32 tripsCreateTrip(xChronosheetsAuth, request)
 
 Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TripsApi;
 
 TripsApi apiInstance = new TripsApi();
-CSCreateTripRequest request = new CSCreateTripRequest(); // CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+CreateTripRequest request = new CreateTripRequest(); // CreateTripRequest | A Create Trip Request object containing values for the new Trip to create
 try {
-    CSApiResponseInt32 result = apiInstance.tripsCreateTrip(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.tripsCreateTrip(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TripsApi#tripsCreateTrip");
@@ -34,14 +36,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| A Create Trip Request object containing values for the new Trip to create |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**CreateTripRequest**](CreateTripRequest.md)| A Create Trip Request object containing values for the new Trip to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -49,25 +52,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="tripsGetMyTripById"></a>
-# **tripsGetMyTripById**
-> CSApiResponseTrip tripsGetMyTripById(tripId, xChronosheetsAuth)
+
+## tripsGetMyTripById
+
+> ApiResponseTrip tripsGetMyTripById(tripId, xChronosheetsAuth)
 
 Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TripsApi;
 
 TripsApi apiInstance = new TripsApi();
-Integer tripId = 56; // Integer | The ID of the Trip you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer tripId = null; // Integer | The ID of the Trip you want to get
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseTrip result = apiInstance.tripsGetMyTripById(tripId, xChronosheetsAuth);
+    ApiResponseTrip result = apiInstance.tripsGetMyTripById(tripId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TripsApi#tripsGetMyTripById");
@@ -77,14 +82,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tripId** | **Integer**| The ID of the Trip you want to get |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **tripId** | **Integer**| The ID of the Trip you want to get | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseTrip**](CSApiResponseTrip.md)
+[**ApiResponseTrip**](ApiResponseTrip.md)
 
 ### Authorization
 
@@ -92,29 +98,31 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="tripsGetMyTrips"></a>
-# **tripsGetMyTrips**
-> CSApiResponseForPaginatedListTrip tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId)
+
+## tripsGetMyTrips
+
+> ApiResponseForPaginatedListTrip tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId)
 
 Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TripsApi;
 
 TripsApi apiInstance = new TripsApi();
-Date startDate = new Date(); // Date | The Start date of the date range.  Trips after this date will be obtained.
-Date endDate = new Date(); // Date | The End date of the date range.  Trips before this date will be obtained.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Skip this many Trips
-Integer take = 56; // Integer | Take this many Trips
-Integer vehicleId = 56; // Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
+Date startDate = null; // Date | The Start date of the date range.  Trips after this date will be obtained.
+Date endDate = null; // Date | The End date of the date range.  Trips before this date will be obtained.
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Skip this many Trips
+Integer take = null; // Integer | Take this many Trips
+Integer vehicleId = null; // Integer | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
 try {
-    CSApiResponseForPaginatedListTrip result = apiInstance.tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
+    ApiResponseForPaginatedListTrip result = apiInstance.tripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TripsApi#tripsGetMyTrips");
@@ -124,18 +132,19 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The Start date of the date range.  Trips after this date will be obtained. |
- **endDate** | **Date**| The End date of the date range.  Trips before this date will be obtained. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Skip this many Trips | [optional]
- **take** | **Integer**| Take this many Trips | [optional]
- **vehicleId** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | [optional]
+ **startDate** | **Date**| The Start date of the date range.  Trips after this date will be obtained. | [default to null]
+ **endDate** | **Date**| The End date of the date range.  Trips before this date will be obtained. | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Skip this many Trips | [optional] [default to null]
+ **take** | **Integer**| Take this many Trips | [optional] [default to null]
+ **vehicleId** | **Integer**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTrip**](CSApiResponseForPaginatedListTrip.md)
+[**ApiResponseForPaginatedListTrip**](ApiResponseForPaginatedListTrip.md)
 
 ### Authorization
 
@@ -143,6 +152,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

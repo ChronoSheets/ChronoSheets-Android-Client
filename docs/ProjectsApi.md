@@ -10,22 +10,24 @@ Method | HTTP request | Description
 [**projectsUpdateProject**](ProjectsApi.md#projectsUpdateProject) | **PUT** /Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
-<a name="projectsCreateProject"></a>
-# **projectsCreateProject**
-> CSApiResponseInt32 projectsCreateProject(request, xChronosheetsAuth)
+
+## projectsCreateProject
+
+> ApiResponseInt32 projectsCreateProject(xChronosheetsAuth, request)
 
 Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-CSInsertProjectRequest request = new CSInsertProjectRequest(); // CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+InsertProjectRequest request = new InsertProjectRequest(); // InsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 try {
-    CSApiResponseInt32 result = apiInstance.projectsCreateProject(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.projectsCreateProject(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsCreateProject");
@@ -35,14 +37,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**InsertProjectRequest**](InsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -50,25 +53,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="projectsGetProjectById"></a>
-# **projectsGetProjectById**
-> CSApiResponseProject projectsGetProjectById(projectId, xChronosheetsAuth)
+
+## projectsGetProjectById
+
+> ApiResponseProject projectsGetProjectById(projectId, xChronosheetsAuth)
 
 Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-Integer projectId = 56; // Integer | The ID of the Project you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer projectId = null; // Integer | The ID of the Project you want to get
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseProject result = apiInstance.projectsGetProjectById(projectId, xChronosheetsAuth);
+    ApiResponseProject result = apiInstance.projectsGetProjectById(projectId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsGetProjectById");
@@ -78,14 +83,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **Integer**| The ID of the Project you want to get |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **projectId** | **Integer**| The ID of the Project you want to get | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseProject**](CSApiResponseProject.md)
+[**ApiResponseProject**](ApiResponseProject.md)
 
 ### Authorization
 
@@ -93,25 +99,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="projectsGetProjectsForClient"></a>
-# **projectsGetProjectsForClient**
-> CSApiResponseListProject projectsGetProjectsForClient(clientId, xChronosheetsAuth)
+
+## projectsGetProjectsForClient
+
+> ApiResponseListProject projectsGetProjectsForClient(clientId, xChronosheetsAuth)
 
 Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-Integer clientId = 56; // Integer | The ID of the client
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer clientId = null; // Integer | The ID of the client
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseListProject result = apiInstance.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
+    ApiResponseListProject result = apiInstance.projectsGetProjectsForClient(clientId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsGetProjectsForClient");
@@ -121,14 +129,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **Integer**| The ID of the client |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **clientId** | **Integer**| The ID of the client | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseListProject**](CSApiResponseListProject.md)
+[**ApiResponseListProject**](ApiResponseListProject.md)
 
 ### Authorization
 
@@ -136,25 +145,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="projectsUpdateProject"></a>
-# **projectsUpdateProject**
-> CSApiResponseBoolean projectsUpdateProject(request, xChronosheetsAuth)
+
+## projectsUpdateProject
+
+> ApiResponseBoolean projectsUpdateProject(xChronosheetsAuth, request)
 
 Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ProjectsApi;
 
 ProjectsApi apiInstance = new ProjectsApi();
-CSUpdateProjectRequest request = new CSUpdateProjectRequest(); // CSUpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+UpdateProjectRequest request = new UpdateProjectRequest(); // UpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
 try {
-    CSApiResponseBoolean result = apiInstance.projectsUpdateProject(request, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.projectsUpdateProject(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ProjectsApi#projectsUpdateProject");
@@ -164,14 +175,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**UpdateProjectRequest**](UpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update |
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -179,6 +191,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

@@ -11,21 +11,23 @@ Method | HTTP request | Description
 [**userProfileUpdateMyProfile**](UserProfileApi.md#userProfileUpdateMyProfile) | **PUT** /UserProfile/UpdateMyProfile | Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 
-<a name="userProfileDoLogin"></a>
-# **userProfileDoLogin**
-> CSApiResponseDoLoginResponse userProfileDoLogin(request)
+
+## userProfileDoLogin
+
+> ApiResponseDoLoginResponse userProfileDoLogin(request)
 
 Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-CSDoLoginRequest request = new CSDoLoginRequest(); // CSDoLoginRequest | A request object containing your username/email and password.
+DoLoginRequest request = new DoLoginRequest(); // DoLoginRequest | A request object containing your username/email and password.
 try {
-    CSApiResponseDoLoginResponse result = apiInstance.userProfileDoLogin(request);
+    ApiResponseDoLoginResponse result = apiInstance.userProfileDoLogin(request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileDoLogin");
@@ -35,13 +37,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)| A request object containing your username/email and password. |
+ **request** | [**DoLoginRequest**](DoLoginRequest.md)| A request object containing your username/email and password. |
 
 ### Return type
 
-[**CSApiResponseDoLoginResponse**](CSApiResponseDoLoginResponse.md)
+[**ApiResponseDoLoginResponse**](ApiResponseDoLoginResponse.md)
 
 ### Authorization
 
@@ -49,24 +52,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userProfileDoLogout"></a>
-# **userProfileDoLogout**
-> CSApiResponseBoolean userProfileDoLogout(xChronosheetsAuth)
+
+## userProfileDoLogout
+
+> ApiResponseBoolean userProfileDoLogout(xChronosheetsAuth)
 
 Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.userProfileDoLogout(xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.userProfileDoLogout(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileDoLogout");
@@ -76,13 +81,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -90,24 +96,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userProfileGetMyProfile"></a>
-# **userProfileGetMyProfile**
-> CSApiResponseUserProfile userProfileGetMyProfile(xChronosheetsAuth)
+
+## userProfileGetMyProfile
+
+> ApiResponseUserProfile userProfileGetMyProfile(xChronosheetsAuth)
 
 Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseUserProfile result = apiInstance.userProfileGetMyProfile(xChronosheetsAuth);
+    ApiResponseUserProfile result = apiInstance.userProfileGetMyProfile(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileGetMyProfile");
@@ -117,13 +125,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseUserProfile**](CSApiResponseUserProfile.md)
+[**ApiResponseUserProfile**](ApiResponseUserProfile.md)
 
 ### Authorization
 
@@ -131,24 +140,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userProfileKeepSessionAlive"></a>
-# **userProfileKeepSessionAlive**
-> CSApiResponseBoolean userProfileKeepSessionAlive(xChronosheetsAuth)
+
+## userProfileKeepSessionAlive
+
+> ApiResponseBoolean userProfileKeepSessionAlive(xChronosheetsAuth)
 
 Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.userProfileKeepSessionAlive(xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.userProfileKeepSessionAlive(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileKeepSessionAlive");
@@ -158,13 +169,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -172,25 +184,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userProfileUpdateMyProfile"></a>
-# **userProfileUpdateMyProfile**
-> CSApiResponseUpdateProfileResponse userProfileUpdateMyProfile(request, xChronosheetsAuth)
+
+## userProfileUpdateMyProfile
+
+> ApiResponseUpdateProfileResponse userProfileUpdateMyProfile(xChronosheetsAuth, request)
 
 Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserProfileApi;
 
 UserProfileApi apiInstance = new UserProfileApi();
-CSUpdateMyProfileRequest request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+UpdateMyProfileRequest request = new UpdateMyProfileRequest(); // UpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
 try {
-    CSApiResponseUpdateProfileResponse result = apiInstance.userProfileUpdateMyProfile(request, xChronosheetsAuth);
+    ApiResponseUpdateProfileResponse result = apiInstance.userProfileUpdateMyProfile(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserProfileApi#userProfileUpdateMyProfile");
@@ -200,14 +214,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)| An Update MyProfile Request object containing updated fields. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**UpdateMyProfileRequest**](UpdateMyProfileRequest.md)| An Update MyProfile Request object containing updated fields. |
 
 ### Return type
 
-[**CSApiResponseUpdateProfileResponse**](CSApiResponseUpdateProfileResponse.md)
+[**ApiResponseUpdateProfileResponse**](ApiResponseUpdateProfileResponse.md)
 
 ### Authorization
 
@@ -215,6 +230,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

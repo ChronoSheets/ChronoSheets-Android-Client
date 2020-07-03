@@ -9,22 +9,24 @@ Method | HTTP request | Description
 [**fileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileAttachmentsGetMyFileAttachments) | **GET** /FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
-<a name="fileAttachmentsDeleteTimesheetFileAttachment"></a>
-# **fileAttachmentsDeleteTimesheetFileAttachment**
-> CSApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth)
+
+## fileAttachmentsDeleteTimesheetFileAttachment
+
+> ApiResponseBoolean fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth)
 
 Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.FileAttachmentsApi;
 
 FileAttachmentsApi apiInstance = new FileAttachmentsApi();
-Integer fileAttachmentId = 56; // Integer | The Id of the file attachment to delete
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer fileAttachmentId = null; // Integer | The Id of the file attachment to delete
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.fileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsDeleteTimesheetFileAttachment");
@@ -34,14 +36,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileAttachmentId** | **Integer**| The Id of the file attachment to delete |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **fileAttachmentId** | **Integer**| The Id of the file attachment to delete | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -49,25 +52,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="fileAttachmentsGetFileAttachmentById"></a>
-# **fileAttachmentsGetFileAttachmentById**
-> CSApiResponseTimesheetFileAttachment fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth)
+
+## fileAttachmentsGetFileAttachmentById
+
+> ApiResponseTimesheetFileAttachment fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth)
 
 Get a particular file attachment by ID.  User must own the file attachment for access.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.FileAttachmentsApi;
 
 FileAttachmentsApi apiInstance = new FileAttachmentsApi();
-Integer fileAttachmentId = 56; // Integer | The ID of the file attachment
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer fileAttachmentId = null; // Integer | The ID of the file attachment
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseTimesheetFileAttachment result = apiInstance.fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
+    ApiResponseTimesheetFileAttachment result = apiInstance.fileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsGetFileAttachmentById");
@@ -77,14 +82,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileAttachmentId** | **Integer**| The ID of the file attachment |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **fileAttachmentId** | **Integer**| The ID of the file attachment | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
+[**ApiResponseTimesheetFileAttachment**](ApiResponseTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -92,28 +98,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="fileAttachmentsGetMyFileAttachments"></a>
-# **fileAttachmentsGetMyFileAttachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take)
+
+## fileAttachmentsGetMyFileAttachments
+
+> ApiResponseForPaginatedListTimesheetFileAttachment fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take)
 
 Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.FileAttachmentsApi;
 
 FileAttachmentsApi apiInstance = new FileAttachmentsApi();
-Date startDate = new Date(); // Date | The Start date of the date range.  File attachments after this date will be obtained.
-Date endDate = new Date(); // Date | The End date of the date range.  File attachments before this date will be obtained.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Skip this many File attachments
-Integer take = 56; // Integer | Take this many File attachments
+Date startDate = null; // Date | The Start date of the date range.  File attachments after this date will be obtained.
+Date endDate = null; // Date | The End date of the date range.  File attachments before this date will be obtained.
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Skip this many File attachments
+Integer take = null; // Integer | Take this many File attachments
 try {
-    CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
+    ApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.fileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FileAttachmentsApi#fileAttachmentsGetMyFileAttachments");
@@ -123,17 +131,18 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The Start date of the date range.  File attachments after this date will be obtained. |
- **endDate** | **Date**| The End date of the date range.  File attachments before this date will be obtained. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Skip this many File attachments | [optional]
- **take** | **Integer**| Take this many File attachments | [optional]
+ **startDate** | **Date**| The Start date of the date range.  File attachments after this date will be obtained. | [default to null]
+ **endDate** | **Date**| The End date of the date range.  File attachments before this date will be obtained. | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Skip this many File attachments | [optional] [default to null]
+ **take** | **Integer**| Take this many File attachments | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTimesheetFileAttachment**](CSApiResponseForPaginatedListTimesheetFileAttachment.md)
+[**ApiResponseForPaginatedListTimesheetFileAttachment**](ApiResponseForPaginatedListTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -141,6 +150,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

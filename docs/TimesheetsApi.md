@@ -10,22 +10,24 @@ Method | HTTP request | Description
 [**timesheetsUpdateTimesheets**](TimesheetsApi.md#timesheetsUpdateTimesheets) | **PUT** /Timesheets/UpdateTimesheets | Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
-<a name="timesheetsCreateSingleTimesheet"></a>
-# **timesheetsCreateSingleTimesheet**
-> CSApiResponseInt32 timesheetsCreateSingleTimesheet(request, xChronosheetsAuth)
+
+## timesheetsCreateSingleTimesheet
+
+> ApiResponseInt32 timesheetsCreateSingleTimesheet(xChronosheetsAuth, request)
 
 Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TimesheetsApi;
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-CSTimesheet request = new CSTimesheet(); // CSTimesheet | A Timesheet Request object containing values for the new Timesheet to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Timesheet request = new Timesheet(); // Timesheet | A Timesheet Request object containing values for the new Timesheet to create
 try {
-    CSApiResponseInt32 result = apiInstance.timesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.timesheetsCreateSingleTimesheet(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsCreateSingleTimesheet");
@@ -35,14 +37,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSTimesheet**](CSTimesheet.md)| A Timesheet Request object containing values for the new Timesheet to create |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**Timesheet**](Timesheet.md)| A Timesheet Request object containing values for the new Timesheet to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -50,25 +53,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="timesheetsDeleteTimesheet"></a>
-# **timesheetsDeleteTimesheet**
-> CSApiResponseBoolean timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth)
+
+## timesheetsDeleteTimesheet
+
+> ApiResponseBoolean timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth)
 
 Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TimesheetsApi;
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-Integer timesheetId = 56; // Integer | The ID of the Timesheet you want to delete
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer timesheetId = null; // Integer | The ID of the Timesheet you want to delete
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.timesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsDeleteTimesheet");
@@ -78,14 +83,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timesheetId** | **Integer**| The ID of the Timesheet you want to delete |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **timesheetId** | **Integer**| The ID of the Timesheet you want to delete | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -93,26 +99,28 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="timesheetsGetTimesheets"></a>
-# **timesheetsGetTimesheets**
-> CSApiResponseListTimesheet timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth)
+
+## timesheetsGetTimesheets
+
+> ApiResponseListTimesheet timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth)
 
 Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TimesheetsApi;
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-Date startDate = new Date(); // Date | The start date of the date range
-Date endDate = new Date(); // Date | The end date of the date range
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Date startDate = null; // Date | The start date of the date range
+Date endDate = null; // Date | The end date of the date range
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
+    ApiResponseListTimesheet result = apiInstance.timesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsGetTimesheets");
@@ -122,15 +130,16 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date of the date range |
- **endDate** | **Date**| The end date of the date range |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **startDate** | **Date**| The start date of the date range | [default to null]
+ **endDate** | **Date**| The end date of the date range | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseListTimesheet**](CSApiResponseListTimesheet.md)
+[**ApiResponseListTimesheet**](ApiResponseListTimesheet.md)
 
 ### Authorization
 
@@ -138,25 +147,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="timesheetsUpdateTimesheets"></a>
-# **timesheetsUpdateTimesheets**
-> CSApiResponseListInt32 timesheetsUpdateTimesheets(request, xChronosheetsAuth)
+
+## timesheetsUpdateTimesheets
+
+> ApiResponseListInt32 timesheetsUpdateTimesheets(xChronosheetsAuth, request)
 
 Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.TimesheetsApi;
 
 TimesheetsApi apiInstance = new TimesheetsApi();
-CSBatchUpdateTimesheetRequest request = new CSBatchUpdateTimesheetRequest(); // CSBatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+BatchUpdateTimesheetRequest request = new BatchUpdateTimesheetRequest(); // BatchUpdateTimesheetRequest | A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.
 try {
-    CSApiResponseListInt32 result = apiInstance.timesheetsUpdateTimesheets(request, xChronosheetsAuth);
+    ApiResponseListInt32 result = apiInstance.timesheetsUpdateTimesheets(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TimesheetsApi#timesheetsUpdateTimesheets");
@@ -166,14 +177,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**BatchUpdateTimesheetRequest**](BatchUpdateTimesheetRequest.md)| A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created. |
 
 ### Return type
 
-[**CSApiResponseListInt32**](CSApiResponseListInt32.md)
+[**ApiResponseListInt32**](ApiResponseListInt32.md)
 
 ### Authorization
 
@@ -181,6 +193,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

@@ -9,22 +9,24 @@ Method | HTTP request | Description
 [**userJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userJobFavouritesGetJobFavourites) | **GET** /UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
-<a name="userJobFavouritesCreateJobFavourite"></a>
-# **userJobFavouritesCreateJobFavourite**
-> CSApiResponseInt32 userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth)
+
+## userJobFavouritesCreateJobFavourite
+
+> ApiResponseInt32 userJobFavouritesCreateJobFavourite(xChronosheetsAuth, request)
 
 Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserJobFavouritesApi;
 
 UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
-CSInsertUserJobFavouriteRequest request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+InsertUserJobFavouriteRequest request = new InsertUserJobFavouriteRequest(); // InsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
 try {
-    CSApiResponseInt32 result = apiInstance.userJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
+    ApiResponseInt32 result = apiInstance.userJobFavouritesCreateJobFavourite(xChronosheetsAuth, request);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesCreateJobFavourite");
@@ -34,14 +36,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **request** | [**InsertUserJobFavouriteRequest**](InsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create |
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -49,25 +52,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userJobFavouritesDeleteJobFavourite"></a>
-# **userJobFavouritesDeleteJobFavourite**
-> CSApiResponseBoolean userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth)
+
+## userJobFavouritesDeleteJobFavourite
+
+> ApiResponseBoolean userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth)
 
 Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserJobFavouritesApi;
 
 UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
-Integer jobId = 56; // Integer | The ID of the Job for the Job Favourite you want to delete.
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer jobId = null; // Integer | The ID of the Job for the Job Favourite you want to delete.
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseBoolean result = apiInstance.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
+    ApiResponseBoolean result = apiInstance.userJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesDeleteJobFavourite");
@@ -77,14 +82,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **Integer**| The ID of the Job for the Job Favourite you want to delete. |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **jobId** | **Integer**| The ID of the Job for the Job Favourite you want to delete. | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -92,24 +98,26 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="userJobFavouritesGetJobFavourites"></a>
-# **userJobFavouritesGetJobFavourites**
-> CSApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(xChronosheetsAuth)
+
+## userJobFavouritesGetJobFavourites
+
+> ApiResponseListUserJobFavourite userJobFavouritesGetJobFavourites(xChronosheetsAuth)
 
 Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.UserJobFavouritesApi;
 
 UserJobFavouritesApi apiInstance = new UserJobFavouritesApi();
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseListUserJobFavourite result = apiInstance.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
+    ApiResponseListUserJobFavourite result = apiInstance.userJobFavouritesGetJobFavourites(xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UserJobFavouritesApi#userJobFavouritesGetJobFavourites");
@@ -119,13 +127,14 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseListUserJobFavourite**](CSApiResponseListUserJobFavourite.md)
+[**ApiResponseListUserJobFavourite**](ApiResponseListUserJobFavourite.md)
 
 ### Authorization
 
@@ -133,6 +142,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 

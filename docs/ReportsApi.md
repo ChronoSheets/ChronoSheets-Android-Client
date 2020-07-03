@@ -16,25 +16,27 @@ Method | HTTP request | Description
 [**reportsUserJobsOverTime**](ReportsApi.md#reportsUserJobsOverTime) | **GET** /Reports/UserJobsOverTime | Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
 
 
-<a name="reportsGetAllChartsDataAdmin"></a>
-# **reportsGetAllChartsDataAdmin**
-> CSApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart)
+
+## reportsGetAllChartsDataAdmin
+
+> ApiResponseCombinedReportsData reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-String forceOnlyThisChart = "forceOnlyThisChart_example"; // String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String forceOnlyThisChart = null; // String | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option.
 try {
-    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
+    ApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetAllChartsDataAdmin");
@@ -44,17 +46,18 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
- **forceOnlyThisChart** | **String**| A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. | [optional] [enum: NotForced, SeriesJobCodes, SeriesClients, SeriesProjects, SeriesTasks, TotalsClients, TotalsJobCodes, TotalsProjects, TotalsTasks]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
+ **forceOnlyThisChart** | **String**| A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. | [optional] [default to null] [enum: NotForced, SeriesJobCodes, SeriesClients, SeriesProjects, SeriesTasks, TotalsClients, TotalsJobCodes, TotalsProjects, TotalsTasks]
 
 ### Return type
 
-[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
+[**ApiResponseCombinedReportsData**](ApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -62,26 +65,28 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetAllChartsDataUser"></a>
-# **reportsGetAllChartsDataUser**
-> CSApiResponseCombinedReportsData reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth)
+
+## reportsGetAllChartsDataUser
+
+> ApiResponseCombinedReportsData reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth)
 
 Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
+    ApiResponseCombinedReportsData result = apiInstance.reportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetAllChartsDataUser");
@@ -91,15 +96,16 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
+[**ApiResponseCombinedReportsData**](ApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -107,27 +113,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetFleetSummaryAdmin"></a>
-# **reportsGetFleetSummaryAdmin**
-> CSApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds)
+
+## reportsGetFleetSummaryAdmin
+
+> ApiResponseListFleetSummaryReportItem reportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds)
 
 Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 try {
-    CSApiResponseListFleetSummaryReportItem result = apiInstance.reportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+    ApiResponseListFleetSummaryReportItem result = apiInstance.reportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetFleetSummaryAdmin");
@@ -137,16 +145,17 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseListFleetSummaryReportItem**](CSApiResponseListFleetSummaryReportItem.md)
+[**ApiResponseListFleetSummaryReportItem**](ApiResponseListFleetSummaryReportItem.md)
 
 ### Authorization
 
@@ -154,25 +163,27 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetOrgTripById"></a>
-# **reportsGetOrgTripById**
-> CSApiResponseTrip reportsGetOrgTripById(tripId, xChronosheetsAuth)
+
+## reportsGetOrgTripById
+
+> ApiResponseTrip reportsGetOrgTripById(tripId, xChronosheetsAuth)
 
 Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Integer tripId = 56; // Integer | The ID of the Trip you want to get
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Integer tripId = null; // Integer | The ID of the Trip you want to get
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseTrip result = apiInstance.reportsGetOrgTripById(tripId, xChronosheetsAuth);
+    ApiResponseTrip result = apiInstance.reportsGetOrgTripById(tripId, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrgTripById");
@@ -182,14 +193,15 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tripId** | **Integer**| The ID of the Trip you want to get |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **tripId** | **Integer**| The ID of the Trip you want to get | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseTrip**](CSApiResponseTrip.md)
+[**ApiResponseTrip**](ApiResponseTrip.md)
 
 ### Authorization
 
@@ -197,29 +209,31 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetOrganisationTimesheetFileAttachments"></a>
-# **reportsGetOrganisationTimesheetFileAttachments**
-> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds)
+
+## reportsGetOrganisationTimesheetFileAttachments
+
+> ApiResponseForPaginatedListOrgReportTimesheetFileAttachment reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds)
 
 Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Skip this many items
-Integer take = 56; // Integer | Take this many items
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Skip this many items
+Integer take = null; // Integer | Take this many items
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 try {
-    CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
+    ApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.reportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTimesheetFileAttachments");
@@ -229,18 +243,19 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Skip this many items | [optional]
- **take** | **Integer**| Take this many items | [optional]
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Skip this many items | [optional] [default to null]
+ **take** | **Integer**| Take this many items | [optional] [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+[**ApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](ApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -248,30 +263,32 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetOrganisationTranscripts"></a>
-# **reportsGetOrganisationTranscripts**
-> CSApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords)
+
+## reportsGetOrganisationTranscripts
+
+> ApiResponseForPaginatedListOrgReportTranscript reportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords)
 
 Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Skip this many items
-Integer take = 56; // Integer | Take this many items
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-String keywords = "keywords_example"; // String | Search the transcripts by keyword(s)
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Skip this many items
+Integer take = null; // Integer | Take this many items
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String keywords = null; // String | Search the transcripts by keyword(s)
 try {
-    CSApiResponseForPaginatedListOrgReportTranscript result = apiInstance.reportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
+    ApiResponseForPaginatedListOrgReportTranscript result = apiInstance.reportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTranscripts");
@@ -281,19 +298,20 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Skip this many items | [optional]
- **take** | **Integer**| Take this many items | [optional]
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
- **keywords** | **String**| Search the transcripts by keyword(s) | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Skip this many items | [optional] [default to null]
+ **take** | **Integer**| Take this many items | [optional] [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
+ **keywords** | **String**| Search the transcripts by keyword(s) | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListOrgReportTranscript**](CSApiResponseForPaginatedListOrgReportTranscript.md)
+[**ApiResponseForPaginatedListOrgReportTranscript**](ApiResponseForPaginatedListOrgReportTranscript.md)
 
 ### Authorization
 
@@ -301,29 +319,31 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetOrganisationTrips"></a>
-# **reportsGetOrganisationTrips**
-> CSApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds)
+
+## reportsGetOrganisationTrips
+
+> ApiResponseForPaginatedListOrgReportTrip reportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds)
 
 Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-Integer skip = 56; // Integer | Skip this many items
-Integer take = 56; // Integer | Take this many items
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+Integer skip = null; // Integer | Skip this many items
+Integer take = null; // Integer | Take this many items
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 try {
-    CSApiResponseForPaginatedListOrgReportTrip result = apiInstance.reportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
+    ApiResponseForPaginatedListOrgReportTrip result = apiInstance.reportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetOrganisationTrips");
@@ -333,18 +353,19 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **skip** | **Integer**| Skip this many items | [optional]
- **take** | **Integer**| Take this many items | [optional]
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **skip** | **Integer**| Skip this many items | [optional] [default to null]
+ **take** | **Integer**| Take this many items | [optional] [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListOrgReportTrip**](CSApiResponseForPaginatedListOrgReportTrip.md)
+[**ApiResponseForPaginatedListOrgReportTrip**](ApiResponseForPaginatedListOrgReportTrip.md)
 
 ### Authorization
 
@@ -352,31 +373,33 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsGetRawDataAdmin"></a>
-# **reportsGetRawDataAdmin**
-> CSApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take)
+
+## reportsGetRawDataAdmin
+
+> ApiResponseForPaginatedListRawReportItem reportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take)
 
 Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
-String sort = "sort_example"; // String | Decide which column to sort on
-String order = "order_example"; // String | Decide which direction to sort the column
-Integer skip = 56; // Integer | Skip this many rows
-Integer take = 56; // Integer | Take this many rows
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+String sort = null; // String | Decide which column to sort on
+String order = null; // String | Decide which direction to sort the column
+Integer skip = null; // Integer | Skip this many rows
+Integer take = null; // Integer | Take this many rows
 try {
-    CSApiResponseForPaginatedListRawReportItem result = apiInstance.reportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
+    ApiResponseForPaginatedListRawReportItem result = apiInstance.reportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsGetRawDataAdmin");
@@ -386,20 +409,21 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
- **sort** | **String**| Decide which column to sort on | [optional] [enum: EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username]
- **order** | **String**| Decide which direction to sort the column | [optional] [enum: Ascending, Descending]
- **skip** | **Integer**| Skip this many rows | [optional]
- **take** | **Integer**| Take this many rows | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
+ **sort** | **String**| Decide which column to sort on | [optional] [default to null] [enum: EmailAddress, JobCode, TaskName, ClientName, ProjectName, StartDate, EndDate, SpanSeconds, Description, PayAmount, PayOvertimeAmount, TripCost, TripDistanceMeters, Username]
+ **order** | **String**| Decide which direction to sort the column | [optional] [default to null] [enum: Ascending, Descending]
+ **skip** | **Integer**| Skip this many rows | [optional] [default to null]
+ **take** | **Integer**| Take this many rows | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseForPaginatedListRawReportItem**](CSApiResponseForPaginatedListRawReportItem.md)
+[**ApiResponseForPaginatedListRawReportItem**](ApiResponseForPaginatedListRawReportItem.md)
 
 ### Authorization
 
@@ -407,27 +431,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsProjectCostingsAdmin"></a>
-# **reportsProjectCostingsAdmin**
-> CSApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds)
+
+## reportsProjectCostingsAdmin
+
+> ApiResponseListProjectCostingReportItem reportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds)
 
 Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
-String userIds = "userIds_example"; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
+String userIds = null; // String | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.
 try {
-    CSApiResponseListProjectCostingReportItem result = apiInstance.reportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+    ApiResponseListProjectCostingReportItem result = apiInstance.reportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsProjectCostingsAdmin");
@@ -437,16 +463,17 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
- **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional]
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
+ **userIds** | **String**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] [default to null]
 
 ### Return type
 
-[**CSApiResponseListProjectCostingReportItem**](CSApiResponseListProjectCostingReportItem.md)
+[**ApiResponseListProjectCostingReportItem**](ApiResponseListProjectCostingReportItem.md)
 
 ### Authorization
 
@@ -454,26 +481,28 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-<a name="reportsUserJobsOverTime"></a>
-# **reportsUserJobsOverTime**
-> CSApiResponseListJobSeriesReportItem reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth)
+
+## reportsUserJobsOverTime
+
+> ApiResponseListJobSeriesReportItem reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth)
 
 Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
 
 ### Example
+
 ```java
 // Import classes:
 //import ChronoSheetsClientLibApi.ReportsApi;
 
 ReportsApi apiInstance = new ReportsApi();
-Date startDate = new Date(); // Date | The start date for the date range.  Report data in the response is after this date
-Date endDate = new Date(); // Date | The end date for the date range.  Report data in the response is before this date
-String xChronosheetsAuth = "xChronosheetsAuth_example"; // String | The ChronoSheets Auth Token
+Date startDate = null; // Date | The start date for the date range.  Report data in the response is after this date
+Date endDate = null; // Date | The end date for the date range.  Report data in the response is before this date
+String xChronosheetsAuth = null; // String | The ChronoSheets Auth Token
 try {
-    CSApiResponseListJobSeriesReportItem result = apiInstance.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
+    ApiResponseListJobSeriesReportItem result = apiInstance.reportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ReportsApi#reportsUserJobsOverTime");
@@ -483,15 +512,16 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date |
- **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date |
- **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token |
+ **startDate** | **Date**| The start date for the date range.  Report data in the response is after this date | [default to null]
+ **endDate** | **Date**| The end date for the date range.  Report data in the response is before this date | [default to null]
+ **xChronosheetsAuth** | **String**| The ChronoSheets Auth Token | [default to null]
 
 ### Return type
 
-[**CSApiResponseListJobSeriesReportItem**](CSApiResponseListJobSeriesReportItem.md)
+[**ApiResponseListJobSeriesReportItem**](ApiResponseListJobSeriesReportItem.md)
 
 ### Authorization
 
@@ -499,6 +529,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
