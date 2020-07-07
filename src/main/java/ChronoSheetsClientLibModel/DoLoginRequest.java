@@ -25,6 +25,8 @@ public class DoLoginRequest {
   private String usernameOrEmail = null;
   @SerializedName("Password")
   private String password = null;
+  @SerializedName("RememberMe")
+  private Boolean rememberMe = null;
 
   /**
    * Your ChronoSheets username or registered email address
@@ -48,6 +50,17 @@ public class DoLoginRequest {
     this.password = password;
   }
 
+  /**
+   * Increase session expiry beyond default of 1 hour
+   **/
+  @ApiModelProperty(value = "Increase session expiry beyond default of 1 hour")
+  public Boolean getRememberMe() {
+    return rememberMe;
+  }
+  public void setRememberMe(Boolean rememberMe) {
+    this.rememberMe = rememberMe;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -59,7 +72,8 @@ public class DoLoginRequest {
     }
     DoLoginRequest doLoginRequest = (DoLoginRequest) o;
     return (this.usernameOrEmail == null ? doLoginRequest.usernameOrEmail == null : this.usernameOrEmail.equals(doLoginRequest.usernameOrEmail)) &&
-        (this.password == null ? doLoginRequest.password == null : this.password.equals(doLoginRequest.password));
+        (this.password == null ? doLoginRequest.password == null : this.password.equals(doLoginRequest.password)) &&
+        (this.rememberMe == null ? doLoginRequest.rememberMe == null : this.rememberMe.equals(doLoginRequest.rememberMe));
   }
 
   @Override
@@ -67,6 +81,7 @@ public class DoLoginRequest {
     int result = 17;
     result = 31 * result + (this.usernameOrEmail == null ? 0: this.usernameOrEmail.hashCode());
     result = 31 * result + (this.password == null ? 0: this.password.hashCode());
+    result = 31 * result + (this.rememberMe == null ? 0: this.rememberMe.hashCode());
     return result;
   }
 
@@ -77,6 +92,7 @@ public class DoLoginRequest {
     
     sb.append("  usernameOrEmail: ").append(usernameOrEmail).append("\n");
     sb.append("  password: ").append(password).append("\n");
+    sb.append("  rememberMe: ").append(rememberMe).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
