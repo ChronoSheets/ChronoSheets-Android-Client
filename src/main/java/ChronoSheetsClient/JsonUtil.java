@@ -93,6 +93,10 @@ public class JsonUtil {
       return new TypeToken<List<ApiResponseFleetVehicle>>(){}.getType();
     }
     
+    if ("ApiResponseForPaginatedListBasicGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ApiResponseForPaginatedListBasicGeofence>>(){}.getType();
+    }
+    
     if ("ApiResponseForPaginatedListExtendedGeofence".equalsIgnoreCase(className)) {
       return new TypeToken<List<ApiResponseForPaginatedListExtendedGeofence>>(){}.getType();
     }
@@ -259,6 +263,10 @@ public class JsonUtil {
     
     if ("BasicCoordinate".equalsIgnoreCase(className)) {
       return new TypeToken<List<BasicCoordinate>>(){}.getType();
+    }
+    
+    if ("BasicGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<List<BasicGeofence>>(){}.getType();
     }
     
     if ("BatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
@@ -579,6 +587,10 @@ public class JsonUtil {
       return new TypeToken<ApiResponseFleetVehicle>(){}.getType();
     }
     
+    if ("ApiResponseForPaginatedListBasicGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<ApiResponseForPaginatedListBasicGeofence>(){}.getType();
+    }
+    
     if ("ApiResponseForPaginatedListExtendedGeofence".equalsIgnoreCase(className)) {
       return new TypeToken<ApiResponseForPaginatedListExtendedGeofence>(){}.getType();
     }
@@ -745,6 +757,10 @@ public class JsonUtil {
     
     if ("BasicCoordinate".equalsIgnoreCase(className)) {
       return new TypeToken<BasicCoordinate>(){}.getType();
+    }
+    
+    if ("BasicGeofence".equalsIgnoreCase(className)) {
+      return new TypeToken<BasicGeofence>(){}.getType();
     }
     
     if ("BatchUpdateTimesheetRequest".equalsIgnoreCase(className)) {
