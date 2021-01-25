@@ -15,7 +15,10 @@ package ChronoSheetsClientLibModel;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A basic geofence
+ **/
+@ApiModel(description = "A basic geofence")
 public class BasicGeofence {
   
   @SerializedName("GeoFencingId")
@@ -24,8 +27,9 @@ public class BasicGeofence {
   private String name = null;
 
   /**
+   * The ID of the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the geofence")
   public Integer getGeoFencingId() {
     return geoFencingId;
   }
@@ -34,8 +38,9 @@ public class BasicGeofence {
   }
 
   /**
+   * The descriptive name of the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The descriptive name of the geofence")
   public String getName() {
     return name;
   }

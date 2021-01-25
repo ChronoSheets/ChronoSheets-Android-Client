@@ -18,7 +18,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * An extended geofence record
+ **/
+@ApiModel(description = "An extended geofence record")
 public class ExtendedGeofence {
   
   @SerializedName("JobCode")
@@ -75,8 +78,9 @@ public class ExtendedGeofence {
   private Integer endTimeMinute = null;
 
   /**
+   * The Job code used when the employee enters/exits the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The Job code used when the employee enters/exits the geofence")
   public String getJobCode() {
     return jobCode;
   }
@@ -85,8 +89,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The name of the task used when the employee enters/exits the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the task used when the employee enters/exits the geofence")
   public String getTaskName() {
     return taskName;
   }
@@ -95,8 +100,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The name of the employee who created the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the employee who created the geofence")
   public String getCreatedBy() {
     return createdBy;
   }
@@ -105,8 +111,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The name of the employee who last updated the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the employee who last updated the geofence")
   public String getUpdatedBy() {
     return updatedBy;
   }
@@ -115,8 +122,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The name of the organisation group who will be notified when the geofence is triggered
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the organisation group who will be notified when the geofence is triggered")
   public String getAlertOrganisation() {
     return alertOrganisation;
   }
@@ -125,8 +133,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the geofence")
   public Integer getGeoFencingId() {
     return geoFencingId;
   }
@@ -135,8 +144,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the organisation owning the geofence record
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation owning the geofence record")
   public Integer getOrgId() {
     return orgId;
   }
@@ -145,8 +155,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the user/employee who created the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user/employee who created the geofence")
   public Integer getCreatedByUserId() {
     return createdByUserId;
   }
@@ -155,8 +166,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the user/employee who last updated the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user/employee who last updated the geofence")
   public Integer getLastUpdatedByUserId() {
     return lastUpdatedByUserId;
   }
@@ -165,8 +177,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * A descriptive name of the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A descriptive name of the geofence")
   public String getName() {
     return name;
   }
@@ -175,8 +188,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The name of the approx. location of the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the approx. location of the geofence")
   public String getLocationName() {
     return locationName;
   }
@@ -185,8 +199,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * A list of co-ordinates specifying the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A list of co-ordinates specifying the geofence")
   public List<BasicCoordinate> getCoordinates() {
     return coordinates;
   }
@@ -195,8 +210,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The date and time the geofence was created.  Time is in UTC.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the geofence was created.  Time is in UTC.")
   public Date getCreatedAt() {
     return createdAt;
   }
@@ -205,8 +221,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The date and time the geofence was updated last.  Time is in UTC.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the geofence was updated last.  Time is in UTC.")
   public Date getUpdatedAt() {
     return updatedAt;
   }
@@ -215,8 +232,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the job code used when the employee enters/exits the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the job code used when the employee enters/exits the geofence")
   public Integer getTriggerJobCodeId() {
     return triggerJobCodeId;
   }
@@ -225,8 +243,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The ID of the task used when the employee enters/exits the geofence
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the task used when the employee enters/exits the geofence")
   public Integer getTriggerTaskId() {
     return triggerTaskId;
   }
@@ -235,8 +254,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The settings for triggering actions
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The settings for triggering actions")
   public TriggerSettingsEnum getTriggerSettings() {
     return triggerSettings;
   }
@@ -245,8 +265,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The organisation group that will be notified when the geofence is triggered
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The organisation group that will be notified when the geofence is triggered")
   public Integer getAlertToOrgGroupId() {
     return alertToOrgGroupId;
   }
@@ -255,8 +276,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The settings for trigger alerts
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The settings for trigger alerts")
   public AlertSettingsEnum getAlertSettings() {
     return alertSettings;
   }
@@ -265,8 +287,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.")
   public Integer getStartTimeHour() {
     return startTimeHour;
   }
@@ -275,8 +298,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The minute start time.  E.g. 46 would be the 46th minute of the hour.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The minute start time.  E.g. 46 would be the 46th minute of the hour.")
   public Integer getStartTimeMinute() {
     return startTimeMinute;
   }
@@ -285,8 +309,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.")
   public Integer getEndTimeHour() {
     return endTimeHour;
   }
@@ -295,8 +320,9 @@ public class ExtendedGeofence {
   }
 
   /**
+   * The minute end time.  E.g. 13 would be the 13th minute of the hour.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The minute end time.  E.g. 13 would be the 13th minute of the hour.")
   public Integer getEndTimeMinute() {
     return endTimeMinute;
   }

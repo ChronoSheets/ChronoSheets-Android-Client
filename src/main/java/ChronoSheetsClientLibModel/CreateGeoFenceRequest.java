@@ -108,9 +108,9 @@ public class CreateGeoFenceRequest {
   }
 
   /**
-   * Define when you want the alerts to be setn
+   * Define when you want the alerts to be sent
    **/
-  @ApiModelProperty(value = "Define when you want the alerts to be setn")
+  @ApiModelProperty(value = "Define when you want the alerts to be sent")
   public AlertSettingsEnum getAlertSettings() {
     return alertSettings;
   }

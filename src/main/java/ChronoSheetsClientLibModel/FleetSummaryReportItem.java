@@ -89,8 +89,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The ID of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the vehicle")
   public Integer getId() {
     return id;
   }
@@ -99,8 +100,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The ID of the organisation managing the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation managing the vehicle")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -109,8 +111,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * A name given to the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A name given to the vehicle")
   public String getName() {
     return name;
   }
@@ -119,8 +122,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The cost, in dollars, of running the vehicle over one kilometer
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The cost, in dollars, of running the vehicle over one kilometer")
   public Double getCostPerKilometer() {
     return costPerKilometer;
   }
@@ -129,8 +133,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The make of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The make of the vehicle")
   public String getMake() {
     return make;
   }
@@ -139,8 +144,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The model of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The model of the vehicle")
   public String getModel() {
     return model;
   }
@@ -149,8 +155,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The year the vehicle was manufactured
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The year the vehicle was manufactured")
   public String getYear() {
     return year;
   }
@@ -159,8 +166,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * The licence plate number of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The licence plate number of the vehicle")
   public String getLicencePlateNumber() {
     return licencePlateNumber;
   }
@@ -169,8 +177,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * Whether or not the vehicle is deleted
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the vehicle is deleted")
   public Boolean getIsDeleted() {
     return isDeleted;
   }
@@ -179,8 +188,9 @@ public class FleetSummaryReportItem {
   }
 
   /**
+   * An array of employee IDs that are permitted to use the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of employee IDs that are permitted to use the vehicle")
   public List<Integer> getPermittedEmployees() {
     return permittedEmployees;
   }

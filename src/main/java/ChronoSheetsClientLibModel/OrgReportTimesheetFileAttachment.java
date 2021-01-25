@@ -123,8 +123,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The ID of the timesheet this attachment is attached to.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the timesheet this attachment is attached to.")
   public Integer getTimesheetId() {
     return timesheetId;
   }
@@ -133,8 +134,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The limited use signed URL for the document (if it's not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won't be set.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the document (if it's not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won't be set.")
   public String getDocumentS3SignedUrl() {
     return documentS3SignedUrl;
   }
@@ -143,8 +145,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
   public String getImageLargeS3SignedUrl() {
     return imageLargeS3SignedUrl;
   }
@@ -153,8 +156,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
   public String getImageMediumS3SignedUrl() {
     return imageMediumS3SignedUrl;
   }
@@ -163,8 +167,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.")
   public String getImageSmallS3SignedUrl() {
     return imageSmallS3SignedUrl;
   }
@@ -173,8 +178,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The start date and time of the timesheet that this attachment is attached to
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the timesheet that this attachment is attached to")
   public Date getTimesheetStart() {
     return timesheetStart;
   }
@@ -183,8 +189,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The end date and time of the timesheet that this attachment is attached to
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the timesheet that this attachment is attached to")
   public Date getTimesheetEnd() {
     return timesheetEnd;
   }
@@ -193,8 +200,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The ID of the file attachment
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the file attachment")
   public Integer getFileAttachmentId() {
     return fileAttachmentId;
   }
@@ -203,8 +211,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The ID of the user who attached the file
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user who attached the file")
   public Integer getUserId() {
     return userId;
   }
@@ -213,8 +222,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The ID of the organisation that owns the file and employs the employee
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation that owns the file and employs the employee")
   public Integer getOrgId() {
     return orgId;
   }
@@ -223,8 +233,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The mobile platform that was used to attach the file
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The mobile platform that was used to attach the file")
   public MobilePlatformEnum getMobilePlatform() {
     return mobilePlatform;
   }
@@ -233,8 +244,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The type of file attachment
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The type of file attachment")
   public AttachmentTypeEnum getAttachmentType() {
     return attachmentType;
   }
@@ -243,8 +255,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * Any notes regarding the file attachment
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Any notes regarding the file attachment")
   public String getNotes() {
     return notes;
   }
@@ -253,8 +266,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The path to the file attachment as hosted by ChronoSheets storage, if it's not an image.  If the attachment is an image then this won't be set.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, if it's not an image.  If the attachment is an image then this won't be set.")
   public String getNonImageFilePath() {
     return nonImageFilePath;
   }
@@ -263,8 +277,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the large version of the image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the large version of the image.")
   public String getImageLargeFilePath() {
     return imageLargeFilePath;
   }
@@ -273,8 +288,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the medium version of the image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the medium version of the image.")
   public String getImageMediumFilePath() {
     return imageMediumFilePath;
   }
@@ -283,8 +299,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the small version of the image.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The path to the file attachment as hosted by ChronoSheets storage, only set if it's an image.  This is regarding the small version of the image.")
   public String getImageSmallFilePath() {
     return imageSmallFilePath;
   }
@@ -293,8 +310,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The original file name of the attachment
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The original file name of the attachment")
   public String getOriginalFileName() {
     return originalFileName;
   }
@@ -303,8 +321,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.")
   public Double getLatitude() {
     return latitude;
   }
@@ -313,8 +332,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.")
   public Double getLongitude() {
     return longitude;
   }
@@ -323,8 +343,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The date and time the attachment was uploaded.  Time is in UTC.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The date and time the attachment was uploaded.  Time is in UTC.")
   public Date getDateUploaded() {
     return dateUploaded;
   }
@@ -333,8 +354,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.")
   public Date getDateImageCaptured() {
     return dateImageCaptured;
   }
@@ -343,8 +365,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * The number of bytes allocated for storing the file attachment.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of bytes allocated for storing the file attachment.")
   public Long getStorageAllocationBytes() {
     return storageAllocationBytes;
   }
@@ -353,8 +376,9 @@ public class OrgReportTimesheetFileAttachment {
   }
 
   /**
+   * If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.")
   public Integer getAudioDurationSeconds() {
     return audioDurationSeconds;
   }

@@ -57,8 +57,9 @@ public class UserForManagement {
   }
 
   /**
+   * The ID of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user")
   public Integer getId() {
     return id;
   }
@@ -67,8 +68,9 @@ public class UserForManagement {
   }
 
   /**
+   * The ID of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -77,8 +79,9 @@ public class UserForManagement {
   }
 
   /**
+   * The username of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The username of the user")
   public String getUserName() {
     return userName;
   }
@@ -87,8 +90,9 @@ public class UserForManagement {
   }
 
   /**
+   * The first name of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The first name of the user")
   public String getFirstName() {
     return firstName;
   }
@@ -97,8 +101,9 @@ public class UserForManagement {
   }
 
   /**
+   * The last name of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The last name of the user")
   public String getLastName() {
     return lastName;
   }
@@ -107,8 +112,9 @@ public class UserForManagement {
   }
 
   /**
+   * The email address of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The email address of the user")
   public String getEmailAddress() {
     return emailAddress;
   }
@@ -117,8 +123,9 @@ public class UserForManagement {
   }
 
   /**
+   * A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details")
   public Long getRoles() {
     return roles;
   }
@@ -127,8 +134,9 @@ public class UserForManagement {
   }
 
   /**
+   * A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details")
   public Long getAlertSettings() {
     return alertSettings;
   }
@@ -137,8 +145,9 @@ public class UserForManagement {
   }
 
   /**
+   * Whether or not the setup wizard is required
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the setup wizard is required")
   public Boolean getSetupWizardRequired() {
     return setupWizardRequired;
   }
@@ -147,8 +156,9 @@ public class UserForManagement {
   }
 
   /**
+   * Whether or not the user is subscribed to the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the user is subscribed to the user")
   public Boolean getIsSubscribedToNewsletter() {
     return isSubscribedToNewsletter;
   }
@@ -167,8 +177,9 @@ public class UserForManagement {
   }
 
   /**
+   * Whether or not this account is the organisation's primary account.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not this account is the organisation's primary account.")
   public Boolean getIsPrimaryAccount() {
     return isPrimaryAccount;
   }

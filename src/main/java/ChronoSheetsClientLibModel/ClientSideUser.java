@@ -16,7 +16,10 @@ import ChronoSheetsClientLibModel.Organisation;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A user within ChronoSheets
+ **/
+@ApiModel(description = "A user within ChronoSheets")
 public class ClientSideUser {
   
   @SerializedName("Id")
@@ -45,8 +48,9 @@ public class ClientSideUser {
   private Boolean isPrimaryAccount = null;
 
   /**
+   * The ID of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the user")
   public Integer getId() {
     return id;
   }
@@ -55,8 +59,9 @@ public class ClientSideUser {
   }
 
   /**
+   * The ID of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -65,8 +70,9 @@ public class ClientSideUser {
   }
 
   /**
+   * The username of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The username of the user")
   public String getUserName() {
     return userName;
   }
@@ -75,8 +81,9 @@ public class ClientSideUser {
   }
 
   /**
+   * The first name of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The first name of the user")
   public String getFirstName() {
     return firstName;
   }
@@ -85,8 +92,9 @@ public class ClientSideUser {
   }
 
   /**
+   * The last name of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The last name of the user")
   public String getLastName() {
     return lastName;
   }
@@ -95,8 +103,9 @@ public class ClientSideUser {
   }
 
   /**
+   * The email address of the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The email address of the user")
   public String getEmailAddress() {
     return emailAddress;
   }
@@ -105,8 +114,9 @@ public class ClientSideUser {
   }
 
   /**
+   * A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details")
   public Long getRoles() {
     return roles;
   }
@@ -115,8 +125,9 @@ public class ClientSideUser {
   }
 
   /**
+   * A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details")
   public Long getAlertSettings() {
     return alertSettings;
   }
@@ -125,8 +136,9 @@ public class ClientSideUser {
   }
 
   /**
+   * Whether or not the setup wizard is required
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the setup wizard is required")
   public Boolean getSetupWizardRequired() {
     return setupWizardRequired;
   }
@@ -135,8 +147,9 @@ public class ClientSideUser {
   }
 
   /**
+   * Whether or not the user is subscribed to the user
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the user is subscribed to the user")
   public Boolean getIsSubscribedToNewsletter() {
     return isSubscribedToNewsletter;
   }
@@ -155,8 +168,9 @@ public class ClientSideUser {
   }
 
   /**
+   * Whether or not this account is the organisation's primary account.
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not this account is the organisation's primary account.")
   public Boolean getIsPrimaryAccount() {
     return isPrimaryAccount;
   }

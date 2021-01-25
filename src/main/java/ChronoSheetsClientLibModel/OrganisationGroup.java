@@ -15,7 +15,10 @@ package ChronoSheetsClientLibModel;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * An organisation group.  Organisation groups are used throughout ChronoSheets to assign many groups to one alert, action or restriction.  E.g. you can assign an organisation group to receive geofence alerts, or you could restrict access to vehicles to users within an organisation group.
+ **/
+@ApiModel(description = "An organisation group.  Organisation groups are used throughout ChronoSheets to assign many groups to one alert, action or restriction.  E.g. you can assign an organisation group to receive geofence alerts, or you could restrict access to vehicles to users within an organisation group.")
 public class OrganisationGroup {
   
   @SerializedName("Id")
@@ -28,8 +31,9 @@ public class OrganisationGroup {
   private Boolean isDeleted = null;
 
   /**
+   * The ID of the organisation group
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation group")
   public Integer getId() {
     return id;
   }
@@ -38,8 +42,9 @@ public class OrganisationGroup {
   }
 
   /**
+   * The ID of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -48,8 +53,9 @@ public class OrganisationGroup {
   }
 
   /**
+   * The descriptive name of the organisation group
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The descriptive name of the organisation group")
   public String getOrganisationGroupName() {
     return organisationGroupName;
   }
@@ -58,8 +64,9 @@ public class OrganisationGroup {
   }
 
   /**
+   * Whether or not the organisation group is deleted
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the organisation group is deleted")
   public Boolean getIsDeleted() {
     return isDeleted;
   }

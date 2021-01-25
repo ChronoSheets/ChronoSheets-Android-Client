@@ -16,7 +16,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A project in ChronoSheets
+ **/
+@ApiModel(description = "A project in ChronoSheets")
 public class Project {
   
   @SerializedName("Id")
@@ -37,8 +40,9 @@ public class Project {
   private Date endDate = null;
 
   /**
+   * The ID of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the project")
   public Integer getId() {
     return id;
   }
@@ -47,8 +51,9 @@ public class Project {
   }
 
   /**
+   * The ID of the client for which the project is being undertaken for
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the client for which the project is being undertaken for")
   public Integer getClientId() {
     return clientId;
   }
@@ -57,8 +62,9 @@ public class Project {
   }
 
   /**
+   * The ID of the organisation that is completing the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation that is completing the project")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -67,8 +73,9 @@ public class Project {
   }
 
   /**
+   * A descriptive name of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A descriptive name of the project")
   public String getProjectName() {
     return projectName;
   }
@@ -77,8 +84,9 @@ public class Project {
   }
 
   /**
+   * The project's estimated cost
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The project's estimated cost")
   public Double getCostEstimation() {
     return costEstimation;
   }
@@ -87,8 +95,9 @@ public class Project {
   }
 
   /**
+   * The project's actual cost
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The project's actual cost")
   public Double getCostActual() {
     return costActual;
   }
@@ -97,8 +106,9 @@ public class Project {
   }
 
   /**
+   * The start date and time of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the project")
   public Date getStartDate() {
     return startDate;
   }
@@ -107,8 +117,9 @@ public class Project {
   }
 
   /**
+   * The end date and time of the project
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the project")
   public Date getEndDate() {
     return endDate;
   }

@@ -16,7 +16,10 @@ import java.util.*;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * A vehicle within the fleet
+ **/
+@ApiModel(description = "A vehicle within the fleet")
 public class FleetVehicle {
   
   @SerializedName("Id")
@@ -41,8 +44,9 @@ public class FleetVehicle {
   private List<Integer> permittedEmployees = null;
 
   /**
+   * The ID of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the vehicle")
   public Integer getId() {
     return id;
   }
@@ -51,8 +55,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The ID of the organisation managing the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation managing the vehicle")
   public Integer getOrganisationId() {
     return organisationId;
   }
@@ -61,8 +66,9 @@ public class FleetVehicle {
   }
 
   /**
+   * A name given to the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A name given to the vehicle")
   public String getName() {
     return name;
   }
@@ -71,8 +77,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The cost, in dollars, of running the vehicle over one kilometer
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The cost, in dollars, of running the vehicle over one kilometer")
   public Double getCostPerKilometer() {
     return costPerKilometer;
   }
@@ -81,8 +88,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The make of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The make of the vehicle")
   public String getMake() {
     return make;
   }
@@ -91,8 +99,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The model of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The model of the vehicle")
   public String getModel() {
     return model;
   }
@@ -101,8 +110,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The year the vehicle was manufactured
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The year the vehicle was manufactured")
   public String getYear() {
     return year;
   }
@@ -111,8 +121,9 @@ public class FleetVehicle {
   }
 
   /**
+   * The licence plate number of the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The licence plate number of the vehicle")
   public String getLicencePlateNumber() {
     return licencePlateNumber;
   }
@@ -121,8 +132,9 @@ public class FleetVehicle {
   }
 
   /**
+   * Whether or not the vehicle is deleted
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the vehicle is deleted")
   public Boolean getIsDeleted() {
     return isDeleted;
   }
@@ -131,8 +143,9 @@ public class FleetVehicle {
   }
 
   /**
+   * An array of employee IDs that are permitted to use the vehicle
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An array of employee IDs that are permitted to use the vehicle")
   public List<Integer> getPermittedEmployees() {
     return permittedEmployees;
   }

@@ -18,7 +18,10 @@ import java.util.Date;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
-@ApiModel(description = "")
+/**
+ * An organisation in ChronoSheets
+ **/
+@ApiModel(description = "An organisation in ChronoSheets")
 public class Organisation {
   
   @SerializedName("Id")
@@ -71,8 +74,9 @@ public class Organisation {
   private List<OrganisationPricingPlan> pricingPlans = null;
 
   /**
+   * The ID of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The ID of the organisation")
   public Integer getId() {
     return id;
   }
@@ -81,8 +85,9 @@ public class Organisation {
   }
 
   /**
+   * The name of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The name of the organisation")
   public String getName() {
     return name;
   }
@@ -91,8 +96,9 @@ public class Organisation {
   }
 
   /**
+   * Address line 1 of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address line 1 of the organisation")
   public String getAddressLine01() {
     return addressLine01;
   }
@@ -101,8 +107,9 @@ public class Organisation {
   }
 
   /**
+   * Address line 2 of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Address line 2 of the organisation")
   public String getAddressLine02() {
     return addressLine02;
   }
@@ -111,8 +118,9 @@ public class Organisation {
   }
 
   /**
+   * The suburb where the organisation is located
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The suburb where the organisation is located")
   public String getSuburb() {
     return suburb;
   }
@@ -121,8 +129,9 @@ public class Organisation {
   }
 
   /**
+   * The state where the organisation is located
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The state where the organisation is located")
   public String getState() {
     return state;
   }
@@ -131,8 +140,9 @@ public class Organisation {
   }
 
   /**
+   * The postcode of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The postcode of the organisation")
   public String getPostcode() {
     return postcode;
   }
@@ -141,8 +151,9 @@ public class Organisation {
   }
 
   /**
+   * The country of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The country of the organisation")
   public String getCountry() {
     return country;
   }
@@ -151,8 +162,9 @@ public class Organisation {
   }
 
   /**
+   * The primary phone contact number of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The primary phone contact number of the organisation")
   public String getPhone() {
     return phone;
   }
@@ -161,8 +173,9 @@ public class Organisation {
   }
 
   /**
+   * The primary email address of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The primary email address of the organisation")
   public String getEmailAddress() {
     return emailAddress;
   }
@@ -171,8 +184,9 @@ public class Organisation {
   }
 
   /**
+   * The timezone of the organisation
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The timezone of the organisation")
   public String getTimezone() {
     return timezone;
   }
@@ -181,8 +195,9 @@ public class Organisation {
   }
 
   /**
+   * The customer ID of the payments subscription
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The customer ID of the payments subscription")
   public String getSubscriptionCustomerId() {
     return subscriptionCustomerId;
   }
@@ -191,8 +206,9 @@ public class Organisation {
   }
 
   /**
+   * The sign up token
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The sign up token")
   public String getSignupToken() {
     return signupToken;
   }
@@ -201,8 +217,9 @@ public class Organisation {
   }
 
   /**
+   * Whether or not the organisation is active
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Whether or not the organisation is active")
   public Boolean getIsActive() {
     return isActive;
   }
@@ -211,8 +228,9 @@ public class Organisation {
   }
 
   /**
+   * The payments coupon code
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The payments coupon code")
   public String getStripeCouponCode() {
     return stripeCouponCode;
   }
@@ -221,8 +239,9 @@ public class Organisation {
   }
 
   /**
+   * The source of the subscription
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The source of the subscription")
   public SubscriptionSourceEnum getSubscriptionSource() {
     return subscriptionSource;
   }
@@ -231,8 +250,9 @@ public class Organisation {
   }
 
   /**
+   * The source where the organisation signed up
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The source where the organisation signed up")
   public SignUpSourceEnum getSignUpSource() {
     return signUpSource;
   }
@@ -241,8 +261,9 @@ public class Organisation {
   }
 
   /**
+   * A temporary mobile sign up code
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A temporary mobile sign up code")
   public String getMobileSignUpCode() {
     return mobileSignUpCode;
   }
@@ -251,8 +272,9 @@ public class Organisation {
   }
 
   /**
+   * The start date and time of the organisations subscription
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The start date and time of the organisations subscription")
   public Date getSubscriptionCycleStart() {
     return subscriptionCycleStart;
   }
@@ -261,8 +283,9 @@ public class Organisation {
   }
 
   /**
+   * The end date and time of the organisations subscription
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The end date and time of the organisations subscription")
   public Date getSubscriptionCycleEnd() {
     return subscriptionCycleEnd;
   }
@@ -271,8 +294,9 @@ public class Organisation {
   }
 
   /**
+   * The organisation's pricing plans
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The organisation's pricing plans")
   public List<OrganisationPricingPlan> getPricingPlans() {
     return pricingPlans;
   }
